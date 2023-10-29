@@ -1,0 +1,246 @@
+
+C:\Users\RASELA~1\AppData\Local\Temp\arduino_build_278299/Blink_attiny13A.ino.elf:     file format elf32-avr
+
+
+Disassembly of section .text:
+
+00000000 <__vectors>:
+__vectors():
+   0:	09 c0       	rjmp	.+18     	; 0x14 <__ctors_end>
+   2:	16 c0       	rjmp	.+44     	; 0x30 <__bad_interrupt>
+   4:	15 c0       	rjmp	.+42     	; 0x30 <__bad_interrupt>
+   6:	15 c0       	rjmp	.+42     	; 0x32 <__vector_3>
+   8:	13 c0       	rjmp	.+38     	; 0x30 <__bad_interrupt>
+   a:	12 c0       	rjmp	.+36     	; 0x30 <__bad_interrupt>
+   c:	11 c0       	rjmp	.+34     	; 0x30 <__bad_interrupt>
+   e:	10 c0       	rjmp	.+32     	; 0x30 <__bad_interrupt>
+  10:	0f c0       	rjmp	.+30     	; 0x30 <__bad_interrupt>
+  12:	0e c0       	rjmp	.+28     	; 0x30 <__bad_interrupt>
+
+00000014 <__ctors_end>:
+__trampolines_start():
+  14:	11 24       	eor	r1, r1
+  16:	1f be       	out	0x3f, r1	; 63
+  18:	cf e9       	ldi	r28, 0x9F	; 159
+  1a:	cd bf       	out	0x3d, r28	; 61
+
+0000001c <__do_clear_bss>:
+__do_clear_bss():
+/home/jenkins-mingw32/workspace/avr-gcc-staging/label/Ubuntu14.04x64-mingw32/gcc-build/avr/avr25/tiny-stack/libgcc/../../../../../gcc/libgcc/config/avr/lib1funcs.S:2442
+  1c:	20 e0       	ldi	r18, 0x00	; 0
+/home/jenkins-mingw32/workspace/avr-gcc-staging/label/Ubuntu14.04x64-mingw32/gcc-build/avr/avr25/tiny-stack/libgcc/../../../../../gcc/libgcc/config/avr/lib1funcs.S:2443
+  1e:	a0 e6       	ldi	r26, 0x60	; 96
+/home/jenkins-mingw32/workspace/avr-gcc-staging/label/Ubuntu14.04x64-mingw32/gcc-build/avr/avr25/tiny-stack/libgcc/../../../../../gcc/libgcc/config/avr/lib1funcs.S:2444
+  20:	b0 e0       	ldi	r27, 0x00	; 0
+/home/jenkins-mingw32/workspace/avr-gcc-staging/label/Ubuntu14.04x64-mingw32/gcc-build/avr/avr25/tiny-stack/libgcc/../../../../../gcc/libgcc/config/avr/lib1funcs.S:2445
+  22:	01 c0       	rjmp	.+2      	; 0x26 <.do_clear_bss_start>
+
+00000024 <.do_clear_bss_loop>:
+/home/jenkins-mingw32/workspace/avr-gcc-staging/label/Ubuntu14.04x64-mingw32/gcc-build/avr/avr25/tiny-stack/libgcc/../../../../../gcc/libgcc/config/avr/lib1funcs.S:2447
+  24:	1d 92       	st	X+, r1
+
+00000026 <.do_clear_bss_start>:
+/home/jenkins-mingw32/workspace/avr-gcc-staging/label/Ubuntu14.04x64-mingw32/gcc-build/avr/avr25/tiny-stack/libgcc/../../../../../gcc/libgcc/config/avr/lib1funcs.S:2449
+  26:	a4 36       	cpi	r26, 0x64	; 100
+/home/jenkins-mingw32/workspace/avr-gcc-staging/label/Ubuntu14.04x64-mingw32/gcc-build/avr/avr25/tiny-stack/libgcc/../../../../../gcc/libgcc/config/avr/lib1funcs.S:2450
+  28:	b2 07       	cpc	r27, r18
+/home/jenkins-mingw32/workspace/avr-gcc-staging/label/Ubuntu14.04x64-mingw32/gcc-build/avr/avr25/tiny-stack/libgcc/../../../../../gcc/libgcc/config/avr/lib1funcs.S:2451
+  2a:	e1 f7       	brne	.-8      	; 0x24 <.do_clear_bss_loop>
+.do_clear_bss_start():
+  2c:	27 d0       	rcall	.+78     	; 0x7c <main>
+  2e:	4e c0       	rjmp	.+156    	; 0xcc <_exit>
+
+00000030 <__bad_interrupt>:
+__vector_1():
+  30:	e7 cf       	rjmp	.-50     	; 0x0 <__vectors>
+
+00000032 <__vector_3>:
+__vector_3():
+C:\Users\RaselAhmed\AppData\Local\Arduino15\packages\diy_attiny\hardware\avr\2023.4.19-gcc5.4\variants\tiny13/pins_arduino.c:57
+
+#if !(defined(NO_MILLIS) && NO_MILLIS) && defined(USE_NEW_MILLIS) && USE_NEW_MILLIS
+extern volatile MillisMicrosTime_t ovrf;
+ 
+ISR(TIM0_OVF_vect)
+{
+  32:	1f 92       	push	r1
+  34:	0f 92       	push	r0
+  36:	0f b6       	in	r0, 0x3f	; 63
+  38:	0f 92       	push	r0
+  3a:	11 24       	eor	r1, r1
+  3c:	8f 93       	push	r24
+  3e:	9f 93       	push	r25
+  40:	af 93       	push	r26
+  42:	bf 93       	push	r27
+C:\Users\RaselAhmed\AppData\Local\Arduino15\packages\diy_attiny\hardware\avr\2023.4.19-gcc5.4\variants\tiny13/pins_arduino.c:58
+  ovrf++; //Increment counter every 256 clock cycles  
+  44:	80 91 60 00 	lds	r24, 0x0060	; 0x800060 <_edata>
+  48:	90 91 61 00 	lds	r25, 0x0061	; 0x800061 <_edata+0x1>
+  4c:	a0 91 62 00 	lds	r26, 0x0062	; 0x800062 <_edata+0x2>
+  50:	b0 91 63 00 	lds	r27, 0x0063	; 0x800063 <_edata+0x3>
+  54:	01 96       	adiw	r24, 0x01	; 1
+  56:	a1 1d       	adc	r26, r1
+  58:	b1 1d       	adc	r27, r1
+  5a:	80 93 60 00 	sts	0x0060, r24	; 0x800060 <_edata>
+  5e:	90 93 61 00 	sts	0x0061, r25	; 0x800061 <_edata+0x1>
+  62:	a0 93 62 00 	sts	0x0062, r26	; 0x800062 <_edata+0x2>
+  66:	b0 93 63 00 	sts	0x0063, r27	; 0x800063 <_edata+0x3>
+C:\Users\RaselAhmed\AppData\Local\Arduino15\packages\diy_attiny\hardware\avr\2023.4.19-gcc5.4\variants\tiny13/pins_arduino.c:59
+}
+  6a:	bf 91       	pop	r27
+  6c:	af 91       	pop	r26
+  6e:	9f 91       	pop	r25
+  70:	8f 91       	pop	r24
+  72:	0f 90       	pop	r0
+  74:	0f be       	out	0x3f, r0	; 63
+  76:	0f 90       	pop	r0
+  78:	1f 90       	pop	r1
+  7a:	18 95       	reti
+
+0000007c <main>:
+main():
+C:\Users\RaselAhmed\AppData\Local\Arduino15\packages\diy_attiny\hardware\avr\2023.4.19-gcc5.4\cores\tiny/wiring_lite.c:280
+  TCCR0B |= _BV(CS00);
+  TCCR0A |= _BV(WGM00)|_BV(WGM01);
+  TIMSK0 |= 2;
+  TCNT0=0;   
+  #else
+    turnOnMillis(MILLIS_TIMER_PRESCALE);
+  7c:	8f b5       	in	r24, 0x2f	; 47
+  7e:	83 60       	ori	r24, 0x03	; 3
+  80:	8f bd       	out	0x2f, r24	; 47
+  82:	89 b7       	in	r24, 0x39	; 57
+  84:	82 60       	ori	r24, 0x02	; 2
+  86:	89 bf       	out	0x39, r24	; 57
+  88:	83 b7       	in	r24, 0x33	; 51
+  8a:	81 60       	ori	r24, 0x01	; 1
+  8c:	83 bf       	out	0x33, r24	; 51
+  8e:	12 be       	out	0x32, r1	; 50
+C:\Users\RaselAhmed\AppData\Local\Arduino15\packages\diy_attiny\hardware\avr\2023.4.19-gcc5.4\cores\tiny/wiring_lite.c:282
+  #endif
+  sei();
+  90:	78 94       	sei
+C:\Users\RaselAhmed\AppData\Local\Arduino15\packages\diy_attiny\hardware\avr\2023.4.19-gcc5.4\cores\tiny/wiring_lite.c:328
+      #define ADC_ARDUINO_PRESCALER 7
+    #endif
+    
+    // Since this is init(), ADCSRA is already going to be zero, we can just
+    // set our bits indiscriminantly
+    ADCSRA = (ADC_ARDUINO_PRESCALER << ADPS0) | _BV(ADEN);
+  92:	83 e8       	ldi	r24, 0x83	; 131
+  94:	86 b9       	out	0x06, r24	; 6
+pinMode():
+C:\Users\RaselAhmed\AppData\Local\Arduino15\packages\diy_attiny\hardware\avr\2023.4.19-gcc5.4\cores\tiny/Arduino.h:249
+      return;
+      // NOP
+    }
+    else if(mode == OUTPUT)
+    {
+      ((void)(*((volatile uint8_t *)portModeRegister(digitalPinToPort(pin))) |= digitalPinToBitMask(pin)));
+  96:	b8 9a       	sbi	0x17, 0	; 23
+delayMicrosecondsWithoutMillisInterruptAdjustment():
+C:\Users\RaselAhmed\AppData\Local\Arduino15\packages\diy_attiny\hardware\avr\2023.4.19-gcc5.4\cores\tiny/MillisMicrosDelay.c:3065
+
+
+
+#if ! ( defined( REDUCED_CORE_TINYAVR ) && REDUCED_CORE_TINYAVR )
+  // The 4/5/9/10 "Reduced Core" have problems with GCC compiling this    
+  __asm__ __volatile__ (
+  98:	26 e1       	ldi	r18, 0x16	; 22
+  9a:	31 e0       	ldi	r19, 0x01	; 1
+digitalWrite():
+C:\Users\RaselAhmed\AppData\Local\Arduino15\packages\diy_attiny\hardware\avr\2023.4.19-gcc5.4\cores\tiny/Arduino.h:327
+    
+    // If on a timer, turn it off (or fall through if we don't optimize that)
+    if(digitalPinToTimer(pin) != NOT_ON_TIMER )
+    {
+      #if OPTIMIZE_DIGITAL_WRITE_ON_TIMER
+        turnOffPWM(digitalPinToTimer(pin));
+  9c:	8f b5       	in	r24, 0x2f	; 47
+  9e:	8f 73       	andi	r24, 0x3F	; 63
+  a0:	8f bd       	out	0x2f, r24	; 47
+C:\Users\RaselAhmed\AppData\Local\Arduino15\packages\diy_attiny\hardware\avr\2023.4.19-gcc5.4\cores\tiny/Arduino.h:336
+      #endif
+    }
+
+    if(val == HIGH)
+    {
+      ((void)(*((volatile uint8_t *)portOutputRegister(digitalPinToPort(pin))) |= digitalPinToBitMask(pin)));
+  a2:	c0 9a       	sbi	0x18, 0	; 24
+  a4:	89 ee       	ldi	r24, 0xE9	; 233
+  a6:	93 e0       	ldi	r25, 0x03	; 3
+  a8:	01 97       	sbiw	r24, 0x01	; 1
+delay():
+C:\Users\RaselAhmed\AppData\Local\Arduino15\packages\diy_attiny\hardware\avr\2023.4.19-gcc5.4\cores\tiny/MillisMicrosDelay.c:2506
+}
+#endif
+
+void delay(DelayTime_t ms)
+{
+  while(ms--){
+  aa:	21 f0       	breq	.+8      	; 0xb4 <__stack+0x15>
+delayMicrosecondsWithoutMillisInterruptAdjustment():
+C:\Users\RaselAhmed\AppData\Local\Arduino15\packages\diy_attiny\hardware\avr\2023.4.19-gcc5.4\cores\tiny/MillisMicrosDelay.c:3065
+
+
+
+#if ! ( defined( REDUCED_CORE_TINYAVR ) && REDUCED_CORE_TINYAVR )
+  // The 4/5/9/10 "Reduced Core" have problems with GCC compiling this    
+  __asm__ __volatile__ (
+  ac:	f9 01       	movw	r30, r18
+  ae:	31 97       	sbiw	r30, 0x01	; 1
+  b0:	f1 f7       	brne	.-4      	; 0xae <__stack+0xf>
+  b2:	fa cf       	rjmp	.-12     	; 0xa8 <__stack+0x9>
+digitalWrite():
+C:\Users\RaselAhmed\AppData\Local\Arduino15\packages\diy_attiny\hardware\avr\2023.4.19-gcc5.4\cores\tiny/Arduino.h:327
+    
+    // If on a timer, turn it off (or fall through if we don't optimize that)
+    if(digitalPinToTimer(pin) != NOT_ON_TIMER )
+    {
+      #if OPTIMIZE_DIGITAL_WRITE_ON_TIMER
+        turnOffPWM(digitalPinToTimer(pin));
+  b4:	8f b5       	in	r24, 0x2f	; 47
+  b6:	8f 73       	andi	r24, 0x3F	; 63
+  b8:	8f bd       	out	0x2f, r24	; 47
+C:\Users\RaselAhmed\AppData\Local\Arduino15\packages\diy_attiny\hardware\avr\2023.4.19-gcc5.4\cores\tiny/Arduino.h:341
+      ((void)(*((volatile uint8_t *)portOutputRegister(digitalPinToPort(pin))) |= digitalPinToBitMask(pin)));
+      return;
+    }
+    else // Can only be LOW here, no need to check
+    {
+      ((void)(*((volatile uint8_t *)portOutputRegister(digitalPinToPort(pin))) &= ~digitalPinToBitMask(pin)));
+  ba:	c0 98       	cbi	0x18, 0	; 24
+  bc:	89 ee       	ldi	r24, 0xE9	; 233
+  be:	93 e0       	ldi	r25, 0x03	; 3
+  c0:	01 97       	sbiw	r24, 0x01	; 1
+delay():
+C:\Users\RaselAhmed\AppData\Local\Arduino15\packages\diy_attiny\hardware\avr\2023.4.19-gcc5.4\cores\tiny/MillisMicrosDelay.c:2506
+}
+#endif
+
+void delay(DelayTime_t ms)
+{
+  while(ms--){
+  c2:	61 f3       	breq	.-40     	; 0x9c <main+0x20>
+delayMicrosecondsWithoutMillisInterruptAdjustment():
+C:\Users\RaselAhmed\AppData\Local\Arduino15\packages\diy_attiny\hardware\avr\2023.4.19-gcc5.4\cores\tiny/MillisMicrosDelay.c:3065
+
+
+
+#if ! ( defined( REDUCED_CORE_TINYAVR ) && REDUCED_CORE_TINYAVR )
+  // The 4/5/9/10 "Reduced Core" have problems with GCC compiling this    
+  __asm__ __volatile__ (
+  c4:	f9 01       	movw	r30, r18
+  c6:	31 97       	sbiw	r30, 0x01	; 1
+  c8:	f1 f7       	brne	.-4      	; 0xc6 <__stack+0x27>
+  ca:	fa cf       	rjmp	.-12     	; 0xc0 <__stack+0x21>
+
+000000cc <_exit>:
+exit():
+/home/jenkins-mingw32/workspace/avr-gcc-staging/label/Ubuntu14.04x64-mingw32/gcc-build/avr/avr25/tiny-stack/libgcc/../../../../../gcc/libgcc/config/avr/lib1funcs.S:2279
+  cc:	f8 94       	cli
+
+000000ce <__stop_program>:
+__stop_program():
+/home/jenkins-mingw32/workspace/avr-gcc-staging/label/Ubuntu14.04x64-mingw32/gcc-build/avr/avr25/tiny-stack/libgcc/../../../../../gcc/libgcc/config/avr/lib1funcs.S:2281
+  ce:	ff cf       	rjmp	.-2      	; 0xce <__stop_program>

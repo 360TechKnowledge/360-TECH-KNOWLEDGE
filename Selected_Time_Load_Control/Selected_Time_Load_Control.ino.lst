@@ -1,5 +1,5 @@
 
-C:\Users\RASELA~1\AppData\Local\Temp\arduino_build_441768/Selected_Time_Load_Control.ino.elf:     file format elf32-avr
+C:\Users\RASELA~1\AppData\Local\Temp\arduino_build_763650/Selected_Time_Load_Control.ino.elf:     file format elf32-avr
 
 
 Disassembly of section .text:
@@ -238,7 +238,7 @@ C:\Users\RaselAhmed\AppData\Local\Arduino15\packages\diy_attiny\hardware\avr\202
  164:	82 60       	ori	r24, 0x02	; 2
  166:	89 bf       	out	0x39, r24	; 57
  168:	83 b7       	in	r24, 0x33	; 51
- 16a:	82 60       	ori	r24, 0x02	; 2
+ 16a:	81 60       	ori	r24, 0x01	; 1
  16c:	83 bf       	out	0x33, r24	; 51
  16e:	12 be       	out	0x32, r1	; 50
 C:\Users\RaselAhmed\AppData\Local\Arduino15\packages\diy_attiny\hardware\avr\2023.4.19-gcc5.4\cores\tiny/wiring_lite.c:282
@@ -252,7 +252,7 @@ C:\Users\RaselAhmed\AppData\Local\Arduino15\packages\diy_attiny\hardware\avr\202
     // Since this is init(), ADCSRA is already going to be zero, we can just
     // set our bits indiscriminantly
     ADCSRA = (ADC_ARDUINO_PRESCALER << ADPS0) | _BV(ADEN);
- 172:	86 e8       	ldi	r24, 0x86	; 134
+ 172:	83 e8       	ldi	r24, 0x83	; 131
  174:	86 b9       	out	0x06, r24	; 6
 pinMode():
 C:\Users\RaselAhmed\AppData\Local\Arduino15\packages\diy_attiny\hardware\avr\2023.4.19-gcc5.4\cores\tiny/Arduino.h:249

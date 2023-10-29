@@ -1,0 +1,1729 @@
+
+RaselAhmed@DESKTOP-PG8C98O MINGW64 /h/GitLab/Inovace Git/Firmware (master)
+$ git branch
+  1-memory-leak-idenification-and-resolution
+  2-practice-issue
+  3-miso-not-working-properly-as-a-output
+  4-4-led-blinking-using-pri-binary
+  5-safely-reset
+  dev
+  main
+* master
+
+RaselAhmed@DESKTOP-PG8C98O MINGW64 /h/GitLab/Inovace Git/Firmware (master)
+$ git checkout 4-4-led-blinking-using-pri-binary
+Switched to branch '4-4-led-blinking-using-pri-binary'
+Your branch is up to date with 'origin/4-4-led-blinking-using-pri-binary'.
+
+RaselAhmed@DESKTOP-PG8C98O MINGW64 /h/GitLab/Inovace Git/Firmware (4-4-led-blinking-using-pri-binary)
+$ git branch 9-millis-not-accurate-spi-slow
+
+RaselAhmed@DESKTOP-PG8C98O MINGW64 /h/GitLab/Inovace Git/Firmware (4-4-led-blinking-using-pri-binary)
+$ git checkout 9-millis-not-accurate-spi-slow
+Switched to branch '9-millis-not-accurate-spi-slow'
+
+RaselAhmed@DESKTOP-PG8C98O MINGW64 /h/GitLab/Inovace Git/Firmware (9-millis-not-accurate-spi-slow)
+$ git pull origin 9-millis-not-accurate-spi-slow
+warning: redirecting to https://gitlab.inovacetech.com/developer/peoples-meter/Firmware.git/
+remote: Enumerating objects: 692, done.
+remote: Counting objects: 100% (650/650), done.
+remote: Compressing objects: 100% (518/518), done.
+remote: Total 578 (delta 384), reused 0 (delta 0), pack-reused 0
+Receiving objects: 100% (578/578), 2.75 MiB | 64.00 KiB/s, done.
+Resolving deltas: 100% (384/384), completed with 38 local objects.
+From http://gitlab.inovacetech.com/developer/peoples-meter/Firmware
+ * branch            9-millis-not-accurate-spi-slow -> FETCH_HEAD
+ * [new branch]      9-millis-not-accurate-spi-slow -> origin/9-millis-not-accurate-spi-slow
+CONFLICT (modify/delete): .gitignore deleted in HEAD and modified in 38845b4598d5c860fbd6cd01a191985eaf0c147a.  Version 38845b4598d5c860fbd6cd01a191985eaf0c147a of .gitignore left in tree.
+CONFLICT (modify/delete): .vs/ATmega328PB-XMini/v14/.atsuo deleted in HEAD and modified in 38845b4598d5c860fbd6cd01a191985eaf0c147a.  Version 38845b4598d5c860fbd6cd01a191985eaf0c147a of .vs/ATmega328PB-XMini/v14/.atsuo left in tree.
+CONFLICT (rename/delete): test led pri-binary/led blinking using pri binary/.vs/led blinking using pri binary/v14/.atsuo renamed to .vs/led blinking using pri binary/v14/.atsuo in HEAD, but deleted in 38845b4598d5c860fbd6cd01a191985eaf0c147a.
+CONFLICT (modify/delete): ATmega328PB-XMini.cproj deleted in HEAD and modified in 38845b4598d5c860fbd6cd01a191985eaf0c147a.  Version 38845b4598d5c860fbd6cd01a191985eaf0c147a of ATmega328PB-XMini.cproj left in tree.
+CONFLICT (modify/delete): Debug/Makefile deleted in HEAD and modified in 38845b4598d5c860fbd6cd01a191985eaf0c147a.  Version 38845b4598d5c860fbd6cd01a191985eaf0c147a of Debug/Makefile left in tree.
+CONFLICT (modify/delete): Debug/makedep.mk deleted in HEAD and modified in 38845b4598d5c860fbd6cd01a191985eaf0c147a.  Version 38845b4598d5c860fbd6cd01a191985eaf0c147a of Debug/makedep.mk left in tree.
+CONFLICT (modify/delete): FunStuff.c deleted in HEAD and modified in 38845b4598d5c860fbd6cd01a191985eaf0c147a.  Version 38845b4598d5c860fbd6cd01a191985eaf0c147a of FunStuff.c left in tree.
+CONFLICT (modify/delete): FunStuff.h deleted in HEAD and modified in 38845b4598d5c860fbd6cd01a191985eaf0c147a.  Version 38845b4598d5c860fbd6cd01a191985eaf0c147a of FunStuff.h left in tree.
+CONFLICT (modify/delete): Global.h deleted in HEAD and modified in 38845b4598d5c860fbd6cd01a191985eaf0c147a.  Version 38845b4598d5c860fbd6cd01a191985eaf0c147a of Global.h left in tree.
+CONFLICT (modify/delete): IR/remote.c deleted in HEAD and modified in 38845b4598d5c860fbd6cd01a191985eaf0c147a.  Version 38845b4598d5c860fbd6cd01a191985eaf0c147a of IR/remote.c left in tree.
+CONFLICT (modify/delete): IR/remote.h deleted in HEAD and modified in 38845b4598d5c860fbd6cd01a191985eaf0c147a.  Version 38845b4598d5c860fbd6cd01a191985eaf0c147a of IR/remote.h left in tree.
+CONFLICT (rename/delete): test led pri-binary/led blinking using pri binary/led blinking using pri binary/Default.xml renamed to Static Library/IrRemote/IrRemote/Default.xml in 38845b4598d5c860fbd6cd01a191985eaf0c147a, but deleted in HEAD.
+CONFLICT (rename/delete): test led pri-binary/led blinking using pri binary/led blinking using pri binary/include/protected_io.h renamed to Static Library/IrRemote/IrRemote/include/protected_io.h in 38845b4598d5c860fbd6cd01a191985eaf0c147a, but deleted in HEAD.
+CONFLICT (rename/delete): test led pri-binary/led blinking using pri binary/led blinking using pri binary/src/protected_io.S renamed to Static Library/IrRemote/IrRemote/src/protected_io.S in 38845b4598d5c860fbd6cd01a191985eaf0c147a, but deleted in HEAD.
+CONFLICT (modify/delete): TF77/ST7735.c deleted in HEAD and modified in 38845b4598d5c860fbd6cd01a191985eaf0c147a.  Version 38845b4598d5c860fbd6cd01a191985eaf0c147a of TF77/ST7735.c left in tree.
+CONFLICT (modify/delete): TF77/ST7735.h deleted in HEAD and modified in 38845b4598d5c860fbd6cd01a191985eaf0c147a.  Version 38845b4598d5c860fbd6cd01a191985eaf0c147a of TF77/ST7735.h left in tree.
+CONFLICT (modify/delete): TF77/logo.h deleted in HEAD and modified in 38845b4598d5c860fbd6cd01a191985eaf0c147a.  Version 38845b4598d5c860fbd6cd01a191985eaf0c147a of TF77/logo.h left in tree.
+CONFLICT (modify/delete): driver_isr.c deleted in HEAD and modified in 38845b4598d5c860fbd6cd01a191985eaf0c147a.  Version 38845b4598d5c860fbd6cd01a191985eaf0c147a of driver_isr.c left in tree.
+CONFLICT (modify/delete): include/atmel_start_pins.h deleted in HEAD and modified in 38845b4598d5c860fbd6cd01a191985eaf0c147a.  Version 38845b4598d5c860fbd6cd01a191985eaf0c147a of include/atmel_start_pins.h left in tree.
+CONFLICT (modify/delete): include/tc8.h deleted in HEAD and modified in 38845b4598d5c860fbd6cd01a191985eaf0c147a.  Version 38845b4598d5c860fbd6cd01a191985eaf0c147a of include/tc8.h left in tree.
+CONFLICT (modify/delete): include/usart_basic.h deleted in HEAD and modified in 38845b4598d5c860fbd6cd01a191985eaf0c147a.  Version 38845b4598d5c860fbd6cd01a191985eaf0c147a of include/usart_basic.h left in tree.
+CONFLICT (rename/delete): test led pri-binary/led blinking using pri binary/led/led2.c renamed to led blinking using pri binary/Gpio/led2.c in HEAD, but deleted in 38845b4598d5c860fbd6cd01a191985eaf0c147a.
+CONFLICT (rename/delete): test led pri-binary/led blinking using pri binary/led/led2.h renamed to led blinking using pri binary/Gpio/led2.h in HEAD, but deleted in 38845b4598d5c860fbd6cd01a191985eaf0c147a.
+CONFLICT (rename/delete): test led pri-binary/led blinking using pri binary/led/blink.h renamed to led/blink.h in HEAD, but deleted in 38845b4598d5c860fbd6cd01a191985eaf0c147a.
+CONFLICT (rename/delete): test led pri-binary/led blinking using pri binary/led blinking using pri binary/Gpio/led2.c renamed to led/led2.c in HEAD, but deleted in 38845b4598d5c860fbd6cd01a191985eaf0c147a.
+CONFLICT (rename/delete): test led pri-binary/led blinking using pri binary/led blinking using pri binary/Gpio/led2.h renamed to led/led2.h in HEAD, but deleted in 38845b4598d5c860fbd6cd01a191985eaf0c147a.
+CONFLICT (rename/delete): test led pri-binary/led blinking using pri binary/led/libLED.a renamed to led/libLED.a in HEAD, but deleted in 38845b4598d5c860fbd6cd01a191985eaf0c147a.
+CONFLICT (rename/delete): test led pri-binary/led blinking using pri binary/led/libLED2.a renamed to led/libLED2.a in HEAD, but deleted in 38845b4598d5c860fbd6cd01a191985eaf0c147a.
+CONFLICT (modify/delete): main.c deleted in HEAD and modified in 38845b4598d5c860fbd6cd01a191985eaf0c147a.  Version 38845b4598d5c860fbd6cd01a191985eaf0c147a of main.c left in tree.
+CONFLICT (modify/delete): main.h deleted in HEAD and modified in 38845b4598d5c860fbd6cd01a191985eaf0c147a.  Version 38845b4598d5c860fbd6cd01a191985eaf0c147a of main.h left in tree.
+CONFLICT (modify/delete): src/driver_init.c deleted in HEAD and modified in 38845b4598d5c860fbd6cd01a191985eaf0c147a.  Version 38845b4598d5c860fbd6cd01a191985eaf0c147a of src/driver_init.c left in tree.
+CONFLICT (modify/delete): src/spi_basic.c deleted in HEAD and modified in 38845b4598d5c860fbd6cd01a191985eaf0c147a.  Version 38845b4598d5c860fbd6cd01a191985eaf0c147a of src/spi_basic.c left in tree.
+CONFLICT (modify/delete): src/tc8.c deleted in HEAD and modified in 38845b4598d5c860fbd6cd01a191985eaf0c147a.  Version 38845b4598d5c860fbd6cd01a191985eaf0c147a of src/tc8.c left in tree.
+CONFLICT (modify/delete): src/usart_basic.c deleted in HEAD and modified in 38845b4598d5c860fbd6cd01a191985eaf0c147a.  Version 38845b4598d5c860fbd6cd01a191985eaf0c147a of src/usart_basic.c left in tree.
+CONFLICT (rename/rename): test led pri-binary/led blinking using pri binary/led blinking using pri binary.atsln renamed to led blinking using pri binary.atsln in HEAD and to Static Library/TFT77/TFT77.atsln in 38845b4598d5c860fbd6cd01a191985eaf0c147a.
+CONFLICT (rename/rename): test led pri-binary/led blinking using pri binary/led blinking using pri binary/.atmelstart/AtmelStart.env_conf renamed to led blinking using pri binary/.atmelstart/AtmelStart.env_conf in HEAD and to Static Library/IrRemote/IrRemote/.atmelstart/AtmelStart.env_conf in 38845b4598d5c860fbd6cd01a191985eaf0c147a.
+CONFLICT (rename/rename): test led pri-binary/led blinking using pri binary/led blinking using pri binary/.atmelstart/AtmelStart.gpdsc renamed to led blinking using pri binary/.atmelstart/AtmelStart.gpdsc in HEAD and to Static Library/IrRemote/IrRemote/.atmelstart/AtmelStart.gpdsc in 38845b4598d5c860fbd6cd01a191985eaf0c147a.
+CONFLICT (rename/rename): test led pri-binary/led blinking using pri binary/led blinking using pri binary/.atmelstart/atmel_start_config.atstart renamed to led blinking using pri binary/.atmelstart/atmel_start_config.atstart in HEAD and to Static Library/IrRemote/IrRemote/.atmelstart/atmel_start_config.atstart in 38845b4598d5c860fbd6cd01a191985eaf0c147a.
+CONFLICT (rename/rename): test led pri-binary/led blinking using pri binary/led blinking using pri binary/Config/RTE_Components.h renamed to led blinking using pri binary/Config/RTE_Components.h in HEAD and to Static Library/IrRemote/IrRemote/Config/RTE_Components.h in 38845b4598d5c860fbd6cd01a191985eaf0c147a.
+CONFLICT (rename/rename): test led pri-binary/led blinking using pri binary/led blinking using pri binary/Config/clock_config.h renamed to led blinking using pri binary/Config/clock_config.h in HEAD and to Static Library/IrRemote/IrRemote/Config/clock_config.h in 38845b4598d5c860fbd6cd01a191985eaf0c147a.
+CONFLICT (rename/rename): test led pri-binary/led blinking using pri binary/led blinking using pri binary/atmel_start.c renamed to led blinking using pri binary/atmel_start.c in HEAD and to Static Library/IrRemote/IrRemote/atmel_start.c in 38845b4598d5c860fbd6cd01a191985eaf0c147a.
+CONFLICT (rename/rename): test led pri-binary/led blinking using pri binary/led blinking using pri binary/atmel_start.h renamed to led blinking using pri binary/atmel_start.h in HEAD and to Static Library/IrRemote/IrRemote/atmel_start.h in 38845b4598d5c860fbd6cd01a191985eaf0c147a.
+CONFLICT (rename/rename): test led pri-binary/led blinking using pri binary/led blinking using pri binary/doxygen/generator/DoxygenLayout.xml renamed to led blinking using pri binary/doxygen/generator/DoxygenLayout.xml in HEAD and to Static Library/IrRemote/IrRemote/doxygen/generator/DoxygenLayout.xml in 38845b4598d5c860fbd6cd01a191985eaf0c147a.
+CONFLICT (rename/rename): test led pri-binary/led blinking using pri binary/led blinking using pri binary/doxygen/generator/doxyfile.doxygen renamed to led blinking using pri binary/doxygen/generator/doxyfile.doxygen in HEAD and to Static Library/IrRemote/IrRemote/doxygen/generator/doxyfile.doxygen in 38845b4598d5c860fbd6cd01a191985eaf0c147a.
+CONFLICT (rename/rename): test led pri-binary/led blinking using pri binary/led blinking using pri binary/doxygen/mainpage.dox renamed to led blinking using pri binary/doxygen/mainpage.dox in HEAD and to Static Library/IrRemote/IrRemote/doxygen/mainpage.dox in 38845b4598d5c860fbd6cd01a191985eaf0c147a.
+CONFLICT (rename/rename): test led pri-binary/led blinking using pri binary/led blinking using pri binary/doxygen/system.dox renamed to led blinking using pri binary/doxygen/system.dox in HEAD and to Static Library/IrRemote/IrRemote/doxygen/system.dox in 38845b4598d5c860fbd6cd01a191985eaf0c147a.
+CONFLICT (rename/rename): test led pri-binary/led blinking using pri binary/led blinking using pri binary/driver_isr.c renamed to led blinking using pri binary/driver_isr.c in HEAD and to Static Library/IrRemote/IrRemote/driver_isr.c in 38845b4598d5c860fbd6cd01a191985eaf0c147a.
+CONFLICT (rename/rename): test led pri-binary/led blinking using pri binary/led blinking using pri binary/include/atmel_start_pins.h renamed to led blinking using pri binary/include/atmel_start_pins.h in HEAD and to Static Library/IrRemote/IrRemote/include/atmel_start_pins.h in 38845b4598d5c860fbd6cd01a191985eaf0c147a.
+CONFLICT (rename/rename): test led pri-binary/led blinking using pri binary/led blinking using pri binary/include/driver_init.h renamed to led blinking using pri binary/include/driver_init.h in HEAD and to Static Library/IrRemote/IrRemote/include/driver_init.h in 38845b4598d5c860fbd6cd01a191985eaf0c147a.
+CONFLICT (rename/rename): test led pri-binary/led blinking using pri binary/led blinking using pri binary/include/port.h renamed to led blinking using pri binary/include/port.h in HEAD and to Static Library/IrRemote/IrRemote/include/port.h in 38845b4598d5c860fbd6cd01a191985eaf0c147a.
+CONFLICT (rename/rename): test led pri-binary/led blinking using pri binary/led blinking using pri binary/include/sysctrl.h renamed to led blinking using pri binary/include/sysctrl.h in HEAD and to Static Library/IrRemote/IrRemote/include/sysctrl.h in 38845b4598d5c860fbd6cd01a191985eaf0c147a.
+CONFLICT (rename/rename): test led pri-binary/led blinking using pri binary/led blinking using pri binary/include/system.h renamed to led blinking using pri binary/include/system.h in HEAD and to Static Library/IrRemote/IrRemote/include/system.h in 38845b4598d5c860fbd6cd01a191985eaf0c147a.
+CONFLICT (rename/rename): test led pri-binary/led blinking using pri binary/led blinking using pri binary/led blinking using pri binary.componentinfo.xml renamed to led blinking using pri binary/led blinking using pri binary.componentinfo.xml in HEAD and to Static Library/IrRemote/IrRemote/IrRemote.componentinfo.xml in 38845b4598d5c860fbd6cd01a191985eaf0c147a.
+CONFLICT (rename/rename): test led pri-binary/led blinking using pri binary/led blinking using pri binary/led blinking using pri binary.cproj renamed to led blinking using pri binary/led blinking using pri binary.cproj in HEAD and to Static Library/IrRemote/IrRemote/IrRemote.cproj in 38845b4598d5c860fbd6cd01a191985eaf0c147a.
+CONFLICT (rename/rename): test led pri-binary/led blinking using pri binary/led blinking using pri binary/main.c renamed to led blinking using pri binary/main.c in HEAD and to Static Library/IrRemote/IrRemote/main.c in 38845b4598d5c860fbd6cd01a191985eaf0c147a.
+CONFLICT (rename/rename): test led pri-binary/led blinking using pri binary/led blinking using pri binary/src/driver_init.c renamed to led blinking using pri binary/src/driver_init.c in HEAD and to Static Library/IrRemote/IrRemote/src/driver_init.c in 38845b4598d5c860fbd6cd01a191985eaf0c147a.
+CONFLICT (rename/rename): test led pri-binary/led blinking using pri binary/led blinking using pri binary/utils/assembler.h renamed to led blinking using pri binary/utils/assembler.h in HEAD and to Static Library/IrRemote/IrRemote/utils/assembler.h in 38845b4598d5c860fbd6cd01a191985eaf0c147a.
+CONFLICT (rename/rename): test led pri-binary/led blinking using pri binary/led blinking using pri binary/utils/assembler/gas.h renamed to led blinking using pri binary/utils/assembler/gas.h in HEAD and to Static Library/IrRemote/IrRemote/utils/assembler/gas.h in 38845b4598d5c860fbd6cd01a191985eaf0c147a.
+CONFLICT (rename/rename): test led pri-binary/led blinking using pri binary/led blinking using pri binary/utils/assembler/iar.h renamed to led blinking using pri binary/utils/assembler/iar.h in HEAD and to Static Library/IrRemote/IrRemote/utils/assembler/iar.h in 38845b4598d5c860fbd6cd01a191985eaf0c147a.
+CONFLICT (rename/rename): test led pri-binary/led blinking using pri binary/led blinking using pri binary/utils/atomic.h renamed to led blinking using pri binary/utils/atomic.h in HEAD and to Static Library/IrRemote/IrRemote/utils/atomic.h in 38845b4598d5c860fbd6cd01a191985eaf0c147a.
+CONFLICT (rename/rename): test led pri-binary/led blinking using pri binary/led blinking using pri binary/utils/compiler.h renamed to led blinking using pri binary/utils/compiler.h in HEAD and to Static Library/IrRemote/IrRemote/utils/compiler.h in 38845b4598d5c860fbd6cd01a191985eaf0c147a.
+CONFLICT (rename/rename): test led pri-binary/led blinking using pri binary/led blinking using pri binary/utils/interrupt_avr8.h renamed to led blinking using pri binary/utils/interrupt_avr8.h in HEAD and to Static Library/IrRemote/IrRemote/utils/interrupt_avr8.h in 38845b4598d5c860fbd6cd01a191985eaf0c147a.
+CONFLICT (rename/rename): test led pri-binary/led blinking using pri binary/led blinking using pri binary/utils/utils.h renamed to led blinking using pri binary/utils/utils.h in HEAD and to Static Library/IrRemote/IrRemote/utils/utils.h in 38845b4598d5c860fbd6cd01a191985eaf0c147a.
+CONFLICT (rename/rename): test led pri-binary/led blinking using pri binary/led blinking using pri binary/utils/utils_assert.h renamed to led blinking using pri binary/utils/utils_assert.h in HEAD and to Static Library/IrRemote/IrRemote/utils/utils_assert.h in 38845b4598d5c860fbd6cd01a191985eaf0c147a.
+Automatic merge failed; fix conflicts and then commit the result.
+
+RaselAhmed@DESKTOP-PG8C98O MINGW64 /h/GitLab/Inovace Git/Firmware (9-millis-not-accurate-spi-slow|MERGING)
+$ git branch
+  1-memory-leak-idenification-and-resolution
+  2-practice-issue
+  3-miso-not-working-properly-as-a-output
+  4-4-led-blinking-using-pri-binary
+  5-safely-reset
+* 9-millis-not-accurate-spi-slow
+  dev
+  main
+  master
+
+RaselAhmed@DESKTOP-PG8C98O MINGW64 /h/GitLab/Inovace Git/Firmware (9-millis-not-accurate-spi-slow|MERGING)
+$ git branch 8-relay-switch-no-to-nc
+
+RaselAhmed@DESKTOP-PG8C98O MINGW64 /h/GitLab/Inovace Git/Firmware (9-millis-not-accurate-spi-slow|MERGING)
+$ git checkout 8-relay-switch-no-to-nc
+.gitignore: needs merge
+.vs/ATmega328PB-XMini/v14/.atsuo: needs merge
+.vs/led blinking using pri binary/v14/.atsuo: needs merge
+ATmega328PB-XMini.cproj: needs merge
+Debug/Makefile: needs merge
+Debug/makedep.mk: needs merge
+FunStuff.c: needs merge
+FunStuff.h: needs merge
+Global.h: needs merge
+IR/remote.c: needs merge
+IR/remote.h: needs merge
+Static Library/IrRemote/IrRemote/.atmelstart/AtmelStart.env_conf: needs merge
+Static Library/IrRemote/IrRemote/.atmelstart/AtmelStart.gpdsc: needs merge
+Static Library/IrRemote/IrRemote/.atmelstart/atmel_start_config.atstart: needs merge
+Static Library/IrRemote/IrRemote/Config/RTE_Components.h: needs merge
+Static Library/IrRemote/IrRemote/Config/clock_config.h: needs merge
+Static Library/IrRemote/IrRemote/Default.xml: needs merge
+Static Library/IrRemote/IrRemote/IrRemote.componentinfo.xml: needs merge
+Static Library/IrRemote/IrRemote/IrRemote.cproj: needs merge
+Static Library/IrRemote/IrRemote/atmel_start.c: needs merge
+Static Library/IrRemote/IrRemote/atmel_start.h: needs merge
+Static Library/IrRemote/IrRemote/doxygen/generator/DoxygenLayout.xml: needs merge
+Static Library/IrRemote/IrRemote/doxygen/generator/doxyfile.doxygen: needs merge
+Static Library/IrRemote/IrRemote/doxygen/mainpage.dox: needs merge
+Static Library/IrRemote/IrRemote/doxygen/system.dox: needs merge
+Static Library/IrRemote/IrRemote/driver_isr.c: needs merge
+Static Library/IrRemote/IrRemote/include/atmel_start_pins.h: needs merge
+Static Library/IrRemote/IrRemote/include/driver_init.h: needs merge
+Static Library/IrRemote/IrRemote/include/port.h: needs merge
+Static Library/IrRemote/IrRemote/include/protected_io.h: needs merge
+Static Library/IrRemote/IrRemote/include/sysctrl.h: needs merge
+Static Library/IrRemote/IrRemote/include/system.h: needs merge
+Static Library/IrRemote/IrRemote/main.c: needs merge
+Static Library/IrRemote/IrRemote/src/driver_init.c: needs merge
+Static Library/IrRemote/IrRemote/src/protected_io.S: needs merge
+Static Library/IrRemote/IrRemote/utils/assembler.h: needs merge
+Static Library/IrRemote/IrRemote/utils/assembler/gas.h: needs merge
+Static Library/IrRemote/IrRemote/utils/assembler/iar.h: needs merge
+Static Library/IrRemote/IrRemote/utils/atomic.h: needs merge
+Static Library/IrRemote/IrRemote/utils/compiler.h: needs merge
+Static Library/IrRemote/IrRemote/utils/interrupt_avr8.h: needs merge
+Static Library/IrRemote/IrRemote/utils/utils.h: needs merge
+Static Library/IrRemote/IrRemote/utils/utils_assert.h: needs merge
+Static Library/TFT77/TFT77.atsln: needs merge
+TF77/ST7735.c: needs merge
+TF77/ST7735.h: needs merge
+TF77/logo.h: needs merge
+driver_isr.c: needs merge
+include/atmel_start_pins.h: needs merge
+include/tc8.h: needs merge
+include/usart_basic.h: needs merge
+led blinking using pri binary.atsln: needs merge
+led blinking using pri binary/.atmelstart/AtmelStart.env_conf: needs merge
+led blinking using pri binary/.atmelstart/AtmelStart.gpdsc: needs merge
+led blinking using pri binary/.atmelstart/atmel_start_config.atstart: needs merge
+led blinking using pri binary/Config/RTE_Components.h: needs merge
+led blinking using pri binary/Config/clock_config.h: needs merge
+led blinking using pri binary/Gpio/led2.c: needs merge
+led blinking using pri binary/Gpio/led2.h: needs merge
+led blinking using pri binary/atmel_start.c: needs merge
+led blinking using pri binary/atmel_start.h: needs merge
+led blinking using pri binary/doxygen/generator/DoxygenLayout.xml: needs merge
+led blinking using pri binary/doxygen/generator/doxyfile.doxygen: needs merge
+led blinking using pri binary/doxygen/mainpage.dox: needs merge
+led blinking using pri binary/doxygen/system.dox: needs merge
+led blinking using pri binary/driver_isr.c: needs merge
+led blinking using pri binary/include/atmel_start_pins.h: needs merge
+led blinking using pri binary/include/driver_init.h: needs merge
+led blinking using pri binary/include/port.h: needs merge
+led blinking using pri binary/include/sysctrl.h: needs merge
+led blinking using pri binary/include/system.h: needs merge
+led blinking using pri binary/led blinking using pri binary.componentinfo.xml: needs merge
+led blinking using pri binary/led blinking using pri binary.cproj: needs merge
+led blinking using pri binary/main.c: needs merge
+led blinking using pri binary/src/driver_init.c: needs merge
+led blinking using pri binary/utils/assembler.h: needs merge
+led blinking using pri binary/utils/assembler/gas.h: needs merge
+led blinking using pri binary/utils/assembler/iar.h: needs merge
+led blinking using pri binary/utils/atomic.h: needs merge
+led blinking using pri binary/utils/compiler.h: needs merge
+led blinking using pri binary/utils/interrupt_avr8.h: needs merge
+led blinking using pri binary/utils/utils.h: needs merge
+led blinking using pri binary/utils/utils_assert.h: needs merge
+led/blink.h: needs merge
+led/led2.c: needs merge
+led/led2.h: needs merge
+led/libLED.a: needs merge
+led/libLED2.a: needs merge
+main.c: needs merge
+main.h: needs merge
+src/driver_init.c: needs merge
+src/spi_basic.c: needs merge
+src/tc8.c: needs merge
+src/usart_basic.c: needs merge
+test led pri-binary/led blinking using pri binary/led blinking using pri binary.atsln: needs merge
+test led pri-binary/led blinking using pri binary/led blinking using pri binary/.atmelstart/AtmelStart.env_conf: needs merge
+test led pri-binary/led blinking using pri binary/led blinking using pri binary/.atmelstart/AtmelStart.gpdsc: needs merge
+test led pri-binary/led blinking using pri binary/led blinking using pri binary/.atmelstart/atmel_start_config.atstart: needs merge
+test led pri-binary/led blinking using pri binary/led blinking using pri binary/Config/RTE_Components.h: needs merge
+test led pri-binary/led blinking using pri binary/led blinking using pri binary/Config/clock_config.h: needs merge
+test led pri-binary/led blinking using pri binary/led blinking using pri binary/atmel_start.c: needs merge
+test led pri-binary/led blinking using pri binary/led blinking using pri binary/atmel_start.h: needs merge
+test led pri-binary/led blinking using pri binary/led blinking using pri binary/doxygen/generator/DoxygenLayout.xml: needs merge
+test led pri-binary/led blinking using pri binary/led blinking using pri binary/doxygen/generator/doxyfile.doxygen: needs merge
+test led pri-binary/led blinking using pri binary/led blinking using pri binary/doxygen/mainpage.dox: needs merge
+test led pri-binary/led blinking using pri binary/led blinking using pri binary/doxygen/system.dox: needs merge
+test led pri-binary/led blinking using pri binary/led blinking using pri binary/driver_isr.c: needs merge
+test led pri-binary/led blinking using pri binary/led blinking using pri binary/include/atmel_start_pins.h: needs merge
+test led pri-binary/led blinking using pri binary/led blinking using pri binary/include/driver_init.h: needs merge
+test led pri-binary/led blinking using pri binary/led blinking using pri binary/include/port.h: needs merge
+test led pri-binary/led blinking using pri binary/led blinking using pri binary/include/sysctrl.h: needs merge
+test led pri-binary/led blinking using pri binary/led blinking using pri binary/include/system.h: needs merge
+test led pri-binary/led blinking using pri binary/led blinking using pri binary/led blinking using pri binary.componentinfo.xml: needs merge
+test led pri-binary/led blinking using pri binary/led blinking using pri binary/led blinking using pri binary.cproj: needs merge
+test led pri-binary/led blinking using pri binary/led blinking using pri binary/main.c: needs merge
+test led pri-binary/led blinking using pri binary/led blinking using pri binary/src/driver_init.c: needs merge
+test led pri-binary/led blinking using pri binary/led blinking using pri binary/utils/assembler.h: needs merge
+test led pri-binary/led blinking using pri binary/led blinking using pri binary/utils/assembler/gas.h: needs merge
+test led pri-binary/led blinking using pri binary/led blinking using pri binary/utils/assembler/iar.h: needs merge
+test led pri-binary/led blinking using pri binary/led blinking using pri binary/utils/atomic.h: needs merge
+test led pri-binary/led blinking using pri binary/led blinking using pri binary/utils/compiler.h: needserror: you need to resolve your current index first
+ merge
+test led pri-binary/led blinking using pri binary/led blinking using pri binary/utils/interrupt_avr8.h: needs merge
+test led pri-binary/led blinking using pri binary/led blinking using pri binary/utils/utils.h: needs merge
+test led pri-binary/led blinking using pri binary/led blinking using pri binary/utils/utils_assert.h: needs merge
+
+RaselAhmed@DESKTOP-PG8C98O MINGW64 /h/GitLab/Inovace Git/Firmware (9-millis-not-accurate-spi-slow|MERGING)
+$ git branch
+  1-memory-leak-idenification-and-resolution
+  2-practice-issue
+  3-miso-not-working-properly-as-a-output
+  4-4-led-blinking-using-pri-binary
+  5-safely-reset
+  8-relay-switch-no-to-nc
+* 9-millis-not-accurate-spi-slow
+  dev
+  main
+  master
+
+RaselAhmed@DESKTOP-PG8C98O MINGW64 /h/GitLab/Inovace Git/Firmware (9-millis-not-accurate-spi-slow|MERGING)
+$ git pull origin 9-millis-not-accurate-spi-slow
+error: Pulling is not possible because you have unmerged files.
+hint: Fix them up in the work tree, and then use 'git add/rm <file>'
+hint: as appropriate to mark resolution and make a commit.
+fatal: Exiting because of an unresolved conflict.
+
+RaselAhmed@DESKTOP-PG8C98O MINGW64 /h/GitLab/Inovace Git/Firmware (9-millis-not-accurate-spi-slow|MERGING)
+$ git checkout 8-relay-switch-no-to-nc
+.gitignore: needs merge
+.vs/ATmega328PB-XMini/v14/.atsuo: needs merge
+.vs/led blinking using pri binary/v14/.atsuo: needs merge
+ATmega328PB-XMini.cproj: needs merge
+Debug/Makefile: needs merge
+Debug/makedep.mk: needs merge
+FunStuff.c: needs merge
+FunStuff.h: needs merge
+Global.h: needs merge
+IR/remote.c: needs merge
+IR/remote.h: needs merge
+Static Library/IrRemote/IrRemote/.atmelstart/AtmelStart.env_conf: needs merge
+Static Library/IrRemote/IrRemote/.atmelstart/AtmelStart.gpdsc: needs merge
+Static Library/IrRemote/IrRemote/.atmelstart/atmel_start_config.atstart: needs merge
+Static Library/IrRemote/IrRemote/Config/RTE_Components.h: needs merge
+Static Library/IrRemote/IrRemote/Config/clock_config.h: needs merge
+Static Library/IrRemote/IrRemote/Default.xml: needs merge
+Static Library/IrRemote/IrRemote/IrRemote.componentinfo.xml: needs merge
+Static Library/IrRemote/IrRemote/IrRemote.cproj: needs merge
+Static Library/IrRemote/IrRemote/atmel_start.c: needs merge
+Static Library/IrRemote/IrRemote/atmel_start.h: needs merge
+Static Library/IrRemote/IrRemote/doxygen/generator/DoxygenLayout.xml: needs merge
+Static Library/IrRemote/IrRemote/doxygen/generator/doxyfile.doxygen: needs merge
+Static Library/IrRemote/IrRemote/doxygen/mainpage.dox: needs merge
+Static Library/IrRemote/IrRemote/doxygen/system.dox: needs merge
+Static Library/IrRemote/IrRemote/driver_isr.c: needs merge
+Static Library/IrRemote/IrRemote/include/atmel_start_pins.h: needs merge
+Static Library/IrRemote/IrRemote/include/driver_init.h: needs merge
+Static Library/IrRemote/IrRemote/include/port.h: needs merge
+Static Library/IrRemote/IrRemote/include/protected_io.h: needs merge
+Static Library/IrRemote/IrRemote/include/sysctrl.h: needs merge
+Static Library/IrRemote/IrRemote/include/system.h: needs merge
+Static Library/IrRemote/IrRemote/main.c: needs merge
+Static Library/IrRemote/IrRemote/src/driver_init.c: needs merge
+Static Library/IrRemote/IrRemote/src/protected_io.S: needs merge
+Static Library/IrRemote/IrRemote/utils/assembler.h: needs merge
+Static Library/IrRemote/IrRemote/utils/assembler/gas.h: needs merge
+Static Library/IrRemote/IrRemote/utils/assembler/iar.h: needs merge
+Static Library/IrRemote/IrRemote/utils/atomic.h: needs merge
+Static Library/IrRemote/IrRemote/utils/compiler.h: needs merge
+Static Library/IrRemote/IrRemote/utils/interrupt_avr8.h: needs merge
+Static Library/IrRemote/IrRemote/utils/utils.h: needs merge
+Static Library/IrRemote/IrRemote/utils/utils_assert.h: needs merge
+Static Library/TFT77/TFT77.atsln: needs merge
+TF77/ST7735.c: needs merge
+TF77/ST7735.h: needs merge
+TF77/logo.h: needs merge
+driver_isr.c: needs merge
+include/atmel_start_pins.h: needs merge
+include/tc8.h: needs merge
+include/usart_basic.h: needs merge
+led blinking using pri binary.atsln: needs merge
+led blinking using pri binary/.atmelstart/AtmelStart.env_conf: needs merge
+led blinking using pri binary/.atmelstart/AtmelStart.gpdsc: needs merge
+led blinking using pri binary/.atmelstart/atmel_start_config.atstart: needs merge
+led blinking using pri binary/Config/RTE_Components.h: needs merge
+led blinking using pri binary/Config/clock_config.h: needs merge
+led blinking using pri binary/Gpio/led2.c: needs merge
+led blinking using pri binary/Gpio/led2.h: needs merge
+led blinking using pri binary/atmel_start.c: needs merge
+led blinking using pri binary/atmel_start.h: needs merge
+led blinking using pri binary/doxygen/generator/DoxygenLayout.xml: needs merge
+led blinking using pri binary/doxygen/generator/doxyfile.doxygen: needs merge
+led blinking using pri binary/doxygen/mainpage.dox: needs merge
+led blinking using pri binary/doxygen/system.dox: needs merge
+led blinking using pri binary/driver_isr.c: needs merge
+led blinking using pri binary/include/atmel_start_pins.h: needs merge
+led blinking using pri binary/include/driver_init.h: needs merge
+led blinking using pri binary/include/port.h: needs merge
+led blinking using pri binary/include/sysctrl.h: needs merge
+led blinking using pri binary/include/system.h: needs merge
+led blinking using pri binary/led blinking using pri binary.componentinfo.xml: needs merge
+led blinking using pri binary/led blinking using pri binary.cproj: needs merge
+led blinking using pri binary/main.c: needs merge
+led blinking using pri binary/src/driver_init.c: needs merge
+led blinking using pri binary/utils/assembler.h: needs merge
+led blinking using pri binary/utils/assembler/gas.h: needs merge
+led blinking using pri binary/utils/assembler/iar.h: needs merge
+led blinking using pri binary/utils/atomic.h: needs merge
+led blinking using pri binary/utils/compiler.h: needs merge
+led blinking using pri binary/utils/interrupt_avr8.h: needs merge
+led blinking using pri binary/utils/utils.h: needs merge
+led blinking using pri binary/utils/utils_assert.h: needs merge
+led/blink.h: needs merge
+led/led2.c: needs merge
+led/led2.h: needs merge
+led/libLED.a: needs merge
+led/libLED2.a: needs merge
+main.c: needs merge
+main.h: needs merge
+src/driver_init.c: needs merge
+src/spi_basic.c: needs merge
+src/tc8.c: needs merge
+src/usart_basic.c: needs merge
+test led pri-binary/led blinking using pri binary/led blinking using pri binary.atsln: needs merge
+test led pri-binary/led blinking using pri binary/led blinking using pri binary/.atmelstart/AtmelStart.env_conf: needs merge
+test led pri-binary/led blinking using pri binary/led blinking using pri binary/.atmelstart/AtmelStart.gpdsc: needs merge
+test led pri-binary/led blinking using pri binary/led blinking using pri binary/.atmelstart/atmel_start_config.atstart: needs merge
+test led pri-binary/led blinking using pri binary/led blinking using pri binary/Config/RTE_Components.h: needs merge
+test led pri-binary/led blinking using pri binary/led blinking using pri binary/Config/clock_config.h: needs merge
+test led pri-binary/led blinking using pri binary/led blinking using pri binary/atmel_start.c: needs merge
+test led pri-binary/led blinking using pri binary/led blinking using pri binary/atmel_start.h: needs merge
+test led pri-binary/led blinking using pri binary/led blinking using pri binary/doxygen/generator/DoxygenLayout.xml: needs merge
+test led pri-binary/led blinking using pri binary/led blinking using pri binary/doxygen/generator/doxyfile.doxygen: needs merge
+test led pri-binary/led blinking using pri binary/led blinking using pri binary/doxygen/mainpage.dox: needs merge
+test led pri-binary/led blinking using pri binary/led blinking using pri binary/doxygen/system.dox: needs merge
+test led pri-binary/led blinking using pri binary/led blinking using pri binary/driver_isr.c: needs merge
+test led pri-binary/led blinking using pri binary/led blinking using pri binary/include/atmel_start_pins.h: needs merge
+test led pri-binary/led blinking using pri binary/led blinking using pri binary/include/driver_init.h: needs merge
+test led pri-binary/led blinking using pri binary/led blinking using pri binary/include/port.h: needs merge
+test led pri-binary/led blinking using pri binary/led blinking using pri binary/include/sysctrl.h: needs merge
+test led pri-binary/led blinking using pri binary/led blinking using pri binary/include/system.h: needs merge
+test led pri-binary/led blinking using pri binary/led blinking using pri binary/led blinking using pri binary.componentinfo.xml: needs merge
+test led pri-binary/led blinking using pri binary/led blinking using pri binary/led blinking using pri binary.cproj: needs merge
+test led pri-binary/led blinking using pri binary/led blinking using pri binary/main.c: needs merge
+test led pri-binary/led blinking using pri binary/led blinking using pri binary/src/driver_init.c: needs merge
+test led pri-binary/led blinking using pri binary/led blinking using pri binary/utils/assembler.h: needs merge
+test led pri-binary/led blinking using pri binary/led blinking using pri binary/utils/assembler/gas.h: needs merge
+test led pri-binary/led blinking using pri binary/led blinking using pri binary/utils/assembler/iar.h: needs merge
+test led pri-binary/led blinking using pri binary/led blinking using pri binary/utils/atomic.h: needs merge
+test led pri-binary/led blinking using pri binary/led blinking using pri binary/utils/compiler.h: needserror: you need to resolve your current index first
+ merge
+test led pri-binary/led blinking using pri binary/led blinking using pri binary/utils/interrupt_avr8.h: needs merge
+test led pri-binary/led blinking using pri binary/led blinking using pri binary/utils/utils.h: needs merge
+test led pri-binary/led blinking using pri binary/led blinking using pri binary/utils/utils_assert.h: needs merge
+
+RaselAhmed@DESKTOP-PG8C98O MINGW64 /h/GitLab/Inovace Git/Firmware (9-millis-not-accurate-spi-slow|MERGING)
+$ git add .
+
+RaselAhmed@DESKTOP-PG8C98O MINGW64 /h/GitLab/Inovace Git/Firmware (9-millis-not-accurate-spi-slow|MERGING)
+$ git commit -m "10-30-2023"
+[9-millis-not-accurate-spi-slow 8c2775c] 10-30-2023
+
+RaselAhmed@DESKTOP-PG8C98O MINGW64 /h/GitLab/Inovace Git/Firmware (9-millis-not-accurate-spi-slow)
+$ git push myorigin main
+Everything up-to-date
+
+RaselAhmed@DESKTOP-PG8C98O MINGW64 /h/GitLab/Inovace Git/Firmware (9-millis-not-accurate-spi-slow)
+$ git checkout 8-relay-switch-no-to-nc
+Switched to branch '8-relay-switch-no-to-nc'
+
+RaselAhmed@DESKTOP-PG8C98O MINGW64 /h/GitLab/Inovace Git/Firmware (8-relay-switch-no-to-nc)
+$ git pull origin 8-relay-swich-no-to-nc
+warning: redirecting to https://gitlab.inovacetech.com/developer/peoples-meter/Firmware.git/
+fatal: couldn't find remote ref 8-relay-swich-no-to-nc
+
+RaselAhmed@DESKTOP-PG8C98O MINGW64 /h/GitLab/Inovace Git/Firmware (8-relay-switch-no-to-nc)
+$ git branch
+  1-memory-leak-idenification-and-resolution
+  2-practice-issue
+  3-miso-not-working-properly-as-a-output
+  4-4-led-blinking-using-pri-binary
+  5-safely-reset
+* 8-relay-switch-no-to-nc
+  9-millis-not-accurate-spi-slow
+  dev
+  main
+  master
+
+RaselAhmed@DESKTOP-PG8C98O MINGW64 /h/GitLab/Inovace Git/Firmware (8-relay-switch-no-to-nc)
+$ git checkout dev
+Switched to branch 'dev'
+Your branch is up to date with 'origin/dev'.
+
+RaselAhmed@DESKTOP-PG8C98O MINGW64 /h/GitLab/Inovace Git/Firmware (dev)
+$ git pull origin dev
+warning: redirecting to https://gitlab.inovacetech.com/developer/peoples-meter/Firmware.git/
+From http://gitlab.inovacetech.com/developer/peoples-meter/Firmware
+ * branch            dev        -> FETCH_HEAD
+   4d47aa8..692f56d  dev        -> origin/dev
+Updating 4d47aa8..692f56d
+Fast-forward
+ .gitignore                                         |     2 +-
+ .vs/ATmega328PB-XMini/v14/.atsuo                   |   Bin 49664 -> 92160 bytes
+ ATmega328PB-XMini.cproj                            |    13 +-
+ Debug/ATmega328PB-XMini.elf                        |   Bin 118072 -> 110712 bytes
+ Debug/ATmega328PB-XMini.hex                        |  3608 ++--
+ Debug/ATmega328PB-XMini.lss                        | 18627 ++++++++++---------
+ Debug/ATmega328PB-XMini.map                        |  1295 +-
+ Debug/ATmega328PB-XMini.srec                       |  3608 ++--
+ Debug/FunStuff.d                                   |    35 +-
+ Debug/FunStuff.o                                   |   Bin 53284 -> 74320 bytes
+ Debug/IR/remote.d                                  |    11 +-
+ Debug/IR/remote.o                                  |   Bin 9152 -> 8796 bytes
+ Debug/Makefile                                     |    36 +-
+ Debug/TF77/ST7735.d                                |     9 +-
+ Debug/TF77/ST7735.o                                |   Bin 85900 -> 63436 bytes
+ Debug/atmel_start.o                                |   Bin 2948 -> 2960 bytes
+ Debug/driver_isr.o                                 |   Bin 4644 -> 4824 bytes
+ Debug/main.d                                       |    10 +-
+ Debug/main.o                                       |   Bin 8460 -> 8216 bytes
+ Debug/makedep.mk                                   |     2 +
+ Debug/qtouch/touch.o                               |   Bin 30828 -> 30204 bytes
+ Debug/src/driver_init.o                            |   Bin 13412 -> 13392 bytes
+ Debug/src/spi_basic.o                              |   Bin 5240 -> 5252 bytes
+ Debug/src/tc8.o                                    |   Bin 2792 -> 2812 bytes
+ Debug/src/usart_basic.d                            |     9 +-
+ Debug/src/usart_basic.o                            |   Bin 7608 -> 3372 bytes
+ FunStuff.c                                         |   644 +-
+ FunStuff.h                                         |    74 +-
+ Global.h                                           |    23 +-
+ IR/remote.c                                        |    47 +-
+ IR/remote.h                                        |    11 +-
+ TF77/ST7735.c                                      |    73 +-
+ TF77/ST7735.h                                      |    20 +-
+ TF77/logo.h                                        |    17 +-
+ debug.log                                          |     0
+ driver_isr.c                                       |    18 +-
+ eeprom/myeeprom.c                                  |    69 +
+ eeprom/myeeprom.h                                  |    21 +
+ include/atmel_start_pins.h                         |     7 +-
+ include/tc8.h                                      |     2 +
+ include/usart_basic.h                              |     3 +-
+ main.c                                             |    41 +-
+ main.h                                             |     4 +-
+ my_delay/my_delay.h                                |   282 +
+ .../optiboot_atmega328pb_8mhz.zip                  |   Bin 0 -> 837 bytes
+ optiboot_atmega328pb_8mhz/readme.txt               |     0
+ production file/ppl_production_19_oct_23_V2.zip    |   Bin 0 -> 12475 bytes
+ src/driver_init.c                                  |     4 +-
+ src/tc8.c                                          |    14 +-
+ src/usart_basic.c                                  |    27 +-
+ 50 files changed, 15130 insertions(+), 13536 deletions(-)
+ create mode 100644 debug.log
+ create mode 100644 eeprom/myeeprom.c
+ create mode 100644 eeprom/myeeprom.h
+ create mode 100644 my_delay/my_delay.h
+ create mode 100644 optiboot_atmega328pb_8mhz/optiboot_atmega328pb_8mhz.zip
+ create mode 100644 optiboot_atmega328pb_8mhz/readme.txt
+Merge made by the 'ort' strategy.
+ .gitignore                                         |    14 +-
+ .vs/ATmega328PB-XMini/v14/.atsuo                   |   Bin 49664 -> 73216 bytes
+ ATmega328PB-XMini.cproj                            |     6 +-
+ Debug/ATmega328PB-XMini.elf                        |   Bin 118072 -> 110476 bytes
+ Debug/ATmega328PB-XMini.hex                        |  3582 ++--
+ Debug/ATmega328PB-XMini.lss                        | 17987 ++++++++++---------
+ Debug/ATmega328PB-XMini.map                        |  1042 +-
+ Debug/ATmega328PB-XMini.srec                       |  3582 ++--
+ Debug/FunStuff.d                                   |    32 +-
+ Debug/FunStuff.o                                   |   Bin 53284 -> 72716 bytes
+ Debug/IR/remote.d                                  |    11 +-
+ Debug/IR/remote.o                                  |   Bin 9152 -> 8792 bytes
+ Debug/Makefile                                     |    23 +-
+ Debug/TF77/ST7735.o                                |   Bin 85900 -> 63508 bytes
+ Debug/atmel_start.o                                |   Bin 2948 -> 2960 bytes
+ Debug/driver_isr.o                                 |   Bin 4644 -> 4652 bytes
+ Debug/main.d                                       |    11 +-
+ Debug/main.o                                       |   Bin 8460 -> 8260 bytes
+ Debug/qtouch/touch.o                               |   Bin 30828 -> 30204 bytes
+ Debug/src/driver_init.o                            |   Bin 13412 -> 13480 bytes
+ Debug/src/spi_basic.o                              |   Bin 5240 -> 5252 bytes
+ Debug/src/tc8.o                                    |   Bin 2792 -> 2812 bytes
+ Debug/src/usart_basic.d                            |     9 +-
+ Debug/src/usart_basic.o                            |   Bin 7608 -> 3372 bytes
+ FunStuff.c                                         |   539 +-
+ FunStuff.h                                         |    74 +-
+ Global.h                                           |    14 +
+ IR/remote.c                                        |    46 +-
+ IR/remote.h                                        |    11 +-
+ Static Library/IrRemote/.vs/IrRemote/v14/.atsuo    |   Bin 0 -> 23552 bytes
+ Static Library/IrRemote/IrRemote.atsln             |    22 +
+ .../IrRemote/.atmelstart/AtmelStart.env_conf       |    77 +
+ .../IrRemote/IrRemote/.atmelstart/AtmelStart.gpdsc |    73 +
+ .../.atmelstart/atmel_start_config.atstart         |    88 +
+ .../IrRemote/IrRemote/Config/RTE_Components.h      |    54 +
+ .../IrRemote/IrRemote/Config/clock_config.h        |    13 +
+ Static Library/IrRemote/IrRemote/Default.xml       |   435 +
+ Static Library/IrRemote/IrRemote/IR/remote.c       |    92 +
+ Static Library/IrRemote/IrRemote/IR/remote.h       |    21 +
+ .../IrRemote/IrRemote/IrRemote.componentinfo.xml   |    86 +
+ Static Library/IrRemote/IrRemote/IrRemote.cproj    |   281 +
+ Static Library/IrRemote/IrRemote/atmel_start.c     |     9 +
+ Static Library/IrRemote/IrRemote/atmel_start.h     |    19 +
+ .../IrRemote/doxygen/generator/DoxygenLayout.xml   |   188 +
+ .../IrRemote/doxygen/generator/doxyfile.doxygen    |  2442 +++
+ .../IrRemote/IrRemote/doxygen/mainpage.dox         |   197 +
+ .../IrRemote/IrRemote/doxygen/system.dox           |    18 +
+ Static Library/IrRemote/IrRemote/driver_isr.c      |    37 +
+ .../IrRemote/IrRemote/include/atmel_start_pins.h   |    13 +
+ .../IrRemote/IrRemote/include/driver_init.h        |    56 +
+ Static Library/IrRemote/IrRemote/include/port.h    |   805 +
+ .../IrRemote/IrRemote/include/protected_io.h       |    83 +
+ Static Library/IrRemote/IrRemote/include/sysctrl.h |   111 +
+ Static Library/IrRemote/IrRemote/include/system.h  |    74 +
+ Static Library/IrRemote/IrRemote/main.c            |    12 +
+ Static Library/IrRemote/IrRemote/src/driver_init.c |    47 +
+ .../IrRemote/IrRemote/src/protected_io.S           |   111 +
+ Static Library/IrRemote/IrRemote/utils/assembler.h |    61 +
+ .../IrRemote/IrRemote/utils/assembler/gas.h        |   127 +
+ .../IrRemote/IrRemote/utils/assembler/iar.h        |   116 +
+ Static Library/IrRemote/IrRemote/utils/atomic.h    |   125 +
+ Static Library/IrRemote/IrRemote/utils/compiler.h  |    85 +
+ .../IrRemote/IrRemote/utils/interrupt_avr8.h       |   111 +
+ Static Library/IrRemote/IrRemote/utils/utils.h     |    73 +
+ .../IrRemote/IrRemote/utils/utils_assert.h         |    84 +
+ Static Library/TFT77/.vs/TFT77/v14/.atsuo          |   Bin 0 -> 37888 bytes
+ Static Library/TFT77/TFT77.atsln                   |    22 +
+ .../TFT77/TFT77/.atmelstart/AtmelStart.env_conf    |    77 +
+ .../TFT77/TFT77/.atmelstart/AtmelStart.gpdsc       |    73 +
+ .../TFT77/.atmelstart/atmel_start_config.atstart   |    88 +
+ Static Library/TFT77/TFT77/Config/RTE_Components.h |    54 +
+ Static Library/TFT77/TFT77/Config/clock_config.h   |    13 +
+ Static Library/TFT77/TFT77/Default.xml             |   435 +
+ Static Library/TFT77/TFT77/TF77/ST7735.c           |   996 +
+ Static Library/TFT77/TFT77/TF77/ST7735.h           |   307 +
+ Static Library/TFT77/TFT77/TF77/logo.h             |    24 +
+ Static Library/TFT77/TFT77/TFT77.componentinfo.xml |    86 +
+ Static Library/TFT77/TFT77/TFT77.cproj             |   290 +
+ Static Library/TFT77/TFT77/atmel_start.c           |     9 +
+ Static Library/TFT77/TFT77/atmel_start.h           |    19 +
+ .../TFT77/doxygen/generator/DoxygenLayout.xml      |   188 +
+ .../TFT77/TFT77/doxygen/generator/doxyfile.doxygen |  2442 +++
+ Static Library/TFT77/TFT77/doxygen/mainpage.dox    |   197 +
+ Static Library/TFT77/TFT77/doxygen/system.dox      |    18 +
+ Static Library/TFT77/TFT77/driver_isr.c            |    37 +
+ .../TFT77/TFT77/include/atmel_start_pins.h         |    13 +
+ Static Library/TFT77/TFT77/include/driver_init.h   |    56 +
+ Static Library/TFT77/TFT77/include/port.h          |   805 +
+ Static Library/TFT77/TFT77/include/protected_io.h  |    83 +
+ Static Library/TFT77/TFT77/include/spi_basic.h     |    81 +
+ Static Library/TFT77/TFT77/include/sysctrl.h       |   111 +
+ Static Library/TFT77/TFT77/include/system.h        |    74 +
+ Static Library/TFT77/TFT77/main.c                  |    13 +
+ Static Library/TFT77/TFT77/src/driver_init.c       |    47 +
+ Static Library/TFT77/TFT77/src/protected_io.S      |   111 +
+ Static Library/TFT77/TFT77/src/spi_basic.c         |   185 +
+ Static Library/TFT77/TFT77/utils/assembler.h       |    61 +
+ Static Library/TFT77/TFT77/utils/assembler/gas.h   |   127 +
+ Static Library/TFT77/TFT77/utils/assembler/iar.h   |   116 +
+ Static Library/TFT77/TFT77/utils/atomic.h          |   125 +
+ Static Library/TFT77/TFT77/utils/compiler.h        |    85 +
+ Static Library/TFT77/TFT77/utils/interrupt_avr8.h  |   111 +
+ Static Library/TFT77/TFT77/utils/utils.h           |    73 +
+ Static Library/TFT77/TFT77/utils/utils_assert.h    |    84 +
+ TF77/ST7735.c                                      |    70 +-
+ TF77/ST7735.h                                      |    20 +-
+ TF77/logo.h                                        |    17 +-
+ delay/delay.h                                      |   302 +
+ driver_isr.c                                       |     4 +-
+ include/atmel_start_pins.h                         |     1 +
+ include/usart_basic.h                              |     3 +-
+ main.c                                             |    28 +-
+ main.h                                             |     3 +-
+ .../optiboot_atmega328pb_8mhz.zip                  |   Bin 0 -> 837 bytes
+ optiboot_atmega328pb_8mhz/readme.txt               |     0
+ production file/ppl_production_19_oct_23_V2.zip    |   Bin 0 -> 12475 bytes
+ rasel_merge.txt                                    |     1 +
+ src/driver_init.c                                  |     3 +-
+ src/tc8.c                                          |    12 +-
+ src/usart_basic.c                                  |    27 +-
+ 120 files changed, 28340 insertions(+), 13116 deletions(-)
+ create mode 100644 Static Library/IrRemote/.vs/IrRemote/v14/.atsuo
+ create mode 100644 Static Library/IrRemote/IrRemote.atsln
+ create mode 100644 Static Library/IrRemote/IrRemote/.atmelstart/AtmelStart.env_conf
+ create mode 100644 Static Library/IrRemote/IrRemote/.atmelstart/AtmelStart.gpdsc
+ create mode 100644 Static Library/IrRemote/IrRemote/.atmelstart/atmel_start_config.atstart
+ create mode 100644 Static Library/IrRemote/IrRemote/Config/RTE_Components.h
+ create mode 100644 Static Library/IrRemote/IrRemote/Config/clock_config.h
+ create mode 100644 Static Library/IrRemote/IrRemote/Default.xml
+ create mode 100644 Static Library/IrRemote/IrRemote/IR/remote.c
+ create mode 100644 Static Library/IrRemote/IrRemote/IR/remote.h
+ create mode 100644 Static Library/IrRemote/IrRemote/IrRemote.componentinfo.xml
+ create mode 100644 Static Library/IrRemote/IrRemote/IrRemote.cproj
+ create mode 100644 Static Library/IrRemote/IrRemote/atmel_start.c
+ create mode 100644 Static Library/IrRemote/IrRemote/atmel_start.h
+ create mode 100644 Static Library/IrRemote/IrRemote/doxygen/generator/DoxygenLayout.xml
+ create mode 100644 Static Library/IrRemote/IrRemote/doxygen/generator/doxyfile.doxygen
+ create mode 100644 Static Library/IrRemote/IrRemote/doxygen/mainpage.dox
+ create mode 100644 Static Library/IrRemote/IrRemote/doxygen/system.dox
+ create mode 100644 Static Library/IrRemote/IrRemote/driver_isr.c
+ create mode 100644 Static Library/IrRemote/IrRemote/include/atmel_start_pins.h
+ create mode 100644 Static Library/IrRemote/IrRemote/include/driver_init.h
+ create mode 100644 Static Library/IrRemote/IrRemote/include/port.h
+ create mode 100644 Static Library/IrRemote/IrRemote/include/protected_io.h
+ create mode 100644 Static Library/IrRemote/IrRemote/include/sysctrl.h
+ create mode 100644 Static Library/IrRemote/IrRemote/include/system.h
+ create mode 100644 Static Library/IrRemote/IrRemote/main.c
+ create mode 100644 Static Library/IrRemote/IrRemote/src/driver_init.c
+ create mode 100644 Static Library/IrRemote/IrRemote/src/protected_io.S
+ create mode 100644 Static Library/IrRemote/IrRemote/utils/assembler.h
+ create mode 100644 Static Library/IrRemote/IrRemote/utils/assembler/gas.h
+ create mode 100644 Static Library/IrRemote/IrRemote/utils/assembler/iar.h
+ create mode 100644 Static Library/IrRemote/IrRemote/utils/atomic.h
+ create mode 100644 Static Library/IrRemote/IrRemote/utils/compiler.h
+ create mode 100644 Static Library/IrRemote/IrRemote/utils/interrupt_avr8.h
+ create mode 100644 Static Library/IrRemote/IrRemote/utils/utils.h
+ create mode 100644 Static Library/IrRemote/IrRemote/utils/utils_assert.h
+ create mode 100644 Static Library/TFT77/.vs/TFT77/v14/.atsuo
+ create mode 100644 Static Library/TFT77/TFT77.atsln
+ create mode 100644 Static Library/TFT77/TFT77/.atmelstart/AtmelStart.env_conf
+ create mode 100644 Static Library/TFT77/TFT77/.atmelstart/AtmelStart.gpdsc
+ create mode 100644 Static Library/TFT77/TFT77/.atmelstart/atmel_start_config.atstart
+ create mode 100644 Static Library/TFT77/TFT77/Config/RTE_Components.h
+ create mode 100644 Static Library/TFT77/TFT77/Config/clock_config.h
+ create mode 100644 Static Library/TFT77/TFT77/Default.xml
+ create mode 100644 Static Library/TFT77/TFT77/TF77/ST7735.c
+ create mode 100644 Static Library/TFT77/TFT77/TF77/ST7735.h
+ create mode 100644 Static Library/TFT77/TFT77/TF77/logo.h
+ create mode 100644 Static Library/TFT77/TFT77/TFT77.componentinfo.xml
+ create mode 100644 Static Library/TFT77/TFT77/TFT77.cproj
+ create mode 100644 Static Library/TFT77/TFT77/atmel_start.c
+ create mode 100644 Static Library/TFT77/TFT77/atmel_start.h
+ create mode 100644 Static Library/TFT77/TFT77/doxygen/generator/DoxygenLayout.xml
+ create mode 100644 Static Library/TFT77/TFT77/doxygen/generator/doxyfile.doxygen
+ create mode 100644 Static Library/TFT77/TFT77/doxygen/mainpage.dox
+ create mode 100644 Static Library/TFT77/TFT77/doxygen/system.dox
+ create mode 100644 Static Library/TFT77/TFT77/driver_isr.c
+ create mode 100644 Static Library/TFT77/TFT77/include/atmel_start_pins.h
+ create mode 100644 Static Library/TFT77/TFT77/include/driver_init.h
+ create mode 100644 Static Library/TFT77/TFT77/include/port.h
+ create mode 100644 Static Library/TFT77/TFT77/include/protected_io.h
+ create mode 100644 Static Library/TFT77/TFT77/include/spi_basic.h
+ create mode 100644 Static Library/TFT77/TFT77/include/sysctrl.h
+ create mode 100644 Static Library/TFT77/TFT77/include/system.h
+ create mode 100644 Static Library/TFT77/TFT77/main.c
+ create mode 100644 Static Library/TFT77/TFT77/src/driver_init.c
+ create mode 100644 Static Library/TFT77/TFT77/src/protected_io.S
+ create mode 100644 Static Library/TFT77/TFT77/src/spi_basic.c
+ create mode 100644 Static Library/TFT77/TFT77/utils/assembler.h
+ create mode 100644 Static Library/TFT77/TFT77/utils/assembler/gas.h
+ create mode 100644 Static Library/TFT77/TFT77/utils/assembler/iar.h
+ create mode 100644 Static Library/TFT77/TFT77/utils/atomic.h
+ create mode 100644 Static Library/TFT77/TFT77/utils/compiler.h
+ create mode 100644 Static Library/TFT77/TFT77/utils/interrupt_avr8.h
+ create mode 100644 Static Library/TFT77/TFT77/utils/utils.h
+ create mode 100644 Static Library/TFT77/TFT77/utils/utils_assert.h
+ create mode 100644 delay/delay.h
+ create mode 100644 optiboot_atmega328pb_8mhz/optiboot_atmega328pb_8mhz.zip
+ create mode 100644 optiboot_atmega328pb_8mhz/readme.txt
+ create mode 100644 production file/ppl_production_19_oct_23_V2.zip
+ create mode 100644 rasel_merge.txt
+
+RaselAhmed@DESKTOP-PG8C98O MINGW64 /h/GitLab/Inovace Git/Firmware (2-practice-issue)
+$ git status
+On branch 2-practice-issue
+Your branch is ahead of 'origin/2-practice-issue' by 2 commits.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+RaselAhmed@DESKTOP-PG8C98O MINGW64 /h/GitLab/Inovace Git/Firmware (2-practice-issue)
+$ git branch
+  1-memory-leak-idenification-and-resolution
+* 2-practice-issue
+  3-miso-not-working-properly-as-a-output
+  4-4-led-blinking-using-pri-binary
+  5-safely-reset
+  8-relay-switch-no-to-nc
+  9-millis-not-accurate-spi-slow
+  dev
+  main
+  master
+
+RaselAhmed@DESKTOP-PG8C98O MINGW64 /h/GitLab/Inovace Git/Firmware (2-practice-issue)
+$ git pull
+warning: redirecting to https://gitlab.inovacetech.com/developer/peoples-meter/Firmware.git/
+remote: Enumerating objects: 26, done.
+remote: Counting objects: 100% (26/26), done.
+remote: Compressing objects: 100% (20/20), done.
+remote: Total 26 (delta 13), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (26/26), 19.55 KiB | 23.00 KiB/s, done.
+From http://gitlab.inovacetech.com/developer/peoples-meter/Firmware
+   0c37cb9..8157c27  1-memory-leak-idenification-and-resolution -> origin/1-memory-leak-idenification-and-resolution
+   f6ab35b..fb2958b  3-miso-not-working-properly-as-a-output -> origin/3-miso-not-working-properly-as-a-output
+ * [new branch]      8-relay-switch-no-to-nc -> origin/8-relay-switch-no-to-nc
+Already up to date.
+
+RaselAhmed@DESKTOP-PG8C98O MINGW64 /h/GitLab/Inovace Git/Firmware (2-practice-issue)
+$ git checkout 9-millis-not-accurate-spi-slow
+Switched to branch '9-millis-not-accurate-spi-slow'
+
+RaselAhmed@DESKTOP-PG8C98O MINGW64 /h/GitLab/Inovace Git/Firmware (9-millis-not-accurate-spi-slow)
+$ git pull origin 9-millis-not-accurate-spi-slow
+warning: redirecting to https://gitlab.inovacetech.com/developer/peoples-meter/Firmware.git/
+From http://gitlab.inovacetech.com/developer/peoples-meter/Firmware
+ * branch            9-millis-not-accurate-spi-slow -> FETCH_HEAD
+Already up to date.
+
+RaselAhmed@DESKTOP-PG8C98O MINGW64 /h/GitLab/Inovace Git/Firmware (9-millis-not-accurate-spi-slow)
+$ git push myorigin 9-millis-not-accurate-spi-slow
+Enumerating objects: 724, done.
+Counting objects: 100% (682/682), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (147/147), done.
+Writing objects: 100% (596/596), 2.75 MiB | 1.00 MiB/s, done.
+Total 596 (delta 399), reused 583 (delta 389), pack-reused 0
+remote: Resolving deltas: 100% (399/399), completed with 49 local objects.
+remote:
+remote: Create a pull request for '9-millis-not-accurate-spi-slow' on GitHub by visiting:
+remote:      https://github.com/360TechKnowledge/Inovace-Backup-2023/pull/new/9-millis-not-accurate-spi-slow
+remote:
+To https://github.com/360TechKnowledge/Inovace-Backup-2023.git
+ * [new branch]      9-millis-not-accurate-spi-slow -> 9-millis-not-accurate-spi-slow
+
+RaselAhmed@DESKTOP-PG8C98O MINGW64 /h/GitLab/Inovace Git/Firmware (9-millis-not-accurate-spi-slow)
+$ ^C
+
+RaselAhmed@DESKTOP-PG8C98O MINGW64 /h/GitLab/Inovace Git/Firmware (9-millis-not-accurate-spi-slow)
+$ git checkout 1-memory-leak-idenification-and-resolution
+Switched to branch '1-memory-leak-idenification-and-resolution'
+Your branch is behind 'origin/1-memory-leak-idenification-and-resolution' by 12 commits, and can be fast-forwarded.
+  (use "git pull" to update your local branch)
+
+RaselAhmed@DESKTOP-PG8C98O MINGW64 /h/GitLab/Inovace Git/Firmware (1-memory-leak-idenification-and-resolution)
+$ git pull origin 1-memory-leak-idenification-and-resolution
+warning: redirecting to https://gitlab.inovacetech.com/developer/peoples-meter/Firmware.git/
+From http://gitlab.inovacetech.com/developer/peoples-meter/Firmware
+ * branch            1-memory-leak-idenification-and-resolution -> FETCH_HEAD
+Updating 0c37cb9..8157c27
+Fast-forward
+ .gitignore                                         |    14 +-
+ .vs/ATmega328PB-XMini/v14/.atsuo                   |   Bin 49664 -> 43520 bytes
+ Debug/ATmega328PB-XMini.elf                        |   Bin 118072 -> 118300 bytes
+ Debug/ATmega328PB-XMini.hex                        |  3206 ++---
+ Debug/ATmega328PB-XMini.lss                        | 13942 ++++++++++---------
+ Debug/ATmega328PB-XMini.map                        |   353 +-
+ Debug/ATmega328PB-XMini.srec                       |  3206 ++---
+ Debug/FunStuff.o                                   |   Bin 53284 -> 53288 bytes
+ FunStuff.c                                         |    24 +-
+ Static Library/IrRemote/.vs/IrRemote/v14/.atsuo    |   Bin 0 -> 23552 bytes
+ Static Library/IrRemote/IrRemote.atsln             |    22 +
+ .../IrRemote/.atmelstart/AtmelStart.env_conf       |    77 +
+ .../IrRemote/IrRemote/.atmelstart/AtmelStart.gpdsc |    73 +
+ .../.atmelstart/atmel_start_config.atstart         |    88 +
+ .../IrRemote/IrRemote/Config/RTE_Components.h      |    54 +
+ .../IrRemote/IrRemote/Config/clock_config.h        |    13 +
+ Static Library/IrRemote/IrRemote/Default.xml       |   435 +
+ Static Library/IrRemote/IrRemote/IR/remote.c       |    92 +
+ Static Library/IrRemote/IrRemote/IR/remote.h       |    21 +
+ .../IrRemote/IrRemote/IrRemote.componentinfo.xml   |    86 +
+ Static Library/IrRemote/IrRemote/IrRemote.cproj    |   281 +
+ Static Library/IrRemote/IrRemote/atmel_start.c     |     9 +
+ Static Library/IrRemote/IrRemote/atmel_start.h     |    19 +
+ .../IrRemote/doxygen/generator/DoxygenLayout.xml   |   188 +
+ .../IrRemote/doxygen/generator/doxyfile.doxygen    |  2442 ++++
+ .../IrRemote/IrRemote/doxygen/mainpage.dox         |   197 +
+ .../IrRemote/IrRemote/doxygen/system.dox           |    18 +
+ Static Library/IrRemote/IrRemote/driver_isr.c      |    37 +
+ .../IrRemote/IrRemote/include/atmel_start_pins.h   |    13 +
+ .../IrRemote/IrRemote/include/driver_init.h        |    56 +
+ Static Library/IrRemote/IrRemote/include/port.h    |   805 ++
+ .../IrRemote/IrRemote/include/protected_io.h       |    83 +
+ Static Library/IrRemote/IrRemote/include/sysctrl.h |   111 +
+ Static Library/IrRemote/IrRemote/include/system.h  |    74 +
+ Static Library/IrRemote/IrRemote/main.c            |    12 +
+ Static Library/IrRemote/IrRemote/src/driver_init.c |    47 +
+ .../IrRemote/IrRemote/src/protected_io.S           |   111 +
+ Static Library/IrRemote/IrRemote/utils/assembler.h |    61 +
+ .../IrRemote/IrRemote/utils/assembler/gas.h        |   127 +
+ .../IrRemote/IrRemote/utils/assembler/iar.h        |   116 +
+ Static Library/IrRemote/IrRemote/utils/atomic.h    |   125 +
+ Static Library/IrRemote/IrRemote/utils/compiler.h  |    85 +
+ .../IrRemote/IrRemote/utils/interrupt_avr8.h       |   111 +
+ Static Library/IrRemote/IrRemote/utils/utils.h     |    73 +
+ .../IrRemote/IrRemote/utils/utils_assert.h         |    84 +
+ Static Library/TFT77/.vs/TFT77/v14/.atsuo          |   Bin 0 -> 37888 bytes
+ Static Library/TFT77/TFT77.atsln                   |    22 +
+ .../TFT77/TFT77/.atmelstart/AtmelStart.env_conf    |    77 +
+ .../TFT77/TFT77/.atmelstart/AtmelStart.gpdsc       |    73 +
+ .../TFT77/.atmelstart/atmel_start_config.atstart   |    88 +
+ Static Library/TFT77/TFT77/Config/RTE_Components.h |    54 +
+ Static Library/TFT77/TFT77/Config/clock_config.h   |    13 +
+ Static Library/TFT77/TFT77/Default.xml             |   435 +
+ Static Library/TFT77/TFT77/TF77/ST7735.c           |   996 ++
+ Static Library/TFT77/TFT77/TF77/ST7735.h           |   307 +
+ Static Library/TFT77/TFT77/TF77/logo.h             |    24 +
+ Static Library/TFT77/TFT77/TFT77.componentinfo.xml |    86 +
+ Static Library/TFT77/TFT77/TFT77.cproj             |   290 +
+ Static Library/TFT77/TFT77/atmel_start.c           |     9 +
+ Static Library/TFT77/TFT77/atmel_start.h           |    19 +
+ .../TFT77/doxygen/generator/DoxygenLayout.xml      |   188 +
+ .../TFT77/TFT77/doxygen/generator/doxyfile.doxygen |  2442 ++++
+ Static Library/TFT77/TFT77/doxygen/mainpage.dox    |   197 +
+ Static Library/TFT77/TFT77/doxygen/system.dox      |    18 +
+ Static Library/TFT77/TFT77/driver_isr.c            |    37 +
+ .../TFT77/TFT77/include/atmel_start_pins.h         |    13 +
+ Static Library/TFT77/TFT77/include/driver_init.h   |    56 +
+ Static Library/TFT77/TFT77/include/port.h          |   805 ++
+ Static Library/TFT77/TFT77/include/protected_io.h  |    83 +
+ Static Library/TFT77/TFT77/include/spi_basic.h     |    81 +
+ Static Library/TFT77/TFT77/include/sysctrl.h       |   111 +
+ Static Library/TFT77/TFT77/include/system.h        |    74 +
+ Static Library/TFT77/TFT77/main.c                  |    13 +
+ Static Library/TFT77/TFT77/src/driver_init.c       |    47 +
+ Static Library/TFT77/TFT77/src/protected_io.S      |   111 +
+ Static Library/TFT77/TFT77/src/spi_basic.c         |   185 +
+ Static Library/TFT77/TFT77/utils/assembler.h       |    61 +
+ Static Library/TFT77/TFT77/utils/assembler/gas.h   |   127 +
+ Static Library/TFT77/TFT77/utils/assembler/iar.h   |   116 +
+ Static Library/TFT77/TFT77/utils/atomic.h          |   125 +
+ Static Library/TFT77/TFT77/utils/compiler.h        |    85 +
+ Static Library/TFT77/TFT77/utils/interrupt_avr8.h  |   111 +
+ Static Library/TFT77/TFT77/utils/utils.h           |    73 +
+ Static Library/TFT77/TFT77/utils/utils_assert.h    |    84 +
+ main.c                                             |     1 -
+ 85 files changed, 24591 insertions(+), 10137 deletions(-)
+ create mode 100644 Static Library/IrRemote/.vs/IrRemote/v14/.atsuo
+ create mode 100644 Static Library/IrRemote/IrRemote.atsln
+ create mode 100644 Static Library/IrRemote/IrRemote/.atmelstart/AtmelStart.env_conf
+ create mode 100644 Static Library/IrRemote/IrRemote/.atmelstart/AtmelStart.gpdsc
+ create mode 100644 Static Library/IrRemote/IrRemote/.atmelstart/atmel_start_config.atstart
+ create mode 100644 Static Library/IrRemote/IrRemote/Config/RTE_Components.h
+ create mode 100644 Static Library/IrRemote/IrRemote/Config/clock_config.h
+ create mode 100644 Static Library/IrRemote/IrRemote/Default.xml
+ create mode 100644 Static Library/IrRemote/IrRemote/IR/remote.c
+ create mode 100644 Static Library/IrRemote/IrRemote/IR/remote.h
+ create mode 100644 Static Library/IrRemote/IrRemote/IrRemote.componentinfo.xml
+ create mode 100644 Static Library/IrRemote/IrRemote/IrRemote.cproj
+ create mode 100644 Static Library/IrRemote/IrRemote/atmel_start.c
+ create mode 100644 Static Library/IrRemote/IrRemote/atmel_start.h
+ create mode 100644 Static Library/IrRemote/IrRemote/doxygen/generator/DoxygenLayout.xml
+ create mode 100644 Static Library/IrRemote/IrRemote/doxygen/generator/doxyfile.doxygen
+ create mode 100644 Static Library/IrRemote/IrRemote/doxygen/mainpage.dox
+ create mode 100644 Static Library/IrRemote/IrRemote/doxygen/system.dox
+ create mode 100644 Static Library/IrRemote/IrRemote/driver_isr.c
+ create mode 100644 Static Library/IrRemote/IrRemote/include/atmel_start_pins.h
+ create mode 100644 Static Library/IrRemote/IrRemote/include/driver_init.h
+ create mode 100644 Static Library/IrRemote/IrRemote/include/port.h
+ create mode 100644 Static Library/IrRemote/IrRemote/include/protected_io.h
+ create mode 100644 Static Library/IrRemote/IrRemote/include/sysctrl.h
+ create mode 100644 Static Library/IrRemote/IrRemote/include/system.h
+ create mode 100644 Static Library/IrRemote/IrRemote/main.c
+ create mode 100644 Static Library/IrRemote/IrRemote/src/driver_init.c
+ create mode 100644 Static Library/IrRemote/IrRemote/src/protected_io.S
+ create mode 100644 Static Library/IrRemote/IrRemote/utils/assembler.h
+ create mode 100644 Static Library/IrRemote/IrRemote/utils/assembler/gas.h
+ create mode 100644 Static Library/IrRemote/IrRemote/utils/assembler/iar.h
+ create mode 100644 Static Library/IrRemote/IrRemote/utils/atomic.h
+ create mode 100644 Static Library/IrRemote/IrRemote/utils/compiler.h
+ create mode 100644 Static Library/IrRemote/IrRemote/utils/interrupt_avr8.h
+ create mode 100644 Static Library/IrRemote/IrRemote/utils/utils.h
+ create mode 100644 Static Library/IrRemote/IrRemote/utils/utils_assert.h
+ create mode 100644 Static Library/TFT77/.vs/TFT77/v14/.atsuo
+ create mode 100644 Static Library/TFT77/TFT77.atsln
+ create mode 100644 Static Library/TFT77/TFT77/.atmelstart/AtmelStart.env_conf
+ create mode 100644 Static Library/TFT77/TFT77/.atmelstart/AtmelStart.gpdsc
+ create mode 100644 Static Library/TFT77/TFT77/.atmelstart/atmel_start_config.atstart
+ create mode 100644 Static Library/TFT77/TFT77/Config/RTE_Components.h
+ create mode 100644 Static Library/TFT77/TFT77/Config/clock_config.h
+ create mode 100644 Static Library/TFT77/TFT77/Default.xml
+ create mode 100644 Static Library/TFT77/TFT77/TF77/ST7735.c
+ create mode 100644 Static Library/TFT77/TFT77/TF77/ST7735.h
+ create mode 100644 Static Library/TFT77/TFT77/TF77/logo.h
+ create mode 100644 Static Library/TFT77/TFT77/TFT77.componentinfo.xml
+ create mode 100644 Static Library/TFT77/TFT77/TFT77.cproj
+ create mode 100644 Static Library/TFT77/TFT77/atmel_start.c
+ create mode 100644 Static Library/TFT77/TFT77/atmel_start.h
+ create mode 100644 Static Library/TFT77/TFT77/doxygen/generator/DoxygenLayout.xml
+ create mode 100644 Static Library/TFT77/TFT77/doxygen/generator/doxyfile.doxygen
+ create mode 100644 Static Library/TFT77/TFT77/doxygen/mainpage.dox
+ create mode 100644 Static Library/TFT77/TFT77/doxygen/system.dox
+ create mode 100644 Static Library/TFT77/TFT77/driver_isr.c
+ create mode 100644 Static Library/TFT77/TFT77/include/atmel_start_pins.h
+ create mode 100644 Static Library/TFT77/TFT77/include/driver_init.h
+ create mode 100644 Static Library/TFT77/TFT77/include/port.h
+ create mode 100644 Static Library/TFT77/TFT77/include/protected_io.h
+ create mode 100644 Static Library/TFT77/TFT77/include/spi_basic.h
+ create mode 100644 Static Library/TFT77/TFT77/include/sysctrl.h
+ create mode 100644 Static Library/TFT77/TFT77/include/system.h
+ create mode 100644 Static Library/TFT77/TFT77/main.c
+ create mode 100644 Static Library/TFT77/TFT77/src/driver_init.c
+ create mode 100644 Static Library/TFT77/TFT77/src/protected_io.S
+ create mode 100644 Static Library/TFT77/TFT77/src/spi_basic.c
+ create mode 100644 Static Library/TFT77/TFT77/utils/assembler.h
+ create mode 100644 Static Library/TFT77/TFT77/utils/assembler/gas.h
+ create mode 100644 Static Library/TFT77/TFT77/utils/assembler/iar.h
+ create mode 100644 Static Library/TFT77/TFT77/utils/atomic.h
+ create mode 100644 Static Library/TFT77/TFT77/utils/compiler.h
+ create mode 100644 Static Library/TFT77/TFT77/utils/interrupt_avr8.h
+ create mode 100644 Static Library/TFT77/TFT77/utils/utils.h
+ create mode 100644 Static Library/TFT77/TFT77/utils/utils_assert.h
+
+RaselAhmed@DESKTOP-PG8C98O MINGW64 /h/GitLab/Inovace Git/Firmware (1-memory-leak-idenification-and-resolution)
+$ git status
+On branch 1-memory-leak-idenification-and-resolution
+Your branch is up to date with 'origin/1-memory-leak-idenification-and-resolution'.
+
+nothing to commit, working tree clean
+
+RaselAhmed@DESKTOP-PG8C98O MINGW64 /h/GitLab/Inovace Git/Firmware (1-memory-leak-idenification-and-resolution)
+$ git push myorigin 1-memory-leak-idenification-and-resolution
+Enumerating objects: 18, done.
+Counting objects: 100% (18/18), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (8/8), 1.84 KiB | 1.84 MiB/s, done.
+Total 8 (delta 4), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (4/4), completed with 3 local objects.
+To https://github.com/360TechKnowledge/Inovace-Backup-2023.git
+   0c37cb9..8157c27  1-memory-leak-idenification-and-resolution -> 1-memory-leak-idenification-and-resolution
+
+RaselAhmed@DESKTOP-PG8C98O MINGW64 /h/GitLab/Inovace Git/Firmware (1-memory-leak-idenification-and-resolution)
+$ git checkout 2-practice-issue
+Switched to branch '2-practice-issue'
+Your branch is ahead of 'origin/2-practice-issue' by 2 commits.
+  (use "git push" to publish your local commits)
+
+RaselAhmed@DESKTOP-PG8C98O MINGW64 /h/GitLab/Inovace Git/Firmware (2-practice-issue)
+$ git pull origin 2-practice-issue
+warning: redirecting to https://gitlab.inovacetech.com/developer/peoples-meter/Firmware.git/
+From http://gitlab.inovacetech.com/developer/peoples-meter/Firmware
+ * branch            2-practice-issue -> FETCH_HEAD
+Already up to date.
+
+RaselAhmed@DESKTOP-PG8C98O MINGW64 /h/GitLab/Inovace Git/Firmware (2-practice-issue)
+$ git push myorigin 2-practice-issue
+Enumerating objects: 26, done.
+Counting objects: 100% (26/26), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (10/10), done.
+Writing objects: 100% (14/14), 1.60 KiB | 821.00 KiB/s, done.
+Total 14 (delta 6), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (6/6), completed with 3 local objects.
+To https://github.com/360TechKnowledge/Inovace-Backup-2023.git
+   0c37cb9..75495b4  2-practice-issue -> 2-practice-issue
+
+RaselAhmed@DESKTOP-PG8C98O MINGW64 /h/GitLab/Inovace Git/Firmware (2-practice-issue)
+$ git checkout 3-miso-not-working-properly-as-a-output
+Switched to branch '3-miso-not-working-properly-as-a-output'
+Your branch is behind 'origin/3-miso-not-working-properly-as-a-output' by 13 commits, and can be fast-forwarded.
+  (use "git pull" to update your local branch)
+
+RaselAhmed@DESKTOP-PG8C98O MINGW64 /h/GitLab/Inovace Git/Firmware (3-miso-not-working-properly-as-a-output)
+$ git pull origin 3-miso-not-working-properly-as-a-output
+warning: redirecting to https://gitlab.inovacetech.com/developer/peoples-meter/Firmware.git/
+From http://gitlab.inovacetech.com/developer/peoples-meter/Firmware
+ * branch            3-miso-not-working-properly-as-a-output -> FETCH_HEAD
+Updating f6ab35b..fb2958b
+Fast-forward
+ .gitignore                                         |    12 +-
+ Debug/ATmega328PB-XMini.elf                        |   Bin 118072 -> 118300 bytes
+ Debug/ATmega328PB-XMini.hex                        |  3206 ++---
+ Debug/ATmega328PB-XMini.lss                        | 13942 ++++++++++---------
+ Debug/ATmega328PB-XMini.map                        |   353 +-
+ Debug/ATmega328PB-XMini.srec                       |  3206 ++---
+ Debug/FunStuff.o                                   |   Bin 53284 -> 53288 bytes
+ FunStuff.c                                         |    24 +-
+ Static Library/IrRemote/.vs/IrRemote/v14/.atsuo    |   Bin 0 -> 23552 bytes
+ Static Library/IrRemote/IrRemote.atsln             |    22 +
+ .../IrRemote/.atmelstart/AtmelStart.env_conf       |    77 +
+ .../IrRemote/IrRemote/.atmelstart/AtmelStart.gpdsc |    73 +
+ .../.atmelstart/atmel_start_config.atstart         |    88 +
+ .../IrRemote/IrRemote/Config/RTE_Components.h      |    54 +
+ .../IrRemote/IrRemote/Config/clock_config.h        |    13 +
+ Static Library/IrRemote/IrRemote/Default.xml       |   435 +
+ Static Library/IrRemote/IrRemote/IR/remote.c       |    92 +
+ Static Library/IrRemote/IrRemote/IR/remote.h       |    21 +
+ .../IrRemote/IrRemote/IrRemote.componentinfo.xml   |    86 +
+ Static Library/IrRemote/IrRemote/IrRemote.cproj    |   281 +
+ Static Library/IrRemote/IrRemote/atmel_start.c     |     9 +
+ Static Library/IrRemote/IrRemote/atmel_start.h     |    19 +
+ .../IrRemote/doxygen/generator/DoxygenLayout.xml   |   188 +
+ .../IrRemote/doxygen/generator/doxyfile.doxygen    |  2442 ++++
+ .../IrRemote/IrRemote/doxygen/mainpage.dox         |   197 +
+ .../IrRemote/IrRemote/doxygen/system.dox           |    18 +
+ Static Library/IrRemote/IrRemote/driver_isr.c      |    37 +
+ .../IrRemote/IrRemote/include/atmel_start_pins.h   |    13 +
+ .../IrRemote/IrRemote/include/driver_init.h        |    56 +
+ Static Library/IrRemote/IrRemote/include/port.h    |   805 ++
+ .../IrRemote/IrRemote/include/protected_io.h       |    83 +
+ Static Library/IrRemote/IrRemote/include/sysctrl.h |   111 +
+ Static Library/IrRemote/IrRemote/include/system.h  |    74 +
+ Static Library/IrRemote/IrRemote/main.c            |    12 +
+ Static Library/IrRemote/IrRemote/src/driver_init.c |    47 +
+ .../IrRemote/IrRemote/src/protected_io.S           |   111 +
+ Static Library/IrRemote/IrRemote/utils/assembler.h |    61 +
+ .../IrRemote/IrRemote/utils/assembler/gas.h        |   127 +
+ .../IrRemote/IrRemote/utils/assembler/iar.h        |   116 +
+ Static Library/IrRemote/IrRemote/utils/atomic.h    |   125 +
+ Static Library/IrRemote/IrRemote/utils/compiler.h  |    85 +
+ .../IrRemote/IrRemote/utils/interrupt_avr8.h       |   111 +
+ Static Library/IrRemote/IrRemote/utils/utils.h     |    73 +
+ .../IrRemote/IrRemote/utils/utils_assert.h         |    84 +
+ Static Library/TFT77/.vs/TFT77/v14/.atsuo          |   Bin 0 -> 37888 bytes
+ Static Library/TFT77/TFT77.atsln                   |    22 +
+ .../TFT77/TFT77/.atmelstart/AtmelStart.env_conf    |    77 +
+ .../TFT77/TFT77/.atmelstart/AtmelStart.gpdsc       |    73 +
+ .../TFT77/.atmelstart/atmel_start_config.atstart   |    88 +
+ Static Library/TFT77/TFT77/Config/RTE_Components.h |    54 +
+ Static Library/TFT77/TFT77/Config/clock_config.h   |    13 +
+ Static Library/TFT77/TFT77/Default.xml             |   435 +
+ Static Library/TFT77/TFT77/TF77/ST7735.c           |   996 ++
+ Static Library/TFT77/TFT77/TF77/ST7735.h           |   307 +
+ Static Library/TFT77/TFT77/TF77/logo.h             |    24 +
+ Static Library/TFT77/TFT77/TFT77.componentinfo.xml |    86 +
+ Static Library/TFT77/TFT77/TFT77.cproj             |   290 +
+ Static Library/TFT77/TFT77/atmel_start.c           |     9 +
+ Static Library/TFT77/TFT77/atmel_start.h           |    19 +
+ .../TFT77/doxygen/generator/DoxygenLayout.xml      |   188 +
+ .../TFT77/TFT77/doxygen/generator/doxyfile.doxygen |  2442 ++++
+ Static Library/TFT77/TFT77/doxygen/mainpage.dox    |   197 +
+ Static Library/TFT77/TFT77/doxygen/system.dox      |    18 +
+ Static Library/TFT77/TFT77/driver_isr.c            |    37 +
+ .../TFT77/TFT77/include/atmel_start_pins.h         |    13 +
+ Static Library/TFT77/TFT77/include/driver_init.h   |    56 +
+ Static Library/TFT77/TFT77/include/port.h          |   805 ++
+ Static Library/TFT77/TFT77/include/protected_io.h  |    83 +
+ Static Library/TFT77/TFT77/include/spi_basic.h     |    81 +
+ Static Library/TFT77/TFT77/include/sysctrl.h       |   111 +
+ Static Library/TFT77/TFT77/include/system.h        |    74 +
+ Static Library/TFT77/TFT77/main.c                  |    13 +
+ Static Library/TFT77/TFT77/src/driver_init.c       |    47 +
+ Static Library/TFT77/TFT77/src/protected_io.S      |   111 +
+ Static Library/TFT77/TFT77/src/spi_basic.c         |   185 +
+ Static Library/TFT77/TFT77/utils/assembler.h       |    61 +
+ Static Library/TFT77/TFT77/utils/assembler/gas.h   |   127 +
+ Static Library/TFT77/TFT77/utils/assembler/iar.h   |   116 +
+ Static Library/TFT77/TFT77/utils/atomic.h          |   125 +
+ Static Library/TFT77/TFT77/utils/compiler.h        |    85 +
+ Static Library/TFT77/TFT77/utils/interrupt_avr8.h  |   111 +
+ Static Library/TFT77/TFT77/utils/utils.h           |    73 +
+ Static Library/TFT77/TFT77/utils/utils_assert.h    |    84 +
+ main.c                                             |     1 -
+ 84 files changed, 24589 insertions(+), 10137 deletions(-)
+ create mode 100644 Static Library/IrRemote/.vs/IrRemote/v14/.atsuo
+ create mode 100644 Static Library/IrRemote/IrRemote.atsln
+ create mode 100644 Static Library/IrRemote/IrRemote/.atmelstart/AtmelStart.env_conf
+ create mode 100644 Static Library/IrRemote/IrRemote/.atmelstart/AtmelStart.gpdsc
+ create mode 100644 Static Library/IrRemote/IrRemote/.atmelstart/atmel_start_config.atstart
+ create mode 100644 Static Library/IrRemote/IrRemote/Config/RTE_Components.h
+ create mode 100644 Static Library/IrRemote/IrRemote/Config/clock_config.h
+ create mode 100644 Static Library/IrRemote/IrRemote/Default.xml
+ create mode 100644 Static Library/IrRemote/IrRemote/IR/remote.c
+ create mode 100644 Static Library/IrRemote/IrRemote/IR/remote.h
+ create mode 100644 Static Library/IrRemote/IrRemote/IrRemote.componentinfo.xml
+ create mode 100644 Static Library/IrRemote/IrRemote/IrRemote.cproj
+ create mode 100644 Static Library/IrRemote/IrRemote/atmel_start.c
+ create mode 100644 Static Library/IrRemote/IrRemote/atmel_start.h
+ create mode 100644 Static Library/IrRemote/IrRemote/doxygen/generator/DoxygenLayout.xml
+ create mode 100644 Static Library/IrRemote/IrRemote/doxygen/generator/doxyfile.doxygen
+ create mode 100644 Static Library/IrRemote/IrRemote/doxygen/mainpage.dox
+ create mode 100644 Static Library/IrRemote/IrRemote/doxygen/system.dox
+ create mode 100644 Static Library/IrRemote/IrRemote/driver_isr.c
+ create mode 100644 Static Library/IrRemote/IrRemote/include/atmel_start_pins.h
+ create mode 100644 Static Library/IrRemote/IrRemote/include/driver_init.h
+ create mode 100644 Static Library/IrRemote/IrRemote/include/port.h
+ create mode 100644 Static Library/IrRemote/IrRemote/include/protected_io.h
+ create mode 100644 Static Library/IrRemote/IrRemote/include/sysctrl.h
+ create mode 100644 Static Library/IrRemote/IrRemote/include/system.h
+ create mode 100644 Static Library/IrRemote/IrRemote/main.c
+ create mode 100644 Static Library/IrRemote/IrRemote/src/driver_init.c
+ create mode 100644 Static Library/IrRemote/IrRemote/src/protected_io.S
+ create mode 100644 Static Library/IrRemote/IrRemote/utils/assembler.h
+ create mode 100644 Static Library/IrRemote/IrRemote/utils/assembler/gas.h
+ create mode 100644 Static Library/IrRemote/IrRemote/utils/assembler/iar.h
+ create mode 100644 Static Library/IrRemote/IrRemote/utils/atomic.h
+ create mode 100644 Static Library/IrRemote/IrRemote/utils/compiler.h
+ create mode 100644 Static Library/IrRemote/IrRemote/utils/interrupt_avr8.h
+ create mode 100644 Static Library/IrRemote/IrRemote/utils/utils.h
+ create mode 100644 Static Library/IrRemote/IrRemote/utils/utils_assert.h
+ create mode 100644 Static Library/TFT77/.vs/TFT77/v14/.atsuo
+ create mode 100644 Static Library/TFT77/TFT77.atsln
+ create mode 100644 Static Library/TFT77/TFT77/.atmelstart/AtmelStart.env_conf
+ create mode 100644 Static Library/TFT77/TFT77/.atmelstart/AtmelStart.gpdsc
+ create mode 100644 Static Library/TFT77/TFT77/.atmelstart/atmel_start_config.atstart
+ create mode 100644 Static Library/TFT77/TFT77/Config/RTE_Components.h
+ create mode 100644 Static Library/TFT77/TFT77/Config/clock_config.h
+ create mode 100644 Static Library/TFT77/TFT77/Default.xml
+ create mode 100644 Static Library/TFT77/TFT77/TF77/ST7735.c
+ create mode 100644 Static Library/TFT77/TFT77/TF77/ST7735.h
+ create mode 100644 Static Library/TFT77/TFT77/TF77/logo.h
+ create mode 100644 Static Library/TFT77/TFT77/TFT77.componentinfo.xml
+ create mode 100644 Static Library/TFT77/TFT77/TFT77.cproj
+ create mode 100644 Static Library/TFT77/TFT77/atmel_start.c
+ create mode 100644 Static Library/TFT77/TFT77/atmel_start.h
+ create mode 100644 Static Library/TFT77/TFT77/doxygen/generator/DoxygenLayout.xml
+ create mode 100644 Static Library/TFT77/TFT77/doxygen/generator/doxyfile.doxygen
+ create mode 100644 Static Library/TFT77/TFT77/doxygen/mainpage.dox
+ create mode 100644 Static Library/TFT77/TFT77/doxygen/system.dox
+ create mode 100644 Static Library/TFT77/TFT77/driver_isr.c
+ create mode 100644 Static Library/TFT77/TFT77/include/atmel_start_pins.h
+ create mode 100644 Static Library/TFT77/TFT77/include/driver_init.h
+ create mode 100644 Static Library/TFT77/TFT77/include/port.h
+ create mode 100644 Static Library/TFT77/TFT77/include/protected_io.h
+ create mode 100644 Static Library/TFT77/TFT77/include/spi_basic.h
+ create mode 100644 Static Library/TFT77/TFT77/include/sysctrl.h
+ create mode 100644 Static Library/TFT77/TFT77/include/system.h
+ create mode 100644 Static Library/TFT77/TFT77/main.c
+ create mode 100644 Static Library/TFT77/TFT77/src/driver_init.c
+ create mode 100644 Static Library/TFT77/TFT77/src/protected_io.S
+ create mode 100644 Static Library/TFT77/TFT77/src/spi_basic.c
+ create mode 100644 Static Library/TFT77/TFT77/utils/assembler.h
+ create mode 100644 Static Library/TFT77/TFT77/utils/assembler/gas.h
+ create mode 100644 Static Library/TFT77/TFT77/utils/assembler/iar.h
+ create mode 100644 Static Library/TFT77/TFT77/utils/atomic.h
+ create mode 100644 Static Library/TFT77/TFT77/utils/compiler.h
+ create mode 100644 Static Library/TFT77/TFT77/utils/interrupt_avr8.h
+ create mode 100644 Static Library/TFT77/TFT77/utils/utils.h
+ create mode 100644 Static Library/TFT77/TFT77/utils/utils_assert.h
+
+RaselAhmed@DESKTOP-PG8C98O MINGW64 /h/GitLab/Inovace Git/Firmware (3-miso-not-working-properly-as-a-output)
+$ git push myorigin 3-miso-not-working-properly-as-a-output
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (2/2), 304 bytes | 304.00 KiB/s, done.
+Total 2 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/360TechKnowledge/Inovace-Backup-2023.git
+   f6ab35b..fb2958b  3-miso-not-working-properly-as-a-output -> 3-miso-not-working-properly-as-a-output
+
+RaselAhmed@DESKTOP-PG8C98O MINGW64 /h/GitLab/Inovace Git/Firmware (3-miso-not-working-properly-as-a-output)
+$ git checkout
+Your branch is up to date with 'origin/3-miso-not-working-properly-as-a-output'.
+
+RaselAhmed@DESKTOP-PG8C98O MINGW64 /h/GitLab/Inovace Git/Firmware (3-miso-not-working-properly-as-a-output)
+$ git checkout 5-safely-reset
+Switched to branch '5-safely-reset'
+Your branch is up to date with 'myorigin/5-safely-reset'.
+
+RaselAhmed@DESKTOP-PG8C98O MINGW64 /h/GitLab/Inovace Git/Firmware (5-safely-reset)
+$ git pull origin 5-safely-reset
+warning: redirecting to https://gitlab.inovacetech.com/developer/peoples-meter/Firmware.git/
+fatal: couldn't find remote ref 5-safely-reset
+
+RaselAhmed@DESKTOP-PG8C98O MINGW64 /h/GitLab/Inovace Git/Firmware (5-safely-reset)
+$ git checkout 8-relay-switch-no-to-nc
+Switched to branch '8-relay-switch-no-to-nc'
+
+RaselAhmed@DESKTOP-PG8C98O MINGW64 /h/GitLab/Inovace Git/Firmware (8-relay-switch-no-to-nc)
+$ git pull origin 8-relay-switch-no-to-nc
+warning: redirecting to https://gitlab.inovacetech.com/developer/peoples-meter/Firmware.git/
+From http://gitlab.inovacetech.com/developer/peoples-meter/Firmware
+ * branch            8-relay-switch-no-to-nc -> FETCH_HEAD
+CONFLICT (modify/delete): .gitignore deleted in HEAD and modified in dc784309de5ee236779f4e7719a3f1036a1bd97f.  Version dc784309de5ee236779f4e7719a3f1036a1bd97f of .gitignore left in tree.
+CONFLICT (modify/delete): .vs/ATmega328PB-XMini/v14/.atsuo deleted in HEAD and modified in dc784309de5ee236779f4e7719a3f1036a1bd97f.  Version dc784309de5ee236779f4e7719a3f1036a1bd97f of .vs/ATmega328PB-XMini/v14/.atsuo left in tree.
+CONFLICT (rename/delete): test led pri-binary/led blinking using pri binary/.vs/led blinking using pri binary/v14/.atsuo renamed to .vs/led blinking using pri binary/v14/.atsuo in HEAD, but deleted in dc784309de5ee236779f4e7719a3f1036a1bd97f.
+CONFLICT (modify/delete): ATmega328PB-XMini.cproj deleted in HEAD and modified in dc784309de5ee236779f4e7719a3f1036a1bd97f.  Version dc784309de5ee236779f4e7719a3f1036a1bd97f of ATmega328PB-XMini.cproj left in tree.
+CONFLICT (modify/delete): Debug/Makefile deleted in HEAD and modified in dc784309de5ee236779f4e7719a3f1036a1bd97f.  Version dc784309de5ee236779f4e7719a3f1036a1bd97f of Debug/Makefile left in tree.
+CONFLICT (modify/delete): Debug/makedep.mk deleted in HEAD and modified in dc784309de5ee236779f4e7719a3f1036a1bd97f.  Version dc784309de5ee236779f4e7719a3f1036a1bd97f of Debug/makedep.mk left in tree.
+CONFLICT (modify/delete): FunStuff.c deleted in HEAD and modified in dc784309de5ee236779f4e7719a3f1036a1bd97f.  Version dc784309de5ee236779f4e7719a3f1036a1bd97f of FunStuff.c left in tree.
+CONFLICT (modify/delete): FunStuff.h deleted in HEAD and modified in dc784309de5ee236779f4e7719a3f1036a1bd97f.  Version dc784309de5ee236779f4e7719a3f1036a1bd97f of FunStuff.h left in tree.
+CONFLICT (modify/delete): Global.h deleted in HEAD and modified in dc784309de5ee236779f4e7719a3f1036a1bd97f.  Version dc784309de5ee236779f4e7719a3f1036a1bd97f of Global.h left in tree.
+CONFLICT (modify/delete): IR/remote.c deleted in HEAD and modified in dc784309de5ee236779f4e7719a3f1036a1bd97f.  Version dc784309de5ee236779f4e7719a3f1036a1bd97f of IR/remote.c left in tree.
+CONFLICT (modify/delete): IR/remote.h deleted in HEAD and modified in dc784309de5ee236779f4e7719a3f1036a1bd97f.  Version dc784309de5ee236779f4e7719a3f1036a1bd97f of IR/remote.h left in tree.
+CONFLICT (rename/delete): test led pri-binary/led blinking using pri binary/led blinking using pri binary/Default.xml renamed to Static Library/IrRemote/IrRemote/Default.xml in dc784309de5ee236779f4e7719a3f1036a1bd97f, but deleted in HEAD.
+CONFLICT (rename/delete): test led pri-binary/led blinking using pri binary/led blinking using pri binary/include/protected_io.h renamed to Static Library/IrRemote/IrRemote/include/protected_io.h in dc784309de5ee236779f4e7719a3f1036a1bd97f, but deleted in HEAD.
+CONFLICT (rename/delete): test led pri-binary/led blinking using pri binary/led blinking using pri binary/src/protected_io.S renamed to Static Library/IrRemote/IrRemote/src/protected_io.S in dc784309de5ee236779f4e7719a3f1036a1bd97f, but deleted in HEAD.
+CONFLICT (modify/delete): TF77/ST7735.c deleted in HEAD and modified in dc784309de5ee236779f4e7719a3f1036a1bd97f.  Version dc784309de5ee236779f4e7719a3f1036a1bd97f of TF77/ST7735.c left in tree.
+CONFLICT (modify/delete): TF77/ST7735.h deleted in HEAD and modified in dc784309de5ee236779f4e7719a3f1036a1bd97f.  Version dc784309de5ee236779f4e7719a3f1036a1bd97f of TF77/ST7735.h left in tree.
+CONFLICT (modify/delete): TF77/logo.h deleted in HEAD and modified in dc784309de5ee236779f4e7719a3f1036a1bd97f.  Version dc784309de5ee236779f4e7719a3f1036a1bd97f of TF77/logo.h left in tree.
+CONFLICT (modify/delete): driver_isr.c deleted in HEAD and modified in dc784309de5ee236779f4e7719a3f1036a1bd97f.  Version dc784309de5ee236779f4e7719a3f1036a1bd97f of driver_isr.c left in tree.
+CONFLICT (modify/delete): include/atmel_start_pins.h deleted in HEAD and modified in dc784309de5ee236779f4e7719a3f1036a1bd97f.  Version dc784309de5ee236779f4e7719a3f1036a1bd97f of include/atmel_start_pins.h left in tree.
+CONFLICT (modify/delete): include/tc8.h deleted in HEAD and modified in dc784309de5ee236779f4e7719a3f1036a1bd97f.  Version dc784309de5ee236779f4e7719a3f1036a1bd97f of include/tc8.h left in tree.
+CONFLICT (modify/delete): include/usart_basic.h deleted in HEAD and modified in dc784309de5ee236779f4e7719a3f1036a1bd97f.  Version dc784309de5ee236779f4e7719a3f1036a1bd97f of include/usart_basic.h left in tree.
+CONFLICT (rename/delete): test led pri-binary/led blinking using pri binary/led/led2.c renamed to led blinking using pri binary/Gpio/led2.c in HEAD, but deleted in dc784309de5ee236779f4e7719a3f1036a1bd97f.
+CONFLICT (rename/delete): test led pri-binary/led blinking using pri binary/led/led2.h renamed to led blinking using pri binary/Gpio/led2.h in HEAD, but deleted in dc784309de5ee236779f4e7719a3f1036a1bd97f.
+CONFLICT (rename/delete): test led pri-binary/led blinking using pri binary/led/blink.h renamed to led/blink.h in HEAD, but deleted in dc784309de5ee236779f4e7719a3f1036a1bd97f.
+CONFLICT (rename/delete): test led pri-binary/led blinking using pri binary/led blinking using pri binary/Gpio/led2.c renamed to led/led2.c in HEAD, but deleted in dc784309de5ee236779f4e7719a3f1036a1bd97f.
+CONFLICT (rename/delete): test led pri-binary/led blinking using pri binary/led blinking using pri binary/Gpio/led2.h renamed to led/led2.h in HEAD, but deleted in dc784309de5ee236779f4e7719a3f1036a1bd97f.
+CONFLICT (rename/delete): test led pri-binary/led blinking using pri binary/led/libLED.a renamed to led/libLED.a in HEAD, but deleted in dc784309de5ee236779f4e7719a3f1036a1bd97f.
+CONFLICT (rename/delete): test led pri-binary/led blinking using pri binary/led/libLED2.a renamed to led/libLED2.a in HEAD, but deleted in dc784309de5ee236779f4e7719a3f1036a1bd97f.
+CONFLICT (modify/delete): main.c deleted in HEAD and modified in dc784309de5ee236779f4e7719a3f1036a1bd97f.  Version dc784309de5ee236779f4e7719a3f1036a1bd97f of main.c left in tree.
+CONFLICT (modify/delete): main.h deleted in HEAD and modified in dc784309de5ee236779f4e7719a3f1036a1bd97f.  Version dc784309de5ee236779f4e7719a3f1036a1bd97f of main.h left in tree.
+CONFLICT (modify/delete): src/driver_init.c deleted in HEAD and modified in dc784309de5ee236779f4e7719a3f1036a1bd97f.  Version dc784309de5ee236779f4e7719a3f1036a1bd97f of src/driver_init.c left in tree.
+CONFLICT (modify/delete): src/spi_basic.c deleted in HEAD and modified in dc784309de5ee236779f4e7719a3f1036a1bd97f.  Version dc784309de5ee236779f4e7719a3f1036a1bd97f of src/spi_basic.c left in tree.
+CONFLICT (modify/delete): src/tc8.c deleted in HEAD and modified in dc784309de5ee236779f4e7719a3f1036a1bd97f.  Version dc784309de5ee236779f4e7719a3f1036a1bd97f of src/tc8.c left in tree.
+CONFLICT (modify/delete): src/usart_basic.c deleted in HEAD and modified in dc784309de5ee236779f4e7719a3f1036a1bd97f.  Version dc784309de5ee236779f4e7719a3f1036a1bd97f of src/usart_basic.c left in tree.
+CONFLICT (rename/rename): test led pri-binary/led blinking using pri binary/led blinking using pri binary.atsln renamed to led blinking using pri binary.atsln in HEAD and to Static Library/TFT77/TFT77.atsln in dc784309de5ee236779f4e7719a3f1036a1bd97f.
+CONFLICT (rename/rename): test led pri-binary/led blinking using pri binary/led blinking using pri binary/.atmelstart/AtmelStart.env_conf renamed to led blinking using pri binary/.atmelstart/AtmelStart.env_conf in HEAD and to Static Library/IrRemote/IrRemote/.atmelstart/AtmelStart.env_conf in dc784309de5ee236779f4e7719a3f1036a1bd97f.
+CONFLICT (rename/rename): test led pri-binary/led blinking using pri binary/led blinking using pri binary/.atmelstart/AtmelStart.gpdsc renamed to led blinking using pri binary/.atmelstart/AtmelStart.gpdsc in HEAD and to Static Library/IrRemote/IrRemote/.atmelstart/AtmelStart.gpdsc in dc784309de5ee236779f4e7719a3f1036a1bd97f.
+CONFLICT (rename/rename): test led pri-binary/led blinking using pri binary/led blinking using pri binary/.atmelstart/atmel_start_config.atstart renamed to led blinking using pri binary/.atmelstart/atmel_start_config.atstart in HEAD and to Static Library/IrRemote/IrRemote/.atmelstart/atmel_start_config.atstart in dc784309de5ee236779f4e7719a3f1036a1bd97f.
+CONFLICT (rename/rename): test led pri-binary/led blinking using pri binary/led blinking using pri binary/Config/RTE_Components.h renamed to led blinking using pri binary/Config/RTE_Components.h in HEAD and to Static Library/IrRemote/IrRemote/Config/RTE_Components.h in dc784309de5ee236779f4e7719a3f1036a1bd97f.
+CONFLICT (rename/rename): test led pri-binary/led blinking using pri binary/led blinking using pri binary/Config/clock_config.h renamed to led blinking using pri binary/Config/clock_config.h in HEAD and to Static Library/IrRemote/IrRemote/Config/clock_config.h in dc784309de5ee236779f4e7719a3f1036a1bd97f.
+CONFLICT (rename/rename): test led pri-binary/led blinking using pri binary/led blinking using pri binary/atmel_start.c renamed to led blinking using pri binary/atmel_start.c in HEAD and to Static Library/IrRemote/IrRemote/atmel_start.c in dc784309de5ee236779f4e7719a3f1036a1bd97f.
+CONFLICT (rename/rename): test led pri-binary/led blinking using pri binary/led blinking using pri binary/atmel_start.h renamed to led blinking using pri binary/atmel_start.h in HEAD and to Static Library/IrRemote/IrRemote/atmel_start.h in dc784309de5ee236779f4e7719a3f1036a1bd97f.
+CONFLICT (rename/rename): test led pri-binary/led blinking using pri binary/led blinking using pri binary/doxygen/generator/DoxygenLayout.xml renamed to led blinking using pri binary/doxygen/generator/DoxygenLayout.xml in HEAD and to Static Library/IrRemote/IrRemote/doxygen/generator/DoxygenLayout.xml in dc784309de5ee236779f4e7719a3f1036a1bd97f.
+CONFLICT (rename/rename): test led pri-binary/led blinking using pri binary/led blinking using pri binary/doxygen/generator/doxyfile.doxygen renamed to led blinking using pri binary/doxygen/generator/doxyfile.doxygen in HEAD and to Static Library/IrRemote/IrRemote/doxygen/generator/doxyfile.doxygen in dc784309de5ee236779f4e7719a3f1036a1bd97f.
+CONFLICT (rename/rename): test led pri-binary/led blinking using pri binary/led blinking using pri binary/doxygen/mainpage.dox renamed to led blinking using pri binary/doxygen/mainpage.dox in HEAD and to Static Library/IrRemote/IrRemote/doxygen/mainpage.dox in dc784309de5ee236779f4e7719a3f1036a1bd97f.
+CONFLICT (rename/rename): test led pri-binary/led blinking using pri binary/led blinking using pri binary/doxygen/system.dox renamed to led blinking using pri binary/doxygen/system.dox in HEAD and to Static Library/IrRemote/IrRemote/doxygen/system.dox in dc784309de5ee236779f4e7719a3f1036a1bd97f.
+CONFLICT (rename/rename): test led pri-binary/led blinking using pri binary/led blinking using pri binary/driver_isr.c renamed to led blinking using pri binary/driver_isr.c in HEAD and to Static Library/IrRemote/IrRemote/driver_isr.c in dc784309de5ee236779f4e7719a3f1036a1bd97f.
+CONFLICT (rename/rename): test led pri-binary/led blinking using pri binary/led blinking using pri binary/include/atmel_start_pins.h renamed to led blinking using pri binary/include/atmel_start_pins.h in HEAD and to Static Library/IrRemote/IrRemote/include/atmel_start_pins.h in dc784309de5ee236779f4e7719a3f1036a1bd97f.
+CONFLICT (rename/rename): test led pri-binary/led blinking using pri binary/led blinking using pri binary/include/driver_init.h renamed to led blinking using pri binary/include/driver_init.h in HEAD and to Static Library/IrRemote/IrRemote/include/driver_init.h in dc784309de5ee236779f4e7719a3f1036a1bd97f.
+CONFLICT (rename/rename): test led pri-binary/led blinking using pri binary/led blinking using pri binary/include/port.h renamed to led blinking using pri binary/include/port.h in HEAD and to Static Library/IrRemote/IrRemote/include/port.h in dc784309de5ee236779f4e7719a3f1036a1bd97f.
+CONFLICT (rename/rename): test led pri-binary/led blinking using pri binary/led blinking using pri binary/include/sysctrl.h renamed to led blinking using pri binary/include/sysctrl.h in HEAD and to Static Library/IrRemote/IrRemote/include/sysctrl.h in dc784309de5ee236779f4e7719a3f1036a1bd97f.
+CONFLICT (rename/rename): test led pri-binary/led blinking using pri binary/led blinking using pri binary/include/system.h renamed to led blinking using pri binary/include/system.h in HEAD and to Static Library/IrRemote/IrRemote/include/system.h in dc784309de5ee236779f4e7719a3f1036a1bd97f.
+CONFLICT (rename/rename): test led pri-binary/led blinking using pri binary/led blinking using pri binary/led blinking using pri binary.componentinfo.xml renamed to led blinking using pri binary/led blinking using pri binary.componentinfo.xml in HEAD and to Static Library/IrRemote/IrRemote/IrRemote.componentinfo.xml in dc784309de5ee236779f4e7719a3f1036a1bd97f.
+CONFLICT (rename/rename): test led pri-binary/led blinking using pri binary/led blinking using pri binary/led blinking using pri binary.cproj renamed to led blinking using pri binary/led blinking using pri binary.cproj in HEAD and to Static Library/IrRemote/IrRemote/IrRemote.cproj in dc784309de5ee236779f4e7719a3f1036a1bd97f.
+CONFLICT (rename/rename): test led pri-binary/led blinking using pri binary/led blinking using pri binary/main.c renamed to led blinking using pri binary/main.c in HEAD and to Static Library/IrRemote/IrRemote/main.c in dc784309de5ee236779f4e7719a3f1036a1bd97f.
+CONFLICT (rename/rename): test led pri-binary/led blinking using pri binary/led blinking using pri binary/src/driver_init.c renamed to led blinking using pri binary/src/driver_init.c in HEAD and to Static Library/IrRemote/IrRemote/src/driver_init.c in dc784309de5ee236779f4e7719a3f1036a1bd97f.
+CONFLICT (rename/rename): test led pri-binary/led blinking using pri binary/led blinking using pri binary/utils/assembler.h renamed to led blinking using pri binary/utils/assembler.h in HEAD and to Static Library/IrRemote/IrRemote/utils/assembler.h in dc784309de5ee236779f4e7719a3f1036a1bd97f.
+CONFLICT (rename/rename): test led pri-binary/led blinking using pri binary/led blinking using pri binary/utils/assembler/gas.h renamed to led blinking using pri binary/utils/assembler/gas.h in HEAD and to Static Library/IrRemote/IrRemote/utils/assembler/gas.h in dc784309de5ee236779f4e7719a3f1036a1bd97f.
+CONFLICT (rename/rename): test led pri-binary/led blinking using pri binary/led blinking using pri binary/utils/assembler/iar.h renamed to led blinking using pri binary/utils/assembler/iar.h in HEAD and to Static Library/IrRemote/IrRemote/utils/assembler/iar.h in dc784309de5ee236779f4e7719a3f1036a1bd97f.
+CONFLICT (rename/rename): test led pri-binary/led blinking using pri binary/led blinking using pri binary/utils/atomic.h renamed to led blinking using pri binary/utils/atomic.h in HEAD and to Static Library/IrRemote/IrRemote/utils/atomic.h in dc784309de5ee236779f4e7719a3f1036a1bd97f.
+CONFLICT (rename/rename): test led pri-binary/led blinking using pri binary/led blinking using pri binary/utils/compiler.h renamed to led blinking using pri binary/utils/compiler.h in HEAD and to Static Library/IrRemote/IrRemote/utils/compiler.h in dc784309de5ee236779f4e7719a3f1036a1bd97f.
+CONFLICT (rename/rename): test led pri-binary/led blinking using pri binary/led blinking using pri binary/utils/interrupt_avr8.h renamed to led blinking using pri binary/utils/interrupt_avr8.h in HEAD and to Static Library/IrRemote/IrRemote/utils/interrupt_avr8.h in dc784309de5ee236779f4e7719a3f1036a1bd97f.
+CONFLICT (rename/rename): test led pri-binary/led blinking using pri binary/led blinking using pri binary/utils/utils.h renamed to led blinking using pri binary/utils/utils.h in HEAD and to Static Library/IrRemote/IrRemote/utils/utils.h in dc784309de5ee236779f4e7719a3f1036a1bd97f.
+CONFLICT (rename/rename): test led pri-binary/led blinking using pri binary/led blinking using pri binary/utils/utils_assert.h renamed to led blinking using pri binary/utils/utils_assert.h in HEAD and to Static Library/IrRemote/IrRemote/utils/utils_assert.h in dc784309de5ee236779f4e7719a3f1036a1bd97f.
+Automatic merge failed; fix conflicts and then commit the result.
+
+RaselAhmed@DESKTOP-PG8C98O MINGW64 /h/GitLab/Inovace Git/Firmware (8-relay-switch-no-to-nc|MERGING)
+$ git push myorigin 8-relay-switch-no-to-nc
+Total 0 (delta 0), reused 0 (delta 0), pack-reused 0
+remote:
+remote: Create a pull request for '8-relay-switch-no-to-nc' on GitHub by visiting:
+remote:      https://github.com/360TechKnowledge/Inovace-Backup-2023/pull/new/8-relay-switch-no-to-nc
+remote:
+To https://github.com/360TechKnowledge/Inovace-Backup-2023.git
+ * [new branch]      8-relay-switch-no-to-nc -> 8-relay-switch-no-to-nc
+
+RaselAhmed@DESKTOP-PG8C98O MINGW64 /h/GitLab/Inovace Git/Firmware (8-relay-switch-no-to-nc|MERGING)
+$ git checkout 9-millis-not-accurate-spi-slow
+.gitignore: needs merge
+.vs/ATmega328PB-XMini/v14/.atsuo: needs merge
+.vs/led blinking using pri binary/v14/.atsuo: needs merge
+ATmega328PB-XMini.cproj: needs merge
+Debug/Makefile: needs merge
+Debug/makedep.mk: needs merge
+FunStuff.c: needs merge
+FunStuff.h: needs merge
+Global.h: needs merge
+IR/remote.c: needs merge
+IR/remote.h: needs merge
+Static Library/IrRemote/IrRemote/.atmelstart/AtmelStart.env_conf: needs merge
+Static Library/IrRemote/IrRemote/.atmelstart/AtmelStart.gpdsc: needs merge
+Static Library/IrRemote/IrRemote/.atmelstart/atmel_start_config.atstart: needs merge
+Static Library/IrRemote/IrRemote/Config/RTE_Components.h: needs merge
+Static Library/IrRemote/IrRemote/Config/clock_config.h: needs merge
+Static Library/IrRemote/IrRemote/Default.xml: needs merge
+Static Library/IrRemote/IrRemote/IrRemote.componentinfo.xml: needs merge
+Static Library/IrRemote/IrRemote/IrRemote.cproj: needs merge
+Static Library/IrRemote/IrRemote/atmel_start.c: needs merge
+Static Library/IrRemote/IrRemote/atmel_start.h: needs merge
+Static Library/IrRemote/IrRemote/doxygen/generator/DoxygenLayout.xml: needs merge
+Static Library/IrRemote/IrRemote/doxygen/generator/doxyfile.doxygen: needs merge
+Static Library/IrRemote/IrRemote/doxygen/mainpage.dox: needs merge
+Static Library/IrRemote/IrRemote/doxygen/system.dox: needs merge
+Static Library/IrRemote/IrRemote/driver_isr.c: needs merge
+Static Library/IrRemote/IrRemote/include/atmel_start_pins.h: needs merge
+Static Library/IrRemote/IrRemote/include/driver_init.h: needs merge
+Static Library/IrRemote/IrRemote/include/port.h: needs merge
+Static Library/IrRemote/IrRemote/include/protected_io.h: needs merge
+Static Library/IrRemote/IrRemote/include/sysctrl.h: needs merge
+Static Library/IrRemote/IrRemote/include/system.h: needs merge
+Static Library/IrRemote/IrRemote/main.c: needs merge
+Static Library/IrRemote/IrRemote/src/driver_init.c: needs merge
+Static Library/IrRemote/IrRemote/src/protected_io.S: needs merge
+Static Library/IrRemote/IrRemote/utils/assembler.h: needs merge
+Static Library/IrRemote/IrRemote/utils/assembler/gas.h: needs merge
+Static Library/IrRemote/IrRemote/utils/assembler/iar.h: needs merge
+Static Library/IrRemote/IrRemote/utils/atomic.h: needs merge
+Static Library/IrRemote/IrRemote/utils/compiler.h: needs merge
+Static Library/IrRemote/IrRemote/utils/interrupt_avr8.h: needs merge
+Static Library/IrRemote/IrRemote/utils/utils.h: needs merge
+Static Library/IrRemote/IrRemote/utils/utils_assert.h: needs merge
+Static Library/TFT77/TFT77.atsln: needs merge
+TF77/ST7735.c: needs merge
+TF77/ST7735.h: needs merge
+TF77/logo.h: needs merge
+driver_isr.c: needs merge
+include/atmel_start_pins.h: needs merge
+include/tc8.h: needs merge
+include/usart_basic.h: needs merge
+led blinking using pri binary.atsln: needs merge
+led blinking using pri binary/.atmelstart/AtmelStart.env_conf: needs merge
+led blinking using pri binary/.atmelstart/AtmelStart.gpdsc: needs merge
+led blinking using pri binary/.atmelstart/atmel_start_config.atstart: needs merge
+led blinking using pri binary/Config/RTE_Components.h: needs merge
+led blinking using pri binary/Config/clock_config.h: needs merge
+led blinking using pri binary/Gpio/led2.c: needs merge
+led blinking using pri binary/Gpio/led2.h: needs merge
+led blinking using pri binary/atmel_start.c: needs merge
+led blinking using pri binary/atmel_start.h: needs merge
+led blinking using pri binary/doxygen/generator/DoxygenLayout.xml: needs merge
+led blinking using pri binary/doxygen/generator/doxyfile.doxygen: needs merge
+led blinking using pri binary/doxygen/mainpage.dox: needs merge
+led blinking using pri binary/doxygen/system.dox: needs merge
+led blinking using pri binary/driver_isr.c: needs merge
+led blinking using pri binary/include/atmel_start_pins.h: needs merge
+led blinking using pri binary/include/driver_init.h: needs merge
+led blinking using pri binary/include/port.h: needs merge
+led blinking using pri binary/include/sysctrl.h: needs merge
+led blinking using pri binary/include/system.h: needs merge
+led blinking using pri binary/led blinking using pri binary.componentinfo.xml: needs merge
+led blinking using pri binary/led blinking using pri binary.cproj: needs merge
+led blinking using pri binary/main.c: needs merge
+led blinking using pri binary/src/driver_init.c: needs merge
+led blinking using pri binary/utils/assembler.h: needs merge
+led blinking using pri binary/utils/assembler/gas.h: needs merge
+led blinking using pri binary/utils/assembler/iar.h: needs merge
+led blinking using pri binary/utils/atomic.h: needs merge
+led blinking using pri binary/utils/compiler.h: needs merge
+led blinking using pri binary/utils/interrupt_avr8.h: needs merge
+led blinking using pri binary/utils/utils.h: needs merge
+led blinking using pri binary/utils/utils_assert.h: needs merge
+led/blink.h: needs merge
+led/led2.c: needs merge
+led/led2.h: needs merge
+led/libLED.a: needs merge
+led/libLED2.a: needs merge
+main.c: needs merge
+main.h: needs merge
+src/driver_init.c: needs merge
+src/spi_basic.c: needs merge
+src/tc8.c: needs merge
+src/usart_basic.c: needs merge
+test led pri-binary/led blinking using pri binary/led blinking using pri binary.atsln: needs merge
+test led pri-binary/led blinking using pri binary/led blinking using pri binary/.atmelstart/AtmelStart.env_conf: needs merge
+test led pri-binary/led blinking using pri binary/led blinking using pri binary/.atmelstart/AtmelStart.gpdsc: needs merge
+test led pri-binary/led blinking using pri binary/led blinking using pri binary/.atmelstart/atmel_start_config.atstart: needs merge
+test led pri-binary/led blinking using pri binary/led blinking using pri binary/Config/RTE_Components.h: needs merge
+test led pri-binary/led blinking using pri binary/led blinking using pri binary/Config/clock_config.h: needs merge
+test led pri-binary/led blinking using pri binary/led blinking using pri binary/atmel_start.c: needs merge
+test led pri-binary/led blinking using pri binary/led blinking using pri binary/atmel_start.h: needs merge
+test led pri-binary/led blinking using pri binary/led blinking using pri binary/doxygen/generator/DoxygenLayout.xml: needs merge
+test led pri-binary/led blinking using pri binary/led blinking using pri binary/doxygen/generator/doxyfile.doxygen: needs merge
+test led pri-binary/led blinking using pri binary/led blinking using pri binary/doxygen/mainpage.dox: needs merge
+test led pri-binary/led blinking using pri binary/led blinking using pri binary/doxygen/system.dox: needs merge
+test led pri-binary/led blinking using pri binary/led blinking using pri binary/driver_isr.c: needs merge
+test led pri-binary/led blinking using pri binary/led blinking using pri binary/include/atmel_start_pins.h: needs merge
+test led pri-binary/led blinking using pri binary/led blinking using pri binary/include/driver_init.h: needs merge
+test led pri-binary/led blinking using pri binary/led blinking using pri binary/include/port.h: needs merge
+test led pri-binary/led blinking using pri binary/led blinking using pri binary/include/sysctrl.h: needs merge
+test led pri-binary/led blinking using pri binary/led blinking using pri binary/include/system.h: needs merge
+test led pri-binary/led blinking using pri binary/led blinking using pri binary/led blinking using pri binary.componentinfo.xml: needs merge
+test led pri-binary/led blinking using pri binary/led blinking using pri binary/led blinking using pri binary.cproj: needs merge
+test led pri-binary/led blinking using pri binary/led blinking using pri binary/main.c: needs merge
+test led pri-binary/led blinking using pri binary/led blinking using pri binary/src/driver_init.c: needs merge
+test led pri-binary/led blinking using pri binary/led blinking using pri binary/utils/assembler.h: needs merge
+test led pri-binary/led blinking using pri binary/led blinking using pri binary/utils/assembler/gas.h: needs merge
+test led pri-binary/led blinking using pri binary/led blinking using pri binary/utils/assembler/iar.h: needs merge
+test led pri-binary/led blinking using pri binary/led blinking using pri binary/utils/atomic.h: needs merge
+test led pri-binary/led blinking using pri binary/led blinking using pri binary/utils/compiler.h: needserror: you need to resolve your current index first
+ merge
+test led pri-binary/led blinking using pri binary/led blinking using pri binary/utils/interrupt_avr8.h: needs merge
+test led pri-binary/led blinking using pri binary/led blinking using pri binary/utils/utils.h: needs merge
+test led pri-binary/led blinking using pri binary/led blinking using pri binary/utils/utils_assert.h: needs merge
+
+RaselAhmed@DESKTOP-PG8C98O MINGW64 /h/GitLab/Inovace Git/Firmware (8-relay-switch-no-to-nc|MERGING)
+$ git branch
+  1-memory-leak-idenification-and-resolution
+  2-practice-issue
+  3-miso-not-working-properly-as-a-output
+  4-4-led-blinking-using-pri-binary
+  5-safely-reset
+* 8-relay-switch-no-to-nc
+  9-millis-not-accurate-spi-slow
+  dev
+  main
+  master
+
+RaselAhmed@DESKTOP-PG8C98O MINGW64 /h/GitLab/Inovace Git/Firmware (8-relay-switch-no-to-nc|MERGING)
+$ git status
+On branch 8-relay-switch-no-to-nc
+You have unmerged paths.
+  (fix conflicts and run "git commit")
+  (use "git merge --abort" to abort the merge)
+
+Changes to be committed:
+        new file:   Static Library/IrRemote/.vs/IrRemote/v14/.atsuo
+        new file:   Static Library/IrRemote/IrRemote.atsln
+        new file:   Static Library/IrRemote/IrRemote/IR/remote.c
+        new file:   Static Library/IrRemote/IrRemote/IR/remote.h
+        new file:   Static Library/TFT77/.vs/TFT77/v14/.atsuo
+        new file:   Static Library/TFT77/TFT77/.atmelstart/AtmelStart.env_conf
+        new file:   Static Library/TFT77/TFT77/.atmelstart/AtmelStart.gpdsc
+        new file:   Static Library/TFT77/TFT77/.atmelstart/atmel_start_config.atstart
+        new file:   Static Library/TFT77/TFT77/Config/RTE_Components.h
+        new file:   Static Library/TFT77/TFT77/Config/clock_config.h
+        new file:   Static Library/TFT77/TFT77/Default.xml
+        new file:   Static Library/TFT77/TFT77/TF77/ST7735.c
+        new file:   Static Library/TFT77/TFT77/TF77/ST7735.h
+        new file:   Static Library/TFT77/TFT77/TF77/logo.h
+        new file:   Static Library/TFT77/TFT77/TFT77.componentinfo.xml
+        new file:   Static Library/TFT77/TFT77/TFT77.cproj
+        new file:   Static Library/TFT77/TFT77/atmel_start.c
+        new file:   Static Library/TFT77/TFT77/atmel_start.h
+        new file:   Static Library/TFT77/TFT77/doxygen/generator/DoxygenLayout.xml
+        new file:   Static Library/TFT77/TFT77/doxygen/generator/doxyfile.doxygen
+        new file:   Static Library/TFT77/TFT77/doxygen/mainpage.dox
+        new file:   Static Library/TFT77/TFT77/doxygen/system.dox
+        new file:   Static Library/TFT77/TFT77/driver_isr.c
+        new file:   Static Library/TFT77/TFT77/include/atmel_start_pins.h
+        new file:   Static Library/TFT77/TFT77/include/driver_init.h
+        new file:   Static Library/TFT77/TFT77/include/port.h
+        new file:   Static Library/TFT77/TFT77/include/protected_io.h
+        new file:   Static Library/TFT77/TFT77/include/spi_basic.h
+        new file:   Static Library/TFT77/TFT77/include/sysctrl.h
+        new file:   Static Library/TFT77/TFT77/include/system.h
+        new file:   Static Library/TFT77/TFT77/main.c
+        new file:   Static Library/TFT77/TFT77/src/driver_init.c
+        new file:   Static Library/TFT77/TFT77/src/protected_io.S
+        new file:   Static Library/TFT77/TFT77/src/spi_basic.c
+        new file:   Static Library/TFT77/TFT77/utils/assembler.h
+        new file:   Static Library/TFT77/TFT77/utils/assembler/gas.h
+        new file:   Static Library/TFT77/TFT77/utils/assembler/iar.h
+        new file:   Static Library/TFT77/TFT77/utils/atomic.h
+        new file:   Static Library/TFT77/TFT77/utils/compiler.h
+        new file:   Static Library/TFT77/TFT77/utils/interrupt_avr8.h
+        new file:   Static Library/TFT77/TFT77/utils/utils.h
+        new file:   Static Library/TFT77/TFT77/utils/utils_assert.h
+        new file:   debug.log
+        new file:   eeprom/myeeprom.c
+        new file:   eeprom/myeeprom.h
+        new file:   my_delay/my_delay.h
+        new file:   optiboot_atmega328pb_8mhz/optiboot_atmega328pb_8mhz.zip
+        new file:   optiboot_atmega328pb_8mhz/readme.txt
+        new file:   production file/ppl_production_19_oct_23_V2.zip
+
+Unmerged paths:
+  (use "git add/rm <file>..." as appropriate to mark resolution)
+        deleted by us:   .gitignore
+        deleted by us:   .vs/ATmega328PB-XMini/v14/.atsuo
+        deleted by them: .vs/led blinking using pri binary/v14/.atsuo
+        deleted by us:   ATmega328PB-XMini.cproj
+        deleted by us:   Debug/Makefile
+        deleted by us:   Debug/makedep.mk
+        deleted by us:   FunStuff.c
+        deleted by us:   FunStuff.h
+        deleted by us:   Global.h
+        deleted by us:   IR/remote.c
+        deleted by us:   IR/remote.h
+        added by them:   Static Library/IrRemote/IrRemote/.atmelstart/AtmelStart.env_conf
+        added by them:   Static Library/IrRemote/IrRemote/.atmelstart/AtmelStart.gpdsc
+        added by them:   Static Library/IrRemote/IrRemote/.atmelstart/atmel_start_config.atstart
+        added by them:   Static Library/IrRemote/IrRemote/Config/RTE_Components.h
+        added by them:   Static Library/IrRemote/IrRemote/Config/clock_config.h
+        deleted by us:   Static Library/IrRemote/IrRemote/Default.xml
+        added by them:   Static Library/IrRemote/IrRemote/IrRemote.componentinfo.xml
+        added by them:   Static Library/IrRemote/IrRemote/IrRemote.cproj
+        added by them:   Static Library/IrRemote/IrRemote/atmel_start.c
+        added by them:   Static Library/IrRemote/IrRemote/atmel_start.h
+        added by them:   Static Library/IrRemote/IrRemote/doxygen/generator/DoxygenLayout.xml
+        added by them:   Static Library/IrRemote/IrRemote/doxygen/generator/doxyfile.doxygen
+        added by them:   Static Library/IrRemote/IrRemote/doxygen/mainpage.dox
+        added by them:   Static Library/IrRemote/IrRemote/doxygen/system.dox
+        added by them:   Static Library/IrRemote/IrRemote/driver_isr.c
+        added by them:   Static Library/IrRemote/IrRemote/include/atmel_start_pins.h
+        added by them:   Static Library/IrRemote/IrRemote/include/driver_init.h
+        added by them:   Static Library/IrRemote/IrRemote/include/port.h
+        deleted by us:   Static Library/IrRemote/IrRemote/include/protected_io.h
+        added by them:   Static Library/IrRemote/IrRemote/include/sysctrl.h
+        added by them:   Static Library/IrRemote/IrRemote/include/system.h
+        added by them:   Static Library/IrRemote/IrRemote/main.c
+        added by them:   Static Library/IrRemote/IrRemote/src/driver_init.c
+        deleted by us:   Static Library/IrRemote/IrRemote/src/protected_io.S
+        added by them:   Static Library/IrRemote/IrRemote/utils/assembler.h
+        added by them:   Static Library/IrRemote/IrRemote/utils/assembler/gas.h
+        added by them:   Static Library/IrRemote/IrRemote/utils/assembler/iar.h
+        added by them:   Static Library/IrRemote/IrRemote/utils/atomic.h
+        added by them:   Static Library/IrRemote/IrRemote/utils/compiler.h
+        added by them:   Static Library/IrRemote/IrRemote/utils/interrupt_avr8.h
+        added by them:   Static Library/IrRemote/IrRemote/utils/utils.h
+        added by them:   Static Library/IrRemote/IrRemote/utils/utils_assert.h
+        added by them:   Static Library/TFT77/TFT77.atsln
+        deleted by us:   TF77/ST7735.c
+        deleted by us:   TF77/ST7735.h
+        deleted by us:   TF77/logo.h
+        deleted by us:   driver_isr.c
+        deleted by us:   include/atmel_start_pins.h
+        deleted by us:   include/tc8.h
+        deleted by us:   include/usart_basic.h
+        added by us:     led blinking using pri binary.atsln
+        added by us:     led blinking using pri binary/.atmelstart/AtmelStart.env_conf
+        added by us:     led blinking using pri binary/.atmelstart/AtmelStart.gpdsc
+        added by us:     led blinking using pri binary/.atmelstart/atmel_start_config.atstart
+        added by us:     led blinking using pri binary/Config/RTE_Components.h
+        added by us:     led blinking using pri binary/Config/clock_config.h
+        deleted by them: led blinking using pri binary/Gpio/led2.c
+        deleted by them: led blinking using pri binary/Gpio/led2.h
+        added by us:     led blinking using pri binary/atmel_start.c
+        added by us:     led blinking using pri binary/atmel_start.h
+        added by us:     led blinking using pri binary/doxygen/generator/DoxygenLayout.xml
+        added by us:     led blinking using pri binary/doxygen/generator/doxyfile.doxygen
+        added by us:     led blinking using pri binary/doxygen/mainpage.dox
+        added by us:     led blinking using pri binary/doxygen/system.dox
+        added by us:     led blinking using pri binary/driver_isr.c
+        added by us:     led blinking using pri binary/include/atmel_start_pins.h
+        added by us:     led blinking using pri binary/include/driver_init.h
+        added by us:     led blinking using pri binary/include/port.h
+        added by us:     led blinking using pri binary/include/sysctrl.h
+        added by us:     led blinking using pri binary/include/system.h
+        added by us:     led blinking using pri binary/led blinking using pri binary.componentinfo.xml
+        added by us:     led blinking using pri binary/led blinking using pri binary.cproj
+        added by us:     led blinking using pri binary/main.c
+        added by us:     led blinking using pri binary/src/driver_init.c
+        added by us:     led blinking using pri binary/utils/assembler.h
+        added by us:     led blinking using pri binary/utils/assembler/gas.h
+        added by us:     led blinking using pri binary/utils/assembler/iar.h
+        added by us:     led blinking using pri binary/utils/atomic.h
+        added by us:     led blinking using pri binary/utils/compiler.h
+        added by us:     led blinking using pri binary/utils/interrupt_avr8.h
+        added by us:     led blinking using pri binary/utils/utils.h
+        added by us:     led blinking using pri binary/utils/utils_assert.h
+        deleted by them: led/blink.h
+        deleted by them: led/led2.c
+        deleted by them: led/led2.h
+        deleted by them: led/libLED.a
+        deleted by them: led/libLED2.a
+        deleted by us:   main.c
+        deleted by us:   main.h
+        deleted by us:   src/driver_init.c
+        deleted by us:   src/spi_basic.c
+        deleted by us:   src/tc8.c
+        deleted by us:   src/usart_basic.c
+        both deleted:    test led pri-binary/led blinking using pri binary/led blinking using pri binary.atsln
+        both deleted:    test led pri-binary/led blinking using pri binary/led blinking using pri binary/.atmelstart/AtmelStart.env_conf
+        both deleted:    test led pri-binary/led blinking using pri binary/led blinking using pri binary/.atmelstart/AtmelStart.gpdsc
+        both deleted:    test led pri-binary/led blinking using pri binary/led blinking using pri binary/.atmelstart/atmel_start_config.atstart
+        both deleted:    test led pri-binary/led blinking using pri binary/led blinking using pri binary/Config/RTE_Components.h
+        both deleted:    test led pri-binary/led blinking using pri binary/led blinking using pri binary/Config/clock_config.h
+        both deleted:    test led pri-binary/led blinking using pri binary/led blinking using pri binary/atmel_start.c
+        both deleted:    test led pri-binary/led blinking using pri binary/led blinking using pri binary/atmel_start.h
+        both deleted:    test led pri-binary/led blinking using pri binary/led blinking using pri binary/doxygen/generator/DoxygenLayout.xml
+        both deleted:    test led pri-binary/led blinking using pri binary/led blinking using pri binary/doxygen/generator/doxyfile.doxygen
+        both deleted:    test led pri-binary/led blinking using pri binary/led blinking using pri binary/doxygen/mainpage.dox
+        both deleted:    test led pri-binary/led blinking using pri binary/led blinking using pri binary/doxygen/system.dox
+        both deleted:    test led pri-binary/led blinking using pri binary/led blinking using pri binary/driver_isr.c
+        both deleted:    test led pri-binary/led blinking using pri binary/led blinking using pri binary/include/atmel_start_pins.h
+        both deleted:    test led pri-binary/led blinking using pri binary/led blinking using pri binary/include/driver_init.h
+        both deleted:    test led pri-binary/led blinking using pri binary/led blinking using pri binary/include/port.h
+        both deleted:    test led pri-binary/led blinking using pri binary/led blinking using pri binary/include/sysctrl.h
+        both deleted:    test led pri-binary/led blinking using pri binary/led blinking using pri binary/include/system.h
+        both deleted:    test led pri-binary/led blinking using pri binary/led blinking using pri binary/led blinking using pri binary.componentinfo.xml
+        both deleted:    test led pri-binary/led blinking using pri binary/led blinking using pri binary/led blinking using pri binary.cproj
+        both deleted:    test led pri-binary/led blinking using pri binary/led blinking using pri binary/main.c
+        both deleted:    test led pri-binary/led blinking using pri binary/led blinking using pri binary/src/driver_init.c
+        both deleted:    test led pri-binary/led blinking using pri binary/led blinking using pri binary/utils/assembler.h
+        both deleted:    test led pri-binary/led blinking using pri binary/led blinking using pri binary/utils/assembler/gas.h
+        both deleted:    test led pri-binary/led blinking using pri binary/led blinking using pri binary/utils/assembler/iar.h
+        both deleted:    test led pri-binary/led blinking using pri binary/led blinking using pri binary/utils/atomic.h
+        both deleted:    test led pri-binary/led blinking using pri binary/led blinking using pri binary/utils/compiler.h
+        both deleted:    test led pri-binary/led blinking using pri binary/led blinking using pri binary/utils/interrupt_avr8.h
+        both deleted:    test led pri-binary/led blinking using pri binary/led blinking using pri binary/utils/utils.h
+        both deleted:    test led pri-binary/led blinking using pri binary/led blinking using pri binary/utils/utils_assert.h
+
+
+RaselAhmed@DESKTOP-PG8C98O MINGW64 /h/GitLab/Inovace Git/Firmware (8-relay-switch-no-to-nc|MERGING)
+$ git checkout 9
+error: pathspec '9' did not match any file(s) known to git
+
+RaselAhmed@DESKTOP-PG8C98O MINGW64 /h/GitLab/Inovace Git/Firmware (8-relay-switch-no-to-nc|MERGING)
+$ git checkout 9-millis-not-accurate-spi-slow
+.gitignore: needs merge
+.vs/ATmega328PB-XMini/v14/.atsuo: needs merge
+.vs/led blinking using pri binary/v14/.atsuo: needs merge
+ATmega328PB-XMini.cproj: needs merge
+Debug/Makefile: needs merge
+Debug/makedep.mk: needs merge
+FunStuff.c: needs merge
+FunStuff.h: needs merge
+Global.h: needs merge
+IR/remote.c: needs merge
+IR/remote.h: needs merge
+Static Library/IrRemote/IrRemote/.atmelstart/AtmelStart.env_conf: needs merge
+Static Library/IrRemote/IrRemote/.atmelstart/AtmelStart.gpdsc: needs merge
+Static Library/IrRemote/IrRemote/.atmelstart/atmel_start_config.atstart: needs merge
+Static Library/IrRemote/IrRemote/Config/RTE_Components.h: needs merge
+Static Library/IrRemote/IrRemote/Config/clock_config.h: needs merge
+Static Library/IrRemote/IrRemote/Default.xml: needs merge
+Static Library/IrRemote/IrRemote/IrRemote.componentinfo.xml: needs merge
+Static Library/IrRemote/IrRemote/IrRemote.cproj: needs merge
+Static Library/IrRemote/IrRemote/atmel_start.c: needs merge
+Static Library/IrRemote/IrRemote/atmel_start.h: needs merge
+Static Library/IrRemote/IrRemote/doxygen/generator/DoxygenLayout.xml: needs merge
+Static Library/IrRemote/IrRemote/doxygen/generator/doxyfile.doxygen: needs merge
+Static Library/IrRemote/IrRemote/doxygen/mainpage.dox: needs merge
+Static Library/IrRemote/IrRemote/doxygen/system.dox: needs merge
+Static Library/IrRemote/IrRemote/driver_isr.c: needs merge
+Static Library/IrRemote/IrRemote/include/atmel_start_pins.h: needs merge
+Static Library/IrRemote/IrRemote/include/driver_init.h: needs merge
+Static Library/IrRemote/IrRemote/include/port.h: needs merge
+Static Library/IrRemote/IrRemote/include/protected_io.h: needs merge
+Static Library/IrRemote/IrRemote/include/sysctrl.h: needs merge
+Static Library/IrRemote/IrRemote/include/system.h: needs merge
+Static Library/IrRemote/IrRemote/main.c: needs merge
+Static Library/IrRemote/IrRemote/src/driver_init.c: needs merge
+Static Library/IrRemote/IrRemote/src/protected_io.S: needs merge
+Static Library/IrRemote/IrRemote/utils/assembler.h: needs merge
+Static Library/IrRemote/IrRemote/utils/assembler/gas.h: needs merge
+Static Library/IrRemote/IrRemote/utils/assembler/iar.h: needs merge
+Static Library/IrRemote/IrRemote/utils/atomic.h: needs merge
+Static Library/IrRemote/IrRemote/utils/compiler.h: needs merge
+Static Library/IrRemote/IrRemote/utils/interrupt_avr8.h: needs merge
+Static Library/IrRemote/IrRemote/utils/utils.h: needs merge
+Static Library/IrRemote/IrRemote/utils/utils_assert.h: needs merge
+Static Library/TFT77/TFT77.atsln: needs merge
+TF77/ST7735.c: needs merge
+TF77/ST7735.h: needs merge
+TF77/logo.h: needs merge
+driver_isr.c: needs merge
+include/atmel_start_pins.h: needs merge
+include/tc8.h: needs merge
+include/usart_basic.h: needs merge
+led blinking using pri binary.atsln: needs merge
+led blinking using pri binary/.atmelstart/AtmelStart.env_conf: needs merge
+led blinking using pri binary/.atmelstart/AtmelStart.gpdsc: needs merge
+led blinking using pri binary/.atmelstart/atmel_start_config.atstart: needs merge
+led blinking using pri binary/Config/RTE_Components.h: needs merge
+led blinking using pri binary/Config/clock_config.h: needs merge
+led blinking using pri binary/Gpio/led2.c: needs merge
+led blinking using pri binary/Gpio/led2.h: needs merge
+led blinking using pri binary/atmel_start.c: needs merge
+led blinking using pri binary/atmel_start.h: needs merge
+led blinking using pri binary/doxygen/generator/DoxygenLayout.xml: needs merge
+led blinking using pri binary/doxygen/generator/doxyfile.doxygen: needs merge
+led blinking using pri binary/doxygen/mainpage.dox: needs merge
+led blinking using pri binary/doxygen/system.dox: needs merge
+led blinking using pri binary/driver_isr.c: needs merge
+led blinking using pri binary/include/atmel_start_pins.h: needs merge
+led blinking using pri binary/include/driver_init.h: needs merge
+led blinking using pri binary/include/port.h: needs merge
+led blinking using pri binary/include/sysctrl.h: needs merge
+led blinking using pri binary/include/system.h: needs merge
+led blinking using pri binary/led blinking using pri binary.componentinfo.xml: needs merge
+led blinking using pri binary/led blinking using pri binary.cproj: needs merge
+led blinking using pri binary/main.c: needs merge
+led blinking using pri binary/src/driver_init.c: needs merge
+led blinking using pri binary/utils/assembler.h: needs merge
+led blinking using pri binary/utils/assembler/gas.h: needs merge
+led blinking using pri binary/utils/assembler/iar.h: needs merge
+led blinking using pri binary/utils/atomic.h: needs merge
+led blinking using pri binary/utils/compiler.h: needs merge
+led blinking using pri binary/utils/interrupt_avr8.h: needs merge
+led blinking using pri binary/utils/utils.h: needs merge
+led blinking using pri binary/utils/utils_assert.h: needs merge
+led/blink.h: needs merge
+led/led2.c: needs merge
+led/led2.h: needs merge
+led/libLED.a: needs merge
+led/libLED2.a: needs merge
+main.c: needs merge
+main.h: needs merge
+src/driver_init.c: needs merge
+src/spi_basic.c: needs merge
+src/tc8.c: needs merge
+src/usart_basic.c: needs merge
+test led pri-binary/led blinking using pri binary/led blinking using pri binary.atsln: needs merge
+test led pri-binary/led blinking using pri binary/led blinking using pri binary/.atmelstart/AtmelStart.env_conf: needs merge
+test led pri-binary/led blinking using pri binary/led blinking using pri binary/.atmelstart/AtmelStart.gpdsc: needs merge
+test led pri-binary/led blinking using pri binary/led blinking using pri binary/.atmelstart/atmel_start_config.atstart: needs merge
+test led pri-binary/led blinking using pri binary/led blinking using pri binary/Config/RTE_Components.h: needs merge
+test led pri-binary/led blinking using pri binary/led blinking using pri binary/Config/clock_config.h: needs merge
+test led pri-binary/led blinking using pri binary/led blinking using pri binary/atmel_start.c: needs merge
+test led pri-binary/led blinking using pri binary/led blinking using pri binary/atmel_start.h: needs merge
+test led pri-binary/led blinking using pri binary/led blinking using pri binary/doxygen/generator/DoxygenLayout.xml: needs merge
+test led pri-binary/led blinking using pri binary/led blinking using pri binary/doxygen/generator/doxyfile.doxygen: needs merge
+test led pri-binary/led blinking using pri binary/led blinking using pri binary/doxygen/mainpage.dox: needs merge
+test led pri-binary/led blinking using pri binary/led blinking using pri binary/doxygen/system.dox: needs merge
+test led pri-binary/led blinking using pri binary/led blinking using pri binary/driver_isr.c: needs merge
+test led pri-binary/led blinking using pri binary/led blinking using pri binary/include/atmel_start_pins.h: needs merge
+test led pri-binary/led blinking using pri binary/led blinking using pri binary/include/driver_init.h: needs merge
+test led pri-binary/led blinking using pri binary/led blinking using pri binary/include/port.h: needs merge
+test led pri-binary/led blinking using pri binary/led blinking using pri binary/include/sysctrl.h: needs merge
+test led pri-binary/led blinking using pri binary/led blinking using pri binary/include/system.h: needs merge
+test led pri-binary/led blinking using pri binary/led blinking using pri binary/led blinking using pri binary.componentinfo.xml: needs merge
+test led pri-binary/led blinking using pri binary/led blinking using pri binary/led blinking using pri binary.cproj: needs merge
+test led pri-binary/led blinking using pri binary/led blinking using pri binary/main.c: needs merge
+test led pri-binary/led blinking using pri binary/led blinking using pri binary/src/driver_init.c: needs merge
+test led pri-binary/led blinking using pri binary/led blinking using pri binary/utils/assembler.h: needs merge
+test led pri-binary/led blinking using pri binary/led blinking using pri binary/utils/assembler/gas.h: needs merge
+test led pri-binary/led blinking using pri binary/led blinking using pri binary/utils/assembler/iar.h: needs merge
+test led pri-binary/led blinking using pri binary/led blinking using pri binary/utils/atomic.h: needs merge
+test led pri-binary/led blinking using pri binary/led blinking using pri binary/utils/compiler.h: needserror: you need to resolve your current index first
+ merge
+test led pri-binary/led blinking using pri binary/led blinking using pri binary/utils/interrupt_avr8.h: needs merge
+test led pri-binary/led blinking using pri binary/led blinking using pri binary/utils/utils.h: needs merge
+test led pri-binary/led blinking using pri binary/led blinking using pri binary/utils/utils_assert.h: needs merge
+
+RaselAhmed@DESKTOP-PG8C98O MINGW64 /h/GitLab/Inovace Git/Firmware (8-relay-switch-no-to-nc|MERGING)
+$

@@ -1,0 +1,390 @@
+
+C:\Users\RaselAhmed\AppData\Local\Temp\arduino\sketches\DF2B540820EE7F4292426C4D9DE0C499/Selected_Time_Load_Control.ino.elf:     file format elf32-avr
+
+
+Disassembly of section .text:
+
+00000000 <__vectors>:
+__vectors():
+   0:	09 c0       	rjmp	.+18     	; 0x14 <__ctors_end>
+   2:	16 c0       	rjmp	.+44     	; 0x30 <__bad_interrupt>
+   4:	15 c0       	rjmp	.+42     	; 0x30 <__bad_interrupt>
+   6:	86 c0       	rjmp	.+268    	; 0x114 <__vector_3>
+   8:	13 c0       	rjmp	.+38     	; 0x30 <__bad_interrupt>
+   a:	12 c0       	rjmp	.+36     	; 0x30 <__bad_interrupt>
+   c:	11 c0       	rjmp	.+34     	; 0x30 <__bad_interrupt>
+   e:	10 c0       	rjmp	.+32     	; 0x30 <__bad_interrupt>
+  10:	0f c0       	rjmp	.+30     	; 0x30 <__bad_interrupt>
+  12:	0e c0       	rjmp	.+28     	; 0x30 <__bad_interrupt>
+
+00000014 <__ctors_end>:
+__trampolines_start():
+  14:	11 24       	eor	r1, r1
+  16:	1f be       	out	0x3f, r1	; 63
+  18:	cf e9       	ldi	r28, 0x9F	; 159
+  1a:	cd bf       	out	0x3d, r28	; 61
+
+0000001c <__do_clear_bss>:
+__do_clear_bss():
+/home/jenkins-mingw32/workspace/avr-gcc-staging/label/Ubuntu14.04x64-mingw32/gcc-build/avr/avr25/tiny-stack/libgcc/../../../../../gcc/libgcc/config/avr/lib1funcs.S:2441
+  1c:	20 e0       	ldi	r18, 0x00	; 0
+/home/jenkins-mingw32/workspace/avr-gcc-staging/label/Ubuntu14.04x64-mingw32/gcc-build/avr/avr25/tiny-stack/libgcc/../../../../../gcc/libgcc/config/avr/lib1funcs.S:2442
+  1e:	a0 e6       	ldi	r26, 0x60	; 96
+/home/jenkins-mingw32/workspace/avr-gcc-staging/label/Ubuntu14.04x64-mingw32/gcc-build/avr/avr25/tiny-stack/libgcc/../../../../../gcc/libgcc/config/avr/lib1funcs.S:2443
+  20:	b0 e0       	ldi	r27, 0x00	; 0
+/home/jenkins-mingw32/workspace/avr-gcc-staging/label/Ubuntu14.04x64-mingw32/gcc-build/avr/avr25/tiny-stack/libgcc/../../../../../gcc/libgcc/config/avr/lib1funcs.S:2444
+  22:	01 c0       	rjmp	.+2      	; 0x26 <.do_clear_bss_start>
+
+00000024 <.do_clear_bss_loop>:
+/home/jenkins-mingw32/workspace/avr-gcc-staging/label/Ubuntu14.04x64-mingw32/gcc-build/avr/avr25/tiny-stack/libgcc/../../../../../gcc/libgcc/config/avr/lib1funcs.S:2446
+  24:	1d 92       	st	X+, r1
+
+00000026 <.do_clear_bss_start>:
+/home/jenkins-mingw32/workspace/avr-gcc-staging/label/Ubuntu14.04x64-mingw32/gcc-build/avr/avr25/tiny-stack/libgcc/../../../../../gcc/libgcc/config/avr/lib1funcs.S:2448
+  26:	a8 36       	cpi	r26, 0x68	; 104
+/home/jenkins-mingw32/workspace/avr-gcc-staging/label/Ubuntu14.04x64-mingw32/gcc-build/avr/avr25/tiny-stack/libgcc/../../../../../gcc/libgcc/config/avr/lib1funcs.S:2449
+  28:	b2 07       	cpc	r27, r18
+/home/jenkins-mingw32/workspace/avr-gcc-staging/label/Ubuntu14.04x64-mingw32/gcc-build/avr/avr25/tiny-stack/libgcc/../../../../../gcc/libgcc/config/avr/lib1funcs.S:2450
+  2a:	e1 f7       	brne	.-8      	; 0x24 <.do_clear_bss_loop>
+.do_clear_bss_start():
+  2c:	98 d0       	rcall	.+304    	; 0x15e <main>
+  2e:	d8 c0       	rjmp	.+432    	; 0x1e0 <_exit>
+
+00000030 <__bad_interrupt>:
+__vector_1():
+  30:	e7 cf       	rjmp	.-50     	; 0x0 <__vectors>
+
+00000032 <delay>:
+delay():
+C:\Users\RaselAhmed\AppData\Local\Arduino15\packages\diy_attiny\hardware\avr\2023.4.19-gcc5.4\cores\tiny/MillisMicrosDelay.c:3065
+
+
+
+#if ! ( defined( REDUCED_CORE_TINYAVR ) && REDUCED_CORE_TINYAVR )
+  // The 4/5/9/10 "Reduced Core" have problems with GCC compiling this    
+  __asm__ __volatile__ (
+  32:	26 e1       	ldi	r18, 0x16	; 22
+  34:	31 e0       	ldi	r19, 0x01	; 1
+C:\Users\RaselAhmed\AppData\Local\Arduino15\packages\diy_attiny\hardware\avr\2023.4.19-gcc5.4\cores\tiny/MillisMicrosDelay.c:2506
+}
+#endif
+
+void delay(DelayTime_t ms)
+{
+  while(ms--){
+  36:	01 97       	sbiw	r24, 0x01	; 1
+  38:	08 f4       	brcc	.+2      	; 0x3c <RXSTART+0x2>
+C:\Users\RaselAhmed\AppData\Local\Arduino15\packages\diy_attiny\hardware\avr\2023.4.19-gcc5.4\cores\tiny/MillisMicrosDelay.c:2530
+  MillisMicrosTime_t current = millis();
+  while(millis() - current < ms);
+  return;
+#endif
+#endif
+}
+  3a:	08 95       	ret
+C:\Users\RaselAhmed\AppData\Local\Arduino15\packages\diy_attiny\hardware\avr\2023.4.19-gcc5.4\cores\tiny/MillisMicrosDelay.c:3065
+
+
+
+#if ! ( defined( REDUCED_CORE_TINYAVR ) && REDUCED_CORE_TINYAVR )
+  // The 4/5/9/10 "Reduced Core" have problems with GCC compiling this    
+  __asm__ __volatile__ (
+  3c:	f9 01       	movw	r30, r18
+  3e:	31 97       	sbiw	r30, 0x01	; 1
+  40:	f1 f7       	brne	.-4      	; 0x3e <__SP_L__+0x1>
+  42:	f9 cf       	rjmp	.-14     	; 0x36 <delay+0x4>
+
+00000044 <millis>:
+millis():
+C:\Users\RaselAhmed\AppData\Local\Arduino15\packages\diy_attiny\hardware\avr\2023.4.19-gcc5.4\cores\tiny/MillisMicrosDelay.c:65
+    ovrf++; //Increment counter every 256 clock cycles  
+  }
+  */
+
+MillisMicrosTime_t millis()
+{
+  44:	8f 92       	push	r8
+  46:	9f 92       	push	r9
+  48:	af 92       	push	r10
+  4a:	bf 92       	push	r11
+  4c:	cf 92       	push	r12
+  4e:	df 92       	push	r13
+  50:	ef 92       	push	r14
+  52:	ff 92       	push	r15
+  54:	0f 93       	push	r16
+  56:	1f 93       	push	r17
+C:\Users\RaselAhmed\AppData\Local\Arduino15\packages\diy_attiny\hardware\avr\2023.4.19-gcc5.4\cores\tiny/MillisMicrosDelay.c:67
+  MillisMicrosTime_t x;
+  uint8_t oldSREG = SREG;
+  58:	4f b7       	in	r20, 0x3f	; 63
+C:\Users\RaselAhmed\AppData\Local\Arduino15\packages\diy_attiny\hardware\avr\2023.4.19-gcc5.4\cores\tiny/MillisMicrosDelay.c:68
+  cli();
+  5a:	f8 94       	cli
+C:\Users\RaselAhmed\AppData\Local\Arduino15\packages\diy_attiny\hardware\avr\2023.4.19-gcc5.4\cores\tiny/MillisMicrosDelay.c:730
+    // Jitter: 0.0141% (0.0001412517 Decimal)
+    x = (ovrf * 0)  + (ovrf / 8) + (ovrf / 16) + (ovrf / 64);
+  #elif    ACCEPTABLE_MILLIS_ERROR_PPM >= 11275UL
+    //  Error: 1.1275% (0.0112745348 Decimal)
+    // Jitter: 0.0216% (0.00021628579999999998 Decimal)
+    x = (ovrf * 0)  + (ovrf / 8) + (ovrf / 16) + (ovrf / 64) + (ovrf / 128);
+  5c:	80 91 60 00 	lds	r24, 0x0060	; 0x800060 <__DATA_REGION_ORIGIN__>
+  60:	90 91 61 00 	lds	r25, 0x0061	; 0x800061 <__DATA_REGION_ORIGIN__+0x1>
+  64:	a0 91 62 00 	lds	r26, 0x0062	; 0x800062 <__DATA_REGION_ORIGIN__+0x2>
+  68:	b0 91 63 00 	lds	r27, 0x0063	; 0x800063 <__DATA_REGION_ORIGIN__+0x3>
+  6c:	60 91 60 00 	lds	r22, 0x0060	; 0x800060 <__DATA_REGION_ORIGIN__>
+  70:	70 91 61 00 	lds	r23, 0x0061	; 0x800061 <__DATA_REGION_ORIGIN__+0x1>
+  74:	80 91 62 00 	lds	r24, 0x0062	; 0x800062 <__DATA_REGION_ORIGIN__+0x2>
+  78:	90 91 63 00 	lds	r25, 0x0063	; 0x800063 <__DATA_REGION_ORIGIN__+0x3>
+  7c:	80 90 60 00 	lds	r8, 0x0060	; 0x800060 <__DATA_REGION_ORIGIN__>
+  80:	90 90 61 00 	lds	r9, 0x0061	; 0x800061 <__DATA_REGION_ORIGIN__+0x1>
+  84:	a0 90 62 00 	lds	r10, 0x0062	; 0x800062 <__DATA_REGION_ORIGIN__+0x2>
+  88:	b0 90 63 00 	lds	r11, 0x0063	; 0x800063 <__DATA_REGION_ORIGIN__+0x3>
+  8c:	c0 90 60 00 	lds	r12, 0x0060	; 0x800060 <__DATA_REGION_ORIGIN__>
+  90:	d0 90 61 00 	lds	r13, 0x0061	; 0x800061 <__DATA_REGION_ORIGIN__+0x1>
+  94:	e0 90 62 00 	lds	r14, 0x0062	; 0x800062 <__DATA_REGION_ORIGIN__+0x2>
+  98:	f0 90 63 00 	lds	r15, 0x0063	; 0x800063 <__DATA_REGION_ORIGIN__+0x3>
+  9c:	00 91 60 00 	lds	r16, 0x0060	; 0x800060 <__DATA_REGION_ORIGIN__>
+  a0:	10 91 61 00 	lds	r17, 0x0061	; 0x800061 <__DATA_REGION_ORIGIN__+0x1>
+  a4:	20 91 62 00 	lds	r18, 0x0062	; 0x800062 <__DATA_REGION_ORIGIN__+0x2>
+  a8:	30 91 63 00 	lds	r19, 0x0063	; 0x800063 <__DATA_REGION_ORIGIN__+0x3>
+C:\Users\RaselAhmed\AppData\Local\Arduino15\packages\diy_attiny\hardware\avr\2023.4.19-gcc5.4\cores\tiny/MillisMicrosDelay.c:1649
+  //  Error: 0.0000% (0 Decimal)
+  // Jitter: 0.0000% (0 Decimal)
+
+  x = (ovrf * 500) ;
+#endif
+  SREG = oldSREG;
+  ac:	4f bf       	out	0x3f, r20	; 63
+C:\Users\RaselAhmed\AppData\Local\Arduino15\packages\diy_attiny\hardware\avr\2023.4.19-gcc5.4\cores\tiny/MillisMicrosDelay.c:730
+    // Jitter: 0.0141% (0.0001412517 Decimal)
+    x = (ovrf * 0)  + (ovrf / 8) + (ovrf / 16) + (ovrf / 64);
+  #elif    ACCEPTABLE_MILLIS_ERROR_PPM >= 11275UL
+    //  Error: 1.1275% (0.0112745348 Decimal)
+    // Jitter: 0.0216% (0.00021628579999999998 Decimal)
+    x = (ovrf * 0)  + (ovrf / 8) + (ovrf / 16) + (ovrf / 64) + (ovrf / 128);
+  ae:	43 e0       	ldi	r20, 0x03	; 3
+  b0:	96 95       	lsr	r25
+  b2:	87 95       	ror	r24
+  b4:	77 95       	ror	r23
+  b6:	67 95       	ror	r22
+  b8:	4a 95       	dec	r20
+  ba:	d1 f7       	brne	.-12     	; 0xb0 <__stack+0x11>
+  bc:	54 e0       	ldi	r21, 0x04	; 4
+  be:	b6 94       	lsr	r11
+  c0:	a7 94       	ror	r10
+  c2:	97 94       	ror	r9
+  c4:	87 94       	ror	r8
+  c6:	5a 95       	dec	r21
+  c8:	d1 f7       	brne	.-12     	; 0xbe <__stack+0x1f>
+  ca:	68 0d       	add	r22, r8
+  cc:	79 1d       	adc	r23, r9
+  ce:	8a 1d       	adc	r24, r10
+  d0:	9b 1d       	adc	r25, r11
+  d2:	e6 e0       	ldi	r30, 0x06	; 6
+  d4:	f6 94       	lsr	r15
+  d6:	e7 94       	ror	r14
+  d8:	d7 94       	ror	r13
+  da:	c7 94       	ror	r12
+  dc:	ea 95       	dec	r30
+  de:	d1 f7       	brne	.-12     	; 0xd4 <__stack+0x35>
+  e0:	6c 0d       	add	r22, r12
+  e2:	7d 1d       	adc	r23, r13
+  e4:	8e 1d       	adc	r24, r14
+  e6:	9f 1d       	adc	r25, r15
+  e8:	f7 e0       	ldi	r31, 0x07	; 7
+  ea:	36 95       	lsr	r19
+  ec:	27 95       	ror	r18
+  ee:	17 95       	ror	r17
+  f0:	07 95       	ror	r16
+  f2:	fa 95       	dec	r31
+  f4:	d1 f7       	brne	.-12     	; 0xea <__stack+0x4b>
+  f6:	60 0f       	add	r22, r16
+  f8:	71 1f       	adc	r23, r17
+  fa:	82 1f       	adc	r24, r18
+  fc:	93 1f       	adc	r25, r19
+C:\Users\RaselAhmed\AppData\Local\Arduino15\packages\diy_attiny\hardware\avr\2023.4.19-gcc5.4\cores\tiny/MillisMicrosDelay.c:1651
+
+  x = (ovrf * 500) ;
+#endif
+  SREG = oldSREG;
+  return x;
+}
+  fe:	1f 91       	pop	r17
+ 100:	0f 91       	pop	r16
+ 102:	ff 90       	pop	r15
+ 104:	ef 90       	pop	r14
+ 106:	df 90       	pop	r13
+ 108:	cf 90       	pop	r12
+ 10a:	bf 90       	pop	r11
+ 10c:	af 90       	pop	r10
+ 10e:	9f 90       	pop	r9
+ 110:	8f 90       	pop	r8
+ 112:	08 95       	ret
+
+00000114 <__vector_3>:
+__vector_3():
+C:\Users\RaselAhmed\AppData\Local\Arduino15\packages\diy_attiny\hardware\avr\2023.4.19-gcc5.4\variants\tiny13/pins_arduino.c:57
+
+#if !(defined(NO_MILLIS) && NO_MILLIS) && defined(USE_NEW_MILLIS) && USE_NEW_MILLIS
+extern volatile MillisMicrosTime_t ovrf;
+ 
+ISR(TIM0_OVF_vect)
+{
+ 114:	1f 92       	push	r1
+ 116:	0f 92       	push	r0
+ 118:	0f b6       	in	r0, 0x3f	; 63
+ 11a:	0f 92       	push	r0
+ 11c:	11 24       	eor	r1, r1
+ 11e:	8f 93       	push	r24
+ 120:	9f 93       	push	r25
+ 122:	af 93       	push	r26
+ 124:	bf 93       	push	r27
+C:\Users\RaselAhmed\AppData\Local\Arduino15\packages\diy_attiny\hardware\avr\2023.4.19-gcc5.4\variants\tiny13/pins_arduino.c:58
+  ovrf++; //Increment counter every 256 clock cycles  
+ 126:	80 91 60 00 	lds	r24, 0x0060	; 0x800060 <__DATA_REGION_ORIGIN__>
+ 12a:	90 91 61 00 	lds	r25, 0x0061	; 0x800061 <__DATA_REGION_ORIGIN__+0x1>
+ 12e:	a0 91 62 00 	lds	r26, 0x0062	; 0x800062 <__DATA_REGION_ORIGIN__+0x2>
+ 132:	b0 91 63 00 	lds	r27, 0x0063	; 0x800063 <__DATA_REGION_ORIGIN__+0x3>
+ 136:	01 96       	adiw	r24, 0x01	; 1
+ 138:	a1 1d       	adc	r26, r1
+ 13a:	b1 1d       	adc	r27, r1
+ 13c:	80 93 60 00 	sts	0x0060, r24	; 0x800060 <__DATA_REGION_ORIGIN__>
+ 140:	90 93 61 00 	sts	0x0061, r25	; 0x800061 <__DATA_REGION_ORIGIN__+0x1>
+ 144:	a0 93 62 00 	sts	0x0062, r26	; 0x800062 <__DATA_REGION_ORIGIN__+0x2>
+ 148:	b0 93 63 00 	sts	0x0063, r27	; 0x800063 <__DATA_REGION_ORIGIN__+0x3>
+C:\Users\RaselAhmed\AppData\Local\Arduino15\packages\diy_attiny\hardware\avr\2023.4.19-gcc5.4\variants\tiny13/pins_arduino.c:59
+}
+ 14c:	bf 91       	pop	r27
+ 14e:	af 91       	pop	r26
+ 150:	9f 91       	pop	r25
+ 152:	8f 91       	pop	r24
+ 154:	0f 90       	pop	r0
+ 156:	0f be       	out	0x3f, r0	; 63
+ 158:	0f 90       	pop	r0
+ 15a:	1f 90       	pop	r1
+ 15c:	18 95       	reti
+
+0000015e <main>:
+main():
+C:\Users\RaselAhmed\AppData\Local\Arduino15\packages\diy_attiny\hardware\avr\2023.4.19-gcc5.4\cores\tiny/wiring_lite.c:280
+  TCCR0B |= _BV(CS00);
+  TCCR0A |= _BV(WGM00)|_BV(WGM01);
+  TIMSK0 |= 2;
+  TCNT0=0;   
+  #else
+    turnOnMillis(MILLIS_TIMER_PRESCALE);
+ 15e:	8f b5       	in	r24, 0x2f	; 47
+ 160:	83 60       	ori	r24, 0x03	; 3
+ 162:	8f bd       	out	0x2f, r24	; 47
+ 164:	89 b7       	in	r24, 0x39	; 57
+ 166:	82 60       	ori	r24, 0x02	; 2
+ 168:	89 bf       	out	0x39, r24	; 57
+ 16a:	83 b7       	in	r24, 0x33	; 51
+ 16c:	81 60       	ori	r24, 0x01	; 1
+ 16e:	83 bf       	out	0x33, r24	; 51
+ 170:	12 be       	out	0x32, r1	; 50
+C:\Users\RaselAhmed\AppData\Local\Arduino15\packages\diy_attiny\hardware\avr\2023.4.19-gcc5.4\cores\tiny/wiring_lite.c:282
+  #endif
+  sei();
+ 172:	78 94       	sei
+C:\Users\RaselAhmed\AppData\Local\Arduino15\packages\diy_attiny\hardware\avr\2023.4.19-gcc5.4\cores\tiny/wiring_lite.c:328
+      #define ADC_ARDUINO_PRESCALER 7
+    #endif
+    
+    // Since this is init(), ADCSRA is already going to be zero, we can just
+    // set our bits indiscriminantly
+    ADCSRA = (ADC_ARDUINO_PRESCALER << ADPS0) | _BV(ADEN);
+ 174:	83 e8       	ldi	r24, 0x83	; 131
+ 176:	86 b9       	out	0x06, r24	; 6
+setup():
+F:\360TECHKNOWLEDGE-Git2023\360-TECH-KNOWLEDGE\Selected_Time_Load_Control/Selected_Time_Load_Control.ino:10
+unsigned long startTime;
+// unsigned long delayDuration = 7L * 60L * 60L * 1000L;  // 7 hours in milliseconds
+unsigned long delayDuration = 5UL * 60UL * 60UL * 1000UL;  //5h delay
+void setup() {
+  // pinMode(relayPin, OUTPUT);
+  DDRB |= (1 << DDB0);  //PB5 = O/P
+ 178:	b8 9a       	sbi	0x17, 0	; 23
+F:\360TECHKNOWLEDGE-Git2023\360-TECH-KNOWLEDGE\Selected_Time_Load_Control/Selected_Time_Load_Control.ino:11
+  startTime = millis();
+ 17a:	64 df       	rcall	.-312    	; 0x44 <millis>
+ 17c:	60 93 64 00 	sts	0x0064, r22	; 0x800064 <startTime>
+ 180:	70 93 65 00 	sts	0x0065, r23	; 0x800065 <startTime+0x1>
+ 184:	80 93 66 00 	sts	0x0066, r24	; 0x800066 <startTime+0x2>
+ 188:	90 93 67 00 	sts	0x0067, r25	; 0x800067 <startTime+0x3>
+F:\360TECHKNOWLEDGE-Git2023\360-TECH-KNOWLEDGE\Selected_Time_Load_Control/Selected_Time_Load_Control.ino:14
+  //    Serial.begin(9600);
+  //    Serial.println(delayDuration);
+  PORTB |= (1 << PB0);  //PB5 = HIGH
+ 18c:	c0 9a       	sbi	0x18, 0	; 24
+F:\360TECHKNOWLEDGE-Git2023\360-TECH-KNOWLEDGE\Selected_Time_Load_Control/Selected_Time_Load_Control.ino:15
+  delay(3000);
+ 18e:	88 eb       	ldi	r24, 0xB8	; 184
+ 190:	9b e0       	ldi	r25, 0x0B	; 11
+ 192:	4f df       	rcall	.-354    	; 0x32 <delay>
+F:\360TECHKNOWLEDGE-Git2023\360-TECH-KNOWLEDGE\Selected_Time_Load_Control/Selected_Time_Load_Control.ino:16
+  PORTB &= ~(1 << PB0);  //PB5 = LOW
+ 194:	c0 98       	cbi	0x18, 0	; 24
+F:\360TECHKNOWLEDGE-Git2023\360-TECH-KNOWLEDGE\Selected_Time_Load_Control/Selected_Time_Load_Control.ino:17
+  delay(2000);
+ 196:	80 ed       	ldi	r24, 0xD0	; 208
+ 198:	97 e0       	ldi	r25, 0x07	; 7
+ 19a:	4b df       	rcall	.-362    	; 0x32 <delay>
+loop():
+F:\360TECHKNOWLEDGE-Git2023\360-TECH-KNOWLEDGE\Selected_Time_Load_Control/Selected_Time_Load_Control.ino:24
+
+void loop() {
+  // Turn on the relay for 7 hours
+  // digitalWrite(relayPin, 0);
+  //    Serial.println(millis());
+  if (millis() - startTime >= delayDuration) {
+ 19c:	53 df       	rcall	.-346    	; 0x44 <millis>
+ 19e:	00 91 64 00 	lds	r16, 0x0064	; 0x800064 <startTime>
+ 1a2:	10 91 65 00 	lds	r17, 0x0065	; 0x800065 <startTime+0x1>
+ 1a6:	20 91 66 00 	lds	r18, 0x0066	; 0x800066 <startTime+0x2>
+ 1aa:	30 91 67 00 	lds	r19, 0x0067	; 0x800067 <startTime+0x3>
+ 1ae:	60 1b       	sub	r22, r16
+ 1b0:	71 0b       	sbc	r23, r17
+ 1b2:	82 0b       	sbc	r24, r18
+ 1b4:	93 0b       	sbc	r25, r19
+ 1b6:	60 38       	cpi	r22, 0x80	; 128
+ 1b8:	78 4a       	sbci	r23, 0xA8	; 168
+ 1ba:	82 41       	sbci	r24, 0x12	; 18
+ 1bc:	91 40       	sbci	r25, 0x01	; 1
+ 1be:	70 f3       	brcs	.-36     	; 0x19c <main+0x3e>
+F:\360TECHKNOWLEDGE-Git2023\360-TECH-KNOWLEDGE\Selected_Time_Load_Control/Selected_Time_Load_Control.ino:26
+    // digitalWrite(relayPin, 1);
+    PORTB |= (1 << PB0);  //PB5 = HIGH
+ 1c0:	c0 9a       	sbi	0x18, 0	; 24
+F:\360TECHKNOWLEDGE-Git2023\360-TECH-KNOWLEDGE\Selected_Time_Load_Control/Selected_Time_Load_Control.ino:27
+    delay(500);
+ 1c2:	84 ef       	ldi	r24, 0xF4	; 244
+ 1c4:	91 e0       	ldi	r25, 0x01	; 1
+ 1c6:	35 df       	rcall	.-406    	; 0x32 <delay>
+F:\360TECHKNOWLEDGE-Git2023\360-TECH-KNOWLEDGE\Selected_Time_Load_Control/Selected_Time_Load_Control.ino:29
+    // Put the ATtiny13 to sleep to conserve power
+    set_sleep_mode(SLEEP_MODE_PWR_DOWN);
+ 1c8:	85 b7       	in	r24, 0x35	; 53
+ 1ca:	87 7e       	andi	r24, 0xE7	; 231
+ 1cc:	80 61       	ori	r24, 0x10	; 16
+ 1ce:	85 bf       	out	0x35, r24	; 53
+F:\360TECHKNOWLEDGE-Git2023\360-TECH-KNOWLEDGE\Selected_Time_Load_Control/Selected_Time_Load_Control.ino:30
+    sleep_mode();
+ 1d0:	85 b7       	in	r24, 0x35	; 53
+ 1d2:	80 62       	ori	r24, 0x20	; 32
+ 1d4:	85 bf       	out	0x35, r24	; 53
+ 1d6:	88 95       	sleep
+ 1d8:	85 b7       	in	r24, 0x35	; 53
+ 1da:	8f 7d       	andi	r24, 0xDF	; 223
+ 1dc:	85 bf       	out	0x35, r24	; 53
+ 1de:	de cf       	rjmp	.-68     	; 0x19c <main+0x3e>
+
+000001e0 <_exit>:
+exit():
+/home/jenkins-mingw32/workspace/avr-gcc-staging/label/Ubuntu14.04x64-mingw32/gcc-build/avr/avr25/tiny-stack/libgcc/../../../../../gcc/libgcc/config/avr/lib1funcs.S:2278
+ 1e0:	f8 94       	cli
+
+000001e2 <__stop_program>:
+__stop_program():
+/home/jenkins-mingw32/workspace/avr-gcc-staging/label/Ubuntu14.04x64-mingw32/gcc-build/avr/avr25/tiny-stack/libgcc/../../../../../gcc/libgcc/config/avr/lib1funcs.S:2280
+ 1e2:	ff cf       	rjmp	.-2      	; 0x1e2 <__stop_program>

@@ -4,16 +4,16 @@
 
 unsigned long startTime;
 // unsigned long delayDuration = 7L * 60L * 60L * 1000L;  // 7 hours in milliseconds
-unsigned long delayDuration = 5UL * 60UL * 60UL * 1000UL;  //5h delay
+unsigned long delayDuration = 7UL * 60UL * 60UL * 1000UL;  //5h delay
 void setup() {
   // pinMode(relayPin, OUTPUT);
-  DDRB |= (1 << DDB0);  //PB5 = O/P
+  DDRB |= (1 << DDB2);  //PB5 = O/P
   startTime = millis();
   //    Serial.begin(9600);
   //    Serial.println(delayDuration);
-  PORTB |= (1 << PB0);  //PB5 = HIGH
+  PORTB |= (1 << PB2);  //PB5 = HIGH
   delay(3000);
-  PORTB &= ~(1 << PB0);  //PB5 = LOW
+  PORTB &= ~(1 << PB2);  //PB5 = LOW
   delay(2000);
 }
 
@@ -23,7 +23,7 @@ void loop() {
   //    Serial.println(millis());
   if (millis() - startTime >= delayDuration) {
     // digitalWrite(relayPin, 1);
-    PORTB |= (1 << PB0);  //PB5 = HIGH
+    PORTB |= (1 << PB2);  //PB5 = HIGH
     delay(500);
     // Put the ATtiny13 to sleep to conserve power
     set_sleep_mode(SLEEP_MODE_PWR_DOWN);

@@ -300,11 +300,11 @@ setup():
 F:\360TECHKNOWLEDGE-Git2023\360-TECH-KNOWLEDGE\Selected_Time_Load_Control/Selected_Time_Load_Control.ino:10
 unsigned long startTime;
 // unsigned long delayDuration = 7L * 60L * 60L * 1000L;  // 7 hours in milliseconds
-unsigned long delayDuration = 5UL * 60UL * 60UL * 1000UL;  //5h delay
+unsigned long delayDuration = 7UL * 60UL * 60UL * 1000UL;  //5h delay
 void setup() {
   // pinMode(relayPin, OUTPUT);
-  DDRB |= (1 << DDB0);  //PB5 = O/P
- 178:	b8 9a       	sbi	0x17, 0	; 23
+  DDRB |= (1 << DDB2);  //PB5 = O/P
+ 178:	ba 9a       	sbi	0x17, 2	; 23
 F:\360TECHKNOWLEDGE-Git2023\360-TECH-KNOWLEDGE\Selected_Time_Load_Control/Selected_Time_Load_Control.ino:11
   startTime = millis();
  17a:	64 df       	rcall	.-312    	; 0x44 <millis>
@@ -315,16 +315,16 @@ F:\360TECHKNOWLEDGE-Git2023\360-TECH-KNOWLEDGE\Selected_Time_Load_Control/Select
 F:\360TECHKNOWLEDGE-Git2023\360-TECH-KNOWLEDGE\Selected_Time_Load_Control/Selected_Time_Load_Control.ino:14
   //    Serial.begin(9600);
   //    Serial.println(delayDuration);
-  PORTB |= (1 << PB0);  //PB5 = HIGH
- 18c:	c0 9a       	sbi	0x18, 0	; 24
+  PORTB |= (1 << PB2);  //PB5 = HIGH
+ 18c:	c2 9a       	sbi	0x18, 2	; 24
 F:\360TECHKNOWLEDGE-Git2023\360-TECH-KNOWLEDGE\Selected_Time_Load_Control/Selected_Time_Load_Control.ino:15
   delay(3000);
  18e:	88 eb       	ldi	r24, 0xB8	; 184
  190:	9b e0       	ldi	r25, 0x0B	; 11
  192:	4f df       	rcall	.-354    	; 0x32 <delay>
 F:\360TECHKNOWLEDGE-Git2023\360-TECH-KNOWLEDGE\Selected_Time_Load_Control/Selected_Time_Load_Control.ino:16
-  PORTB &= ~(1 << PB0);  //PB5 = LOW
- 194:	c0 98       	cbi	0x18, 0	; 24
+  PORTB &= ~(1 << PB2);  //PB5 = LOW
+ 194:	c2 98       	cbi	0x18, 2	; 24
 F:\360TECHKNOWLEDGE-Git2023\360-TECH-KNOWLEDGE\Selected_Time_Load_Control/Selected_Time_Load_Control.ino:17
   delay(2000);
  196:	80 ed       	ldi	r24, 0xD0	; 208
@@ -348,14 +348,14 @@ void loop() {
  1b2:	82 0b       	sbc	r24, r18
  1b4:	93 0b       	sbc	r25, r19
  1b6:	60 38       	cpi	r22, 0x80	; 128
- 1b8:	78 4a       	sbci	r23, 0xA8	; 168
- 1ba:	82 41       	sbci	r24, 0x12	; 18
+ 1b8:	75 48       	sbci	r23, 0x85	; 133
+ 1ba:	80 48       	sbci	r24, 0x80	; 128
  1bc:	91 40       	sbci	r25, 0x01	; 1
  1be:	70 f3       	brcs	.-36     	; 0x19c <main+0x3e>
 F:\360TECHKNOWLEDGE-Git2023\360-TECH-KNOWLEDGE\Selected_Time_Load_Control/Selected_Time_Load_Control.ino:26
     // digitalWrite(relayPin, 1);
-    PORTB |= (1 << PB0);  //PB5 = HIGH
- 1c0:	c0 9a       	sbi	0x18, 0	; 24
+    PORTB |= (1 << PB2);  //PB5 = HIGH
+ 1c0:	c2 9a       	sbi	0x18, 2	; 24
 F:\360TECHKNOWLEDGE-Git2023\360-TECH-KNOWLEDGE\Selected_Time_Load_Control/Selected_Time_Load_Control.ino:27
     delay(500);
  1c2:	84 ef       	ldi	r24, 0xF4	; 244

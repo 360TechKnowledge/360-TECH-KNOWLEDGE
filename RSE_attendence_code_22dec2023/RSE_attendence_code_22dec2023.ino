@@ -173,6 +173,7 @@ void loop() {
   handleTelnet();
   server.handleClient();
   displayTime();
+  // loadControl();
   // if (timeShow = false) {
   //   printLocalTime();
   //   timeShow = true;
@@ -194,8 +195,8 @@ void loadControl() {
   // Serial.print(tm.tm_hour);
   // displayMessage(" Hour : " + String(tm.tm_hour), "Min :" + String(tm.tm_min));
   // delay(100);
-  if (loadOn == false)
-    if (tm.tm_hour == 4 && tm.tm_min >= 25) {
+  if (loadOn == false && timeShow == false)
+    if (tm.tm_hour == 7 && tm.tm_min >= 32) {
       loadOn = true;
       lcd.clear();
       displayMessage("Load On!", "All Auto charging");
@@ -228,15 +229,18 @@ void rdm6300_code() {
 }
 //////////////All Millis Checking Start///////////////////
 void millis_check() {
-  // if (loadOn = true)
-  //   if (millis() - loadOnTime > 10000) {
-  //     lcd.clear();
-  //     // printLocalTime();
-  //   }
+  if (loadOn)
+    if (millis() - loadOnTime > 20000) {
+      lcd.clear();
+      // printLocalTime();
+      loadOn = false;
+      displayTime();
+    }
   if (timeShow)
     if (millis() - timeShowStart > 15000) {
       lcd.clear();
       loadControl();
+      timeShow = false;
     }
   if (lockOn)
     if (millis() - lockOnTime > 1000) {
@@ -508,6 +512,7 @@ void printLocalTime() {  //ntp
   timeinfo = localtime(&rawtime);
   showTime();
   timeShowStart = millis();
+  timeShow = true;
 }
 
 void showTime() {  //ntp

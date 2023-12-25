@@ -53,9 +53,14 @@ ESP8266WebServer server(80);
 #define buzzer 12          //D6 Buzzer
 #define r_led 13           //D7 RED
 #define g_led 15           //D8 Green
+// #define TIME  1
+// #define LOAD 2
+uint32_t  loadOn    = 0;
+uint32_t  timeShow  = 0;
 
 int count = 0, employee_id, employee_db_id;
-bool loadOn = false, timeShow = false, lockOn, rejectOn, redLedOn, espRebootTimeOn, card_status = true, solinoidLock = true, commonGround = false, webControl = true, noResponse, netSign;
+// bool loadOn = false, timeShow = false;
+bool  DisplayTimmer = false, lockOn, rejectOn, redLedOn, espRebootTimeOn, card_status = true, solinoidLock = true, commonGround = false, webControl = true, noResponse, netSign;
 String data, dd = "", Chipid = "", payload = "", prev_data = "", read_data = "", card_number[1000], infoReadings, uname;
 unsigned long loadOnTime, timeShowStart, startTime, ledOnTime, lockOnTime, rejectOnTime, espRebootTime, lastTime3 = 0, rebootOnTime, noResponseTime;
 const char* serverName6 = "http://192.168.0.142/device_log.php";      //Store device info in DB
@@ -96,7 +101,7 @@ void setup() {
 
   lcd.createChar(0, Skull);
   lcd.createChar(1, Check);
-  // displayMessage("   Welcome To", "  Rasel Steel");
+  displayMessage("   Welcome To", "  Rasel Steel");
   WiFi.mode(WIFI_STA);
   Serial.begin(115200, SERIAL_8N1, SERIAL_TX_ONLY);
 
@@ -167,16 +172,29 @@ void setup() {
 }
 
 void loop() {
-  wm.process();
-  rdm6300_code();
-  millis_check();
-  handleTelnet();
-  server.handleClient();
-  displayTime();
+  // wm.process();
+  // rdm6300_code();
+  // millis_check();
+  // handleTelnet();
+  // server.handleClient();
+  // displayTime();
   // loadControl();
-  // if (timeShow = false) {
-  //   printLocalTime();
-  //   timeShow = true;
+  if(DisplayTimmer == 0){
+    displayTime();
+  }
+  Serial.println(timeShow);
+  if (timeShow == false) {
+    // displayTime();
+    timeShow = true;
+    timeShowStart = millis();
+    // Serial.print("Time Show bool : "); Serial.println(timeShow);
+    // Serial.print("Time Show Timmer Start : "); Serial.println(timeShowStart);
+  }
+  // swtich(displayState){
+  //   case TIME   :   if()  displayTime();
+  //                   break;
+  //   case LOAD   :
+  //                   break;
   // }
 }
 void displayTime() {
@@ -207,6 +225,7 @@ void loadControl() {
       Serial.println("Display Clear");
       Serial.println("Load On! All Auto Charging");
       displayMessage("Load On!", "All Auto charging");
+      delay(300);
       loadOnTime = millis();
       Serial.print("loadonTime millis : ");
       Serial.println(loadOnTime);
@@ -247,6 +266,7 @@ void millis_check() {
       Serial.print("bool loadOn");
       Serial.println(loadOn);
       displayTime();
+      loadOnTime = millis();
       Serial.println("Display Time Function Call");
     }
   if (timeShow)
@@ -254,10 +274,13 @@ void millis_check() {
     if (millis() - timeShowStart > 15000) {
       lcd.clear();
       Serial.println("Display Clear");
-      loadControl();
-      Serial.println("loadControl function Call");
-      timeShow = false;
+      DisplayTimmer = true;
+      // loadControl();
+      // Serial.println("loadControl function Call");
+      // timeShow = false;
+      timeShowStart = millis();
       Serial.print("bool timeShow : "); Serial.println(timeShow);
+      delay(3000);
     }
   if (lockOn)
     if (millis() - lockOnTime > 1000) {
@@ -530,12 +553,12 @@ void printLocalTime() {  //ntp
   showTime();
   Serial.println("Show Time Function Call");
   if(timeShow == false){
-        timeShowStart = millis();
-        Serial.print("timeShowStart : ");
-        Serial.println(timeShowStart);
-        timeShow = true;
-        Serial.print("timeShow :");
-        Serial.println(timeShow);
+        // timeShowStart = millis();
+        // Serial.print("timeShowStart : ");
+        // Serial.println(timeShowStart);
+        // timeShow = true;
+        // Serial.print("timeShow :");
+        // Serial.println(timeShow);
   }
 
 }

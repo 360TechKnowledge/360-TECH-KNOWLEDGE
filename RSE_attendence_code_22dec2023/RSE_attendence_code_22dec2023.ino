@@ -185,6 +185,7 @@ void displayTime() {
     if (currentMillis - startMillis >= period)  //test whether the period has elapsed
     {
       printLocalTime();
+      Serial.println("Print Local Time Function");
       startMillis = currentMillis;  //IMPORTANT to save the start time of the current LED state.
     }
   }
@@ -196,11 +197,19 @@ void loadControl() {
   // displayMessage(" Hour : " + String(tm.tm_hour), "Min :" + String(tm.tm_min));
   // delay(100);
   if (loadOn == false && timeShow == false)
-    if (tm.tm_hour == 7 && tm.tm_min >= 32) {
+    Serial.print("Time : ");
+    Serial.println(tm.tm_hour + String(" : ") + tm.tm_min);
+    if (tm.tm_hour == 10 && tm.tm_min >= 28) {
       loadOn = true;
+      Serial.print("bool loadOn:");
+      Serial.println(loadOn);
       lcd.clear();
+      Serial.println("Display Clear");
+      Serial.println("Load On! All Auto Charging");
       displayMessage("Load On!", "All Auto charging");
       loadOnTime = millis();
+      Serial.print("loadonTime millis : ");
+      Serial.println(loadOnTime);
     }
 }
 
@@ -232,15 +241,23 @@ void millis_check() {
   if (loadOn)
     if (millis() - loadOnTime > 20000) {
       lcd.clear();
+      Serial.println("Display Clear");
       // printLocalTime();
       loadOn = false;
+      Serial.print("bool loadOn");
+      Serial.println(loadOn);
       displayTime();
+      Serial.println("Display Time Function Call");
     }
   if (timeShow)
+    // Serial.print("timeShow : "); 
     if (millis() - timeShowStart > 15000) {
       lcd.clear();
+      Serial.println("Display Clear");
       loadControl();
+      Serial.println("loadControl function Call");
       timeShow = false;
+      Serial.print("bool timeShow : "); Serial.println(timeShow);
     }
   if (lockOn)
     if (millis() - lockOnTime > 1000) {
@@ -511,8 +528,16 @@ void printLocalTime() {  //ntp
   time(&rawtime);
   timeinfo = localtime(&rawtime);
   showTime();
-  timeShowStart = millis();
-  timeShow = true;
+  Serial.println("Show Time Function Call");
+  if(timeShow == false){
+        timeShowStart = millis();
+        Serial.print("timeShowStart : ");
+        Serial.println(timeShowStart);
+        timeShow = true;
+        Serial.print("timeShow :");
+        Serial.println(timeShow);
+  }
+
 }
 
 void showTime() {  //ntp

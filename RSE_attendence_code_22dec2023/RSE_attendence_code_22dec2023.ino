@@ -172,26 +172,52 @@ void setup() {
 }
 
 void loop() {
-  if (millis() - previousMillis >= 20000) {
-    lcd.clear();
-    lcd.setCursor(0, 1);
-    lcd.print("Data Set 3");
-    previousMillis = millis();
-  }
-  if (millis() - previousMillis >= 20000) {
-    lcd.clear();
-    lcd.setCursor(0, 1);
-    lcd.print("Rasel Steel");
-    // displayMessage("   Welcome To", "  Rasel Steel");
-    previousMillis = millis();
-  }
+
   wm.process();
   rdm6300_code();
   millis_check();
   handleTelnet();
   server.handleClient();
-  displayTime();
 
+  if (millis() - previousMillis <= 5000) {
+    lcd.clear();
+    lcd.setCursor(0, 0);
+    lcd.print("Rasel Steel");
+    // Serial.println("Data Set 1");
+  }
+  if (millis() - previousMillis <= 20000 && millis() - previousMillis >= 5000) {
+    lcd.clear();
+    displayTime();
+    // lcd.setCursor(0, 1);
+    // lcd.print("Data Set 3");
+    // Serial.println("Data Set 2");
+  }
+  if (millis() - previousMillis >= 20000 && millis() - previousMillis <= 35000) {
+    lcd.clear();
+    lcd.setCursor(0, 0);
+    lcd.print("Data Set 4");
+    // Serial.println("Data Set 3");
+  }
+  if (millis() - previousMillis >= 50000) {
+    previousMillis = millis();
+  }
+  ///////////////////////////////
+  // if (millis() - previousMillis >= 20000) {
+  //   lcd.clear();
+  //   lcd.setCursor(0, 1);
+  //   lcd.print("Data Set 3");
+  //   previousMillis = millis();
+  // }
+  // if (millis() - previousMillis >= 20000) {
+  //   lcd.clear();
+  //   lcd.setCursor(0, 1);
+  //   lcd.print("Rasel Steel");
+  //   // displayMessage("   Welcome To", "  Rasel Steel");
+  //   previousMillis = millis();
+  // }
+
+
+  delay(20);
 
   // loadControl();
 }

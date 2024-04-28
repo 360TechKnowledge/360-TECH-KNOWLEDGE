@@ -34,8 +34,8 @@ ESP8266WebServer server(80);
 const int num_known_uids = 3;  // Number of known RFID tag UIDs
 const char known_uids[num_known_uids][11] = {
   "10881746",  // Example known RFID UID 1
-  "5144886",    // Example known RFID UID 2
-  "02005A3FD3"  // Example known RFID UID 3
+  "5144886",   // Example known RFID UID 2
+  "5117716"    // Example known RFID UID 3
 };
 
 //////////////////OTA2024?????????
@@ -159,13 +159,6 @@ void RDM() {
       buzzer_beep(3);
       redled_beep(3);
     }
-    // if (tagRead == 10881746 || tagRead == 1206334) {
-    //   buzzer_beep(1);
-    //   greenled_beep(1);
-    // } else if (tagRead != (10879861) || tagRead != (13159803) || tagRead != (1206334)) {
-    //   buzzer_beep(3);
-    //   redled_beep(3);
-    // }
   }
 }
 void buzzer_beep(int times) {

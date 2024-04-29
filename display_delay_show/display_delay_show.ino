@@ -1,8 +1,10 @@
 #include <LiquidCrystal_I2C.h>
 #define ANALOG_IN_PIN A0
+// const int sensorPin = A0;  // Analog pin connected to the voltage divider output
 // Floats for ADC voltage & Input voltage
 float adc_voltage = 0.0;
 float in_voltage = 0.0;
+float averageVoltage;
 
 // Floats for resistor values in divider (in ohms)
 float R1 = 47000.0;  //30000.0;
@@ -48,7 +50,7 @@ void loop() {
     // Serial.println("Data Set 1");
   }
   if (millis() - previousMillis2 <= 20000 && millis() - previousMillis2 >= 10000) {
-    lcd.clear();
+    // lcd.clear();
     Voltage();
     // Serial.println("Data Set 2");
   }
@@ -88,29 +90,73 @@ void loop() {
   if (millis() - previousMillis2 >= 40000) {
     previousMillis2 = millis();
   }
-  delay(200);
+  delay(500);
 }
 
 void Voltage() {
-  adc_value = analogRead(ANALOG_IN_PIN);
+  // Define variables for averaging
+  const int numReadings = 10;          // Number of readings to average
+  float voltageReadings[numReadings];  // Array to store voltage readings
+  int currentIndex = 0;                // Index for storing new readings
+  float totalVoltage = 0.0;            // Variable to store total voltage readings
 
-  // Determine voltage at ADC input
-  adc_voltage = (adc_value * ref_voltage) / 1024.0;
-
-  // Calculate voltage at divider input
-  in_voltage = adc_voltage * (R1 + R2) / R2;
-
-  // Print results to Serial Monitor to 2 decimal places
+  // Take multiple readings and calculate average voltage
+  for (int i = 0; i < numReadings; i++) {
+    adc_value = analogRead(ANALOG_IN_PIN);
+    //   // Determine voltage at ADC input
+    adc_voltage = (adc_value * ref_voltage) / 1023.0;
+    //   // Calculate voltage at divider input
+    in_voltage = adc_voltage * (R1 + R2) / R2;
+    voltageReadings[i] = in_voltage;     // Convert analog reading to voltage
+    totalVoltage += voltageReadings[i];  // Add reading to total
+    delay(50);                           // Delay between readings
+  }
+  averageVoltage = totalVoltage / numReadings;  // Calculate average voltage
+  // Serial.print("Voltage : ");
+  // Serial.println(averageVoltage);
+  //   // Print results to Serial Monitor to 2 decimal places
   lcd.clear();
   lcd.setCursor(0, 0);
   lcd.print(" Input Voltage");
   lcd.setCursor(1, 1);
   lcd.print("  DC ");
-  lcd.print(in_voltage, 2);
+  lcd.print(averageVoltage, 2);
   lcd.print("V");
-  Serial.print("Input Voltage = ");
-  Serial.println(in_voltage, 2);
-
-  // Short delay
-  delay(100);
+  // delay(3);
+  // // Check if average voltage falls below low cutoff threshold
+  // if (averageVoltage < lowCutoffVoltage) {
+  //   // Cut off power
+  //   digitalWrite(relayPin, HIGH);
+  //   Serial.println("Low voltage detected. Power cut off.");
+  // }
+  // // Check if average voltage rises above full cutoff threshold
+  // else if (averageVoltage > fullCutoffVoltage) {
+  //   // Restore power
+  //   digitalWrite(relayPin, LOW);
+  //   Serial.println("Full voltage detected. Power restored.");
+  // }
 }
+//////////// old voltage function//////////////
+// void Voltage() {
+//   adc_value = analogRead(ANALOG_IN_PIN);
+
+//   // Determine voltage at ADC input
+//   adc_voltage = (adc_value * ref_voltage) / 1024.0;
+
+//   // Calculate voltage at divider input
+//   in_voltage = adc_voltage * (R1 + R2) / R2;
+
+//   // Print results to Serial Monitor to 2 decimal places
+//   lcd.clear();
+//   lcd.setCursor(0, 0);
+//   lcd.print(" Input Voltage");
+//   lcd.setCursor(1, 1);
+//   lcd.print("  DC ");
+//   lcd.print(in_voltage, 2);
+//   lcd.print("V");
+//   Serial.print("Input Voltage = ");
+//   Serial.println(in_voltage, 2);
+
+//   // Short delay
+//   delay(100);
+// }

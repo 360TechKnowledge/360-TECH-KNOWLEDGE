@@ -1,11 +1,9 @@
-/*Author by 
-Md. Rasel Ahmed*/
+/*-------Author by--------- 
+------Md. Rasel Ahmed------*/
 #include <LiquidCrystal_I2C.h>
 #define ANALOG_IN_PIN A0
-// const int sensorPin = A0;  // Analog pin connected to the voltage divider output
-// Floats for ADC voltage & Input voltage
 
-///////////////Voltage Musser Part.............
+///////////////voltage measure part.............
 float adc_voltage = 0.0;
 float in_voltage = 0.0;
 float averageVoltage;
@@ -14,19 +12,15 @@ float averageVoltage;
 float R1 = 47000.0;  //30000.0;
 float R2 = 10000.0;  //7500.0;
 float ref_voltage = 5.10; // Float for Reference Voltage
-
-// Integer for ADC value
 int adc_value = 0;
 //////////////////////////////////////////////////
 
-// Initialize the LCD library with the I2C address of the LCD
-LiquidCrystal_I2C lcd(0x27, 16, 2);
-// BigNumbers bigNum(&lcd);
+LiquidCrystal_I2C lcd(0x27, 16, 2); // Initialize the LCD library with the I2C address of the LCD
 int current = 5;
 bool dat1 = true, dat2 = true;
 unsigned long previousMillis = 0, previousMillis2 = 0;
-const long interval = 5000;  // 20 seconds
-// LiquidCrystal_I2C lcd(0x27, 16, 2);
+const long interval = 5000;  // 5 seconds
+
 void setup() {
 
   lcd.init();
@@ -80,13 +74,7 @@ void loop() {
       lcd.print("Please Connect The Charger");
     }
   }
-  // if (millis() - previousMillis2 >= 30000 && millis() - previousMillis2 <= 40000) {
 
-  //   lcd.clear();
-  //   lcd.setCursor(0, 0);
-  //   lcd.print("Date : 30 Jan 2023");
-  //   // Serial.println("Data Set 3");
-  // }
   if (millis() - previousMillis2 >= 40000) {
     previousMillis2 = millis();
   }
@@ -94,7 +82,6 @@ void loop() {
 }
 
 void Voltage() {
-  // Define variables for averaging
   const int numReadings = 10;          // Number of readings to average
   float voltageReadings[numReadings];  // Array to store voltage readings
   int currentIndex = 0;                // Index for storing new readings

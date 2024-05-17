@@ -1,7 +1,11 @@
+/*Author by 
+Md. Rasel Ahmed*/
 #include <LiquidCrystal_I2C.h>
 #define ANALOG_IN_PIN A0
 // const int sensorPin = A0;  // Analog pin connected to the voltage divider output
 // Floats for ADC voltage & Input voltage
+
+///////////////Voltage Musser Part.............
 float adc_voltage = 0.0;
 float in_voltage = 0.0;
 float averageVoltage;
@@ -9,13 +13,12 @@ float averageVoltage;
 // Floats for resistor values in divider (in ohms)
 float R1 = 47000.0;  //30000.0;
 float R2 = 10000.0;  //7500.0;
-
-// Float for Reference Voltage
-float ref_voltage = 5.10;
+float ref_voltage = 5.10; // Float for Reference Voltage
 
 // Integer for ADC value
 int adc_value = 0;
 //////////////////////////////////////////////////
+
 // Initialize the LCD library with the I2C address of the LCD
 LiquidCrystal_I2C lcd(0x27, 16, 2);
 // BigNumbers bigNum(&lcd);
@@ -25,10 +28,7 @@ unsigned long previousMillis = 0, previousMillis2 = 0;
 const long interval = 5000;  // 20 seconds
 // LiquidCrystal_I2C lcd(0x27, 16, 2);
 void setup() {
-  // Initialize the LCD
-  // TCCR1B = TCCR1B & 0b11111000 | 0x01;  // use for Arduino Uno
-  // TCCR2B = TCCR1B & 0b11111000 | 0x01; // use for Arduino Mega2560
-  // bigNum.begin();  // set up BigNumbers
+
   lcd.init();
   lcd.backlight();
   Serial.begin(9600);
@@ -37,7 +37,7 @@ void setup() {
   lcd.print("Data Set 1");
   lcd.setCursor(0, 1);
   lcd.print("Data Set 2");
-  // bigNum.displayLargeInt(current, 0, 4, false);
+
 }
 
 void loop() {

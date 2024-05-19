@@ -9,8 +9,8 @@ float in_voltage = 0.0;
 float averageVoltage;
 
 // Floats for resistor values in divider (in ohms)
-float R1 = 47000.0;  //30000.0;
-float R2 = 10000.0;  //7500.0;
+float R1 = 47000.0;  //30000.0; 47KOhm
+float R2 = 10000.0;  //7500.0;  10KOhm
 float ref_voltage = 5.10; // Float for Reference Voltage
 int adc_value = 0;
 //////////////////////////////////////////////////
@@ -82,7 +82,7 @@ void loop() {
 }
 
 void Voltage() {
-  const int numReadings = 10;          // Number of readings to average
+  const int numReadings = 50;          // Number of readings to average
   float voltageReadings[numReadings];  // Array to store voltage readings
   int currentIndex = 0;                // Index for storing new readings
   float totalVoltage = 0.0;            // Variable to store total voltage readings

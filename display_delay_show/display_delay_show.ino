@@ -1,149 +1,132 @@
 /*-------Author by--------- 
 ------Md. Rasel Ahmed------*/
 #include <LiquidCrystal_I2C.h>
-#define ANALOG_IN_PIN A0
 
-///////////////voltage measure part.............
+// Pin definitions
+#define ANALOG_IN_PIN A0
+#define RELAY_PIN 4
+
+// Voltage thresholds
+const float FULL_CUTOFF_VOLTAGE = 13.7;
+const float LOW_CUTOFF_VOLTAGE = 13.0;
+
+// Voltage measurement variables
 float adc_voltage = 0.0;
 float in_voltage = 0.0;
 float averageVoltage;
 
-// Floats for resistor values in divider (in ohms)
-float R1 = 47000.0;  //30000.0; 47KOhm
-float R2 = 10000.0;  //7500.0;  10KOhm
-float ref_voltage = 5.10; // Float for Reference Voltage
-int adc_value = 0;
-//////////////////////////////////////////////////
+// Resistor values for voltage divider (in ohms)
+const float R1 = 47000.0;  // 47KOhm
+const float R2 = 10000.0;  // 10KOhm
 
-LiquidCrystal_I2C lcd(0x27, 16, 2); // Initialize the LCD library with the I2C address of the LCD
-int current = 5;
-bool dat1 = true, dat2 = true;
-unsigned long previousMillis = 0, previousMillis2 = 0;
+// Reference voltage
+const float REF_VOLTAGE = 5.10;
+
+// ADC value
+int adc_value = 0;
+
+// LCD configuration
+LiquidCrystal_I2C lcd(0x27, 16, 2);
+
+// Timing variables
+unsigned long previousMillis = 0;
+unsigned long previousMillis2 = 0;
 const long interval = 5000;  // 5 seconds
 
 void setup() {
-
   lcd.init();
   lcd.backlight();
   Serial.begin(9600);
-  Serial.println("Data Set ");
-  // Print initial data
-  lcd.print("Data Set 1");
-  lcd.setCursor(0, 1);
-  lcd.print("Data Set 2");
 
+  pinMode(RELAY_PIN, OUTPUT);
+  digitalWrite(RELAY_PIN, LOW);
+
+  Serial.println("System Initialized");
+  lcd.print("System Initialized");
+  lcd.setCursor(0, 1);
+  lcd.print("Please wait...");
+  delay(2000);
 }
 
 void loop() {
-  if (millis() - previousMillis2 <= 10000) {
-    lcd.clear();
-    lcd.setCursor(0, 0);
-    lcd.print("360 TECH KNOWLEDGE");
-    lcd.setCursor(0, 1);
-    lcd.print("DSP Solar IPS");
-    // Serial.println("Data Set 1");
-  }
-  if (millis() - previousMillis2 <= 20000 && millis() - previousMillis2 >= 10000) {
-    // lcd.clear();
-    Voltage();
-    // Serial.println("Data Set 2");
-  }
-  if (millis() - previousMillis2 >= 20000 && millis() - previousMillis2 <= 30000) {
-    if (in_voltage >= 14.2) {
-      lcd.clear();
-      lcd.setCursor(0, 0);
-      lcd.print("Battery Fully Charged");
-      lcd.setCursor(1, 1);
-      lcd.print(" DC ");
-      lcd.print(in_voltage, 2);
-      lcd.print("V");
-      // Serial.println("Data Set 3");
-    } else if (in_voltage >= 13) {
-      lcd.clear();
-      lcd.setCursor(0, 0);
-      lcd.print("Standard Charged Full");
-      lcd.setCursor(1, 1);
-      lcd.print(" DC ");
-      lcd.print(in_voltage, 2);
-      lcd.print("V");
-    } else {
-      lcd.clear();
-      lcd.setCursor(0, 0);
-      lcd.print("Battery LOW!!");
-      lcd.setCursor(0, 1);
-      lcd.print("Please Connect The Charger");
-    }
-  }
+  unsigned long currentMillis = millis();
 
-  if (millis() - previousMillis2 >= 40000) {
-    previousMillis2 = millis();
+  if (currentMillis - previousMillis2 <= 10000) {
+    displayWelcomeMessage();
+  } else if (currentMillis - previousMillis2 <= 20000) {
+    Voltage();
+  } else if (currentMillis - previousMillis2 <= 30000) {
+    displayVoltageStatus();
+  } else if (currentMillis - previousMillis2 >= 40000) {
+    previousMillis2 = currentMillis;
   }
+  
   delay(500);
 }
 
-void Voltage() {
-  const int numReadings = 50;          // Number of readings to average
-  float voltageReadings[numReadings];  // Array to store voltage readings
-  int currentIndex = 0;                // Index for storing new readings
-  float totalVoltage = 0.0;            // Variable to store total voltage readings
-
-  // Take multiple readings and calculate average voltage
-  for (int i = 0; i < numReadings; i++) {
-    adc_value = analogRead(ANALOG_IN_PIN);
-    //   // Determine voltage at ADC input
-    adc_voltage = (adc_value * ref_voltage) / 1023.0;
-    //   // Calculate voltage at divider input
-    in_voltage = adc_voltage * (R1 + R2) / R2;
-    voltageReadings[i] = in_voltage;     // Convert analog reading to voltage
-    totalVoltage += voltageReadings[i];  // Add reading to total
-    delay(50);                           // Delay between readings
-  }
-  averageVoltage = totalVoltage / numReadings;  // Calculate average voltage
-  // Serial.print("Voltage : ");
-  // Serial.println(averageVoltage);
-  //   // Print results to Serial Monitor to 2 decimal places
+void displayWelcomeMessage() {
   lcd.clear();
   lcd.setCursor(0, 0);
-  lcd.print(" Input Voltage");
+  lcd.print("360 TECH KNOWLEDGE");
+  lcd.setCursor(0, 1);
+  lcd.print("DSP Solar IPS");
+}
+
+void Voltage() {
+  const int numReadings = 50;
+  float voltageReadings[numReadings];
+  float totalVoltage = 0.0;
+
+  for (int i = 0; i < numReadings; i++) {
+    adc_value = analogRead(ANALOG_IN_PIN);
+    adc_voltage = (adc_value * REF_VOLTAGE) / 1023.0;
+    in_voltage = adc_voltage * (R1 + R2) / R2;
+    voltageReadings[i] = in_voltage;
+    totalVoltage += voltageReadings[i];
+    delay(50);
+  }
+  
+  averageVoltage = totalVoltage / numReadings;
+
+  lcd.clear();
+  lcd.setCursor(0, 0);
+  lcd.print("Input Voltage");
   lcd.setCursor(1, 1);
-  lcd.print("  DC ");
+  lcd.print("DC ");
   lcd.print(averageVoltage, 2);
   lcd.print("V");
-  // delay(3);
-  // // Check if average voltage falls below low cutoff threshold
-  // if (averageVoltage < lowCutoffVoltage) {
-  //   // Cut off power
-  //   digitalWrite(relayPin, HIGH);
-  //   Serial.println("Low voltage detected. Power cut off.");
-  // }
-  // // Check if average voltage rises above full cutoff threshold
-  // else if (averageVoltage > fullCutoffVoltage) {
-  //   // Restore power
-  //   digitalWrite(relayPin, LOW);
-  //   Serial.println("Full voltage detected. Power restored.");
-  // }
+
+  if (averageVoltage < LOW_CUTOFF_VOLTAGE) {
+    Serial.println("Low voltage detected. Charging On.");
+    digitalWrite(RELAY_PIN, HIGH);
+  } else if (averageVoltage > FULL_CUTOFF_VOLTAGE) {
+    Serial.println("Full voltage detected. Charging off.");
+    digitalWrite(RELAY_PIN, LOW);
+  }
 }
-//////////// old voltage function//////////////
-// void Voltage() {
-//   adc_value = analogRead(ANALOG_IN_PIN);
 
-//   // Determine voltage at ADC input
-//   adc_voltage = (adc_value * ref_voltage) / 1024.0;
-
-//   // Calculate voltage at divider input
-//   in_voltage = adc_voltage * (R1 + R2) / R2;
-
-//   // Print results to Serial Monitor to 2 decimal places
-//   lcd.clear();
-//   lcd.setCursor(0, 0);
-//   lcd.print(" Input Voltage");
-//   lcd.setCursor(1, 1);
-//   lcd.print("  DC ");
-//   lcd.print(in_voltage, 2);
-//   lcd.print("V");
-//   Serial.print("Input Voltage = ");
-//   Serial.println(in_voltage, 2);
-
-//   // Short delay
-//   delay(100);
-// }
+void displayVoltageStatus() {
+  if (in_voltage >= 14.2) {
+    lcd.clear();
+    lcd.setCursor(0, 0);
+    lcd.print("Battery Fully Charged");
+    lcd.setCursor(1, 1);
+    lcd.print("DC ");
+    lcd.print(in_voltage, 2);
+    lcd.print("V");
+  } else if (in_voltage >= 13) {
+    lcd.clear();
+    lcd.setCursor(0, 0);
+    lcd.print("Standard Charged Full");
+    lcd.setCursor(1, 1);
+    lcd.print("DC ");
+    lcd.print(in_voltage, 2);
+    lcd.print("V");
+  } else {
+    lcd.clear();
+    lcd.setCursor(0, 0);
+    lcd.print("Battery LOW!!");
+    lcd.setCursor(0, 1);
+    lcd.print("Connect Charger");
+  }
+}

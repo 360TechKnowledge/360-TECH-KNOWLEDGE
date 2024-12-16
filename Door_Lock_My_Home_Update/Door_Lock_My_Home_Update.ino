@@ -6,6 +6,7 @@
 #include <WiFiClient.h>
 #include <ESP8266WebServer.h>
 #include <ElegantOTA.h>
+
 #define RDM6300_RX_PIN 4  //D2
 #define TIMEOUT_1_MIN 60000
 // #define READ_LED_PIN D1
@@ -30,6 +31,9 @@ bool greenStatus = false, redStatus = false, webControl = true;
 
 // WiFiServer espServer(80);
 ESP8266WebServer server(80);
+
+const char* server1 = "103.115.255.11";  // Your server IP address
+const int port = 8080;                  // Port to connect to
 
 // Known RFID tag UIDs to compare against
 const int num_known_uids = 3;  // Number of known RFID tag UIDs
@@ -154,6 +158,36 @@ bool isUIDInArray(const char* tagRead) {
   return false;  // If no match is found, the UID is unknown
 }
 
+void pushCardData(String card_id) {
+  // Prepare the URL to send to the server
+  String url = "http://" + String(server1) + ":" + String(port) + "/doorlock_data.php?card_id=" + card_id;
+
+  Serial.print("Sending data to server: ");
+  Serial.println(url);
+
+  // Create a WiFiClient object to send the GET request
+  WiFiClient client;
+
+  if (client.connect(server1, port)) {
+    // Send the GET request to the server
+    client.print("GET " + url + " HTTP/1.1\r\n");
+    client.print("Host: " + String(server1) + "\r\n");
+    client.print("Connection: close\r\n\r\n");
+
+    Serial.println("Request sent.");
+
+    // Wait for the server's response
+    while (client.available()) {
+      String line = client.readStringUntil('\r');
+      Serial.println(line);  // Print the server response
+    }
+
+    client.stop();  // Close the connection
+  } else {
+    Serial.println("Connection failed.");
+  }
+}
+
 void RDM() {
   if (rdm6300.get_new_tag_id()) {
     digitalWrite(LED_BUILTIN, rdm6300.get_tag_id());
@@ -173,6 +207,7 @@ void RDM() {
       buzzer_beep(3);
       redled_beep(3);
     }
+    pushCardData(tag_id_str);
   }
 }
 void buzzer_beep(int times) {

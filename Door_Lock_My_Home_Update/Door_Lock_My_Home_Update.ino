@@ -7,6 +7,7 @@
 #include <ESP8266WebServer.h>
 #include <ElegantOTA.h>
 #define RDM6300_RX_PIN 4  //D2
+#define TIMEOUT_1_MIN 60000
 // #define READ_LED_PIN D1
 #define Lock 5     //D1
 #define buzzer 3   // D0
@@ -24,7 +25,7 @@ Rdm6300 rdm6300;
 #define debugln(x)
 #endif
 int tagRead, sw, gpio4Value;
-unsigned long MillisGreen = 0, MillisRed = 0;
+unsigned long MillisGreen = 0, MillisRed = 0, netStatus, netStart;
 bool greenStatus = false, redStatus = false, webControl = true;
 
 // WiFiServer espServer(80);
@@ -125,12 +126,25 @@ void loop() {
   //   greenled_beep(1);
   // }
   RDM();
+  Connection_Status();
   server.handleClient();
   ElegantOTA.loop();
   wm.process();
   millisCheck();
 }
 
+void Connection_Status() {
+  netStart = millis();
+  if (netStart - netStatus > TIMEOUT_1_MIN) {
+    Serial.println("Connection Check!");
+    if (WiFi.status() != WL_CONNECTED) {
+      Serial.println("Connection Issue!");
+      delay(200);
+      ESP.restart();
+    }
+    netStatus = netStart;
+  }
+}
 bool isUIDInArray(const char* tagRead) {
   for (int i = 0; i < num_known_uids; i++) {    // Loop through known UIDs
     if (strcmp(tagRead, known_uids[i]) == 0) {  // If the UIDs match
